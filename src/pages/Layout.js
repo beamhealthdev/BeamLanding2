@@ -116,7 +116,6 @@ const Layout = () => {
               </NavDropdown>
             </Nav>
             <div className='callus'>Call us at (929) 226-0624</div>
-            <Nav.Link className="nav-element demo-link" onClick={() => navigate("/demo")}>Book a Demo</Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>

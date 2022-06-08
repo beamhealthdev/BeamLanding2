@@ -29,11 +29,6 @@ class Home extends React.Component {
             <div className='col-md-6 col-sm-0'>
               <div className="beam-health-header-text">
                 <div>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</div>
-                <div>You can use Beam’s telehealth functionality for free, right now! Try your own mock telehealth visit below.</div>
-                <a href='https://demo.beam.health/demo/login/' target='_bank'>
-                  <button type="button" className="btn btn-secondary homeButton" >Try Beam Free</button>
-                </a>
-
               </div>
             </div>
           </div>
@@ -50,7 +45,6 @@ class Home extends React.Component {
                       <div>No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection</div>
                     </div>
                     <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: true, intuitive: false})}>Scalable Analytics</div>
                     <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: false, intuitive: true})}>Intuitive Scheduling</div>
                     <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
                       <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
@@ -72,7 +66,6 @@ class Home extends React.Component {
                       <div>HD, HIPPA Compliant Telehealth</div>
                       <div>Reliable video connection that allows patients and providers to connect</div>
                     </div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: true, intuitive: false})}>Scalable Analytics</div>
                     <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: false, intuitive: true})}>Intuitive Scheduling</div>
                     <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
                       <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
@@ -84,28 +77,7 @@ class Home extends React.Component {
                 </div>
               </>
             }
-            { this.state.scale &&
-              <>
-                <div className='col-md-6 col-sm-12'>
-                  <div className='section2-text'>
-                    <div className='section2-header'>Features Providers and Patients Love</div>
-                    <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient & Provider Workflows</div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
-                    <div className='blue-background'>
-                      <div>Scalable Analytics</div>
-                      <div>Leverage new digital insights such as retention rates and new patient transaction values to strategically grow your practice</div>
-                    </div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: false, intuitive: true})}>Intuitive Scheduling</div>
-                    <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
-                      <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
-                    </a>
-                  </div>
-                </div>
-                <div className='col-md-6 col-sm-12'>
-                  <img className='image section2-image-home' src='https://beam.health/wp-content/uploads/2021/11/Image-133.png'></img>
-                </div>
-              </>
-            }
+            
             { this.state.intuitive &&
               <>
                 <div className='col-md-6 col-sm-12'>
@@ -113,7 +85,6 @@ class Home extends React.Component {
                     <div className='section2-header'>Features Providers and Patients Love</div>
                     <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient & Provider Workflows</div>
                     <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: true, intuitive: false})}>Scalable Analytics</div>
                     <div className='blue-background'>
                       <div>Intuitive Scheduling</div>
                       <div>No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment</div>
