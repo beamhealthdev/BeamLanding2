@@ -1,6 +1,5 @@
 {
   "name": "beam_main_website",
-  "homepage": "https://beamhealthtyler.github.io/beam_main_site/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "install": "react-scripts install",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
