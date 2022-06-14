@@ -83,7 +83,7 @@ class Home extends React.Component {
                 <div className='col-md-6 col-sm-12'>
                   <div className='section2-text'>
                     <div className='section2-header'>Features Providers and Patients Love</div>
-                    <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient & Provider Workflows</div>
+                    <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient &amp; Provider Workflows</div>
                     <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
                     <div className='blue-background'>
                       <div>Intuitive Scheduling</div>
