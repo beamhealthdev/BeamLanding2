@@ -13,7 +13,7 @@ const TelehealthLandingPage = () => {
           <div className={"col-md-6 " + Style.text}>
             <h1 className='title'>Beyond Today's Standard for Telehealth</h1>
             <p>Choppy audio kills a conversation, a video feed that cuts out or blurs interrupts care-healthcare calls for a solution that is reliable. One that works even when a patient is in their car, or going for a walk, or traveling on vacation.</p>
-            <Link to='/demo'><button class={'btn btn-secondary homeButton ' + Style.blue }>Learn More</button></Link>
+            <Link to='/demo'><button className={'btn btn-secondary homeButton ' + Style.blue }>Learn More</button></Link>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const TelehealthLandingPage = () => {
             <h1 className={'title ' +Style.title}>Digital Infrastructures For The Modern Practice</h1>
             <p>
 You’re not limited to the patient experience created by someone else. With Beam, you can easily craft a better patient experience in telehealth, onboarding, online chat, payment collections, and more!</p>
-            <Link to='/demo'><button class={'btn btn-secondary homeButton ' + Style.blue}>Learn More</button></Link>
+            <Link to='/demo'><button className={'btn btn-secondary homeButton ' + Style.blue}>Learn More</button></Link>
           </div>
         </div>
       </div>

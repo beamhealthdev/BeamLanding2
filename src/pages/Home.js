@@ -1,132 +1,93 @@
-import './Styles/Main.css';
-import { Helmet } from "react-helmet";
-import React, { useState, useEffect } from "react"
+import './Styles/Main.scss';
+import React, { useState, useEffect } from "react";
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import 'animate.css';
 
 class Home extends React.Component {
 
   state = {
-    custom: true,
-    hd: false,
-    scale: false,
-    intuitive: false
   }
 
   render() {
     return (
-      <div className="background-image home">
-        <div className='container home-container'>
-
-          <div className='row'>
-            <div className='col'>
-              <h1 className='main-header-text'>Telehealth Engineered For Reliability</h1>
-            </div>
+      <AnimationOnScroll className="home-container animate__fadeIn">
+        <Navbar {...this.props} />
+        <AnimationOnScroll className='landing-page-container animate__fadeInRight animate__fastest'>
+          <div>
+            <img src='https://beam.health/wp-content/uploads/2021/12/group-video-enterprise-landing-page.png' />
           </div>
-
-          <div className='row'>
-            <div className='col-md-6 col-sm-12'>
-              <video className='video' autoPlay loop muted src="https://beam.health/wp-content/uploads/2021/11/ezgif.com-gif-maker-1.mp4" playsInline></video>
-            </div>
-            <div className='col-md-6 col-sm-0'>
-              <div className="beam-health-header-text">
-                <div>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</div>
+          <div>
+            <h1>Telehealth</h1>
+            <h2>Engineered For</h2>
+            <h1>Reliability</h1>
+            <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
+          </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll className='landing-description-container animate__fastest' animateIn='animate__fadeInUp' animateOnce={true} >
+          <div>
+            <h2>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h2>
+          </div>
+          <div>
+            <img src='https://beam.health/wp-content/uploads/2021/12/Group-1172.png' />
+          </div>
+        </AnimationOnScroll>
+        <div className='landing-feature-container'>
+          <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='feature-card-parent'>
+            <div class="card-wrap">
+              <div class="card-header one">
+                <i className='fas fa-bolt'></i>
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">Customizable Workflows</h1>
+                <p class="card-text">No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection.</p>
+                <div class="card-btn one"></div>
               </div>
             </div>
-          </div>
-
-          <div className='row section2'>
-
-            { this.state.custom &&
-              <>
-                <div className='col-md-6 col-sm-12'>
-                  <div className='section2-text'>
-                    <div className='section2-header'>Features Providers and Patients Love</div>
-                    <div className='blue-background'>
-                      <div>Customizable Patient & Provider Workflows</div>
-                      <div>No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection</div>
-                    </div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: false, intuitive: true})}>Intuitive Scheduling</div>
-                    <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
-                      <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
-                    </a>
-                  </div>
-                </div>
-                <div className='col-md-6 col-sm-12'>
-                  <img className='image section2-image-home' src='https://beam.health/wp-content/uploads/2021/11/Image-124-2.png'></img>
-                </div>
-              </>
-            }
-            { this.state.hd &&
-              <>
-                <div className='col-md-6 col-sm-12'>
-                  <div className='section2-text'>
-                    <div className='section2-header'>Features Providers and Patients Love</div>
-                    <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient & Provider Workflows</div>
-                    <div className='blue-background'>
-                      <div>HD, HIPPA Compliant Telehealth</div>
-                      <div>Reliable video connection that allows patients and providers to connect</div>
-                    </div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: false, scale: false, intuitive: true})}>Intuitive Scheduling</div>
-                    <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
-                      <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
-                    </a>
-                  </div>
-                </div>
-                <div className='col-md-6 col-sm-12'>
-                  <img className='image section2-image-home' src='https://beam.health/wp-content/uploads/2021/11/Image-131.png'></img>
-                </div>
-              </>
-            }
-            
-            { this.state.intuitive &&
-              <>
-                <div className='col-md-6 col-sm-12'>
-                  <div className='section2-text'>
-                    <div className='section2-header'>Features Providers and Patients Love</div>
-                    <div className="pointer" onClick={() => this.setState({custom: true, hd: false, scale: false, intuitive: false})}>Customizable Patient &amp; Provider Workflows</div>
-                    <div className="pointer" onClick={() => this.setState({custom: false, hd: true, scale: false, intuitive: false})}>HD, HIPPA Compliant Telehealth</div>
-                    <div className='blue-background'>
-                      <div>Intuitive Scheduling</div>
-                      <div>No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment</div>
-                    </div>
-                    <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
-                      <button type="button" className="btn btn-secondary homeButton margin-top-home">Learn More</button>
-                    </a>
-                  </div>
-                </div>
-                <div className='col-md-6 col-sm-12'>
-                  <img className='image section2-image-home' src='https://beam.health/wp-content/uploads/2021/11/Image-132.png'></img>
-                </div>
-              </>
-            }
-          </div>
+            <div class="card-wrap">
+              <div class="card-header four">
+                <i className='fas fa-laptop-medical'></i>
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">HD, HIPPA-Compliant Telehealth</h1>
+                <p class="card-text">Reliable video connection that allows patients and providers to connect.</p>
+                <div class="card-btn four"></div>
+            </div>
+            </div>
+            <div class="card-wrap">
+              <div class="card-header three">
+                <i className='fas fa-calendar'></i>
+              </div>
+              <div class="card-content">
+                <h1 class="card-title">Intuitive Scheduling</h1>
+                <p class="card-text">No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment.</p>
+                <div class="card-btn three"></div>
+            </div>
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='landing-brand-container'>
+            <div className='section-header'>Featured On</div>
+            <div className='brand-logo-container'>
+              <img src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo.png" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/The_Guardian_2018.svg/2560px-The_Guardian_2018.svg.png"  />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Business_Insider_Logo.svg/2560px-Business_Insider_Logo.svg.png"  />
+              <br/>
+              <img src="https://cdn.brandfolder.io/70W92OEX/as/q0vc05-3hg50o-8p4uw5/logo-dark.png" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" />
+              <img src="https://beam.health/wp-content/uploads/2020/10/Comcast_Lift_Labs.png" />
+            </div>
+          </AnimationOnScroll>
+          
+          
         </div>
-
-          {/* Featured On Section*/}
-
-          <div className='row section3-background'>
-            <div className='col-md-6 col-sm-12'>
-              <div className='mascot-text'>
-                <div>How much more can you make with Beam?</div>
-                <div>Find out in 2 minutes how much you lost due to your patient collections process</div>
-                <a href='https://providers.beam.health/revenue-calculator/?utm_source=home+page&utm_medium=home+page+email+-+revenue+calc&utm_campaign=home+page+email+collection+revenue+calc&utm_id=home+page+email+collect+-+revenue+calc' target='_bank'>
-                  <button type="button" className="btn btn-secondary homeButton">See your savings</button>
-                </a>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className='image' src='https://beam.health/wp-content/uploads/2021/11/mascot_03.png'></img>
-            </div>
-          </div>
-
-          <div className='row'>
-            <div className='col'>
-              <div className='craft-and-measure'>Craft and Measure the Patient Experience</div>
-              <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
-            </div>
-          </div>
-
-      </div>
+        
+        <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='landing-demo-container'>
+          <div className='section-header' id="schedule-demo">Schedule a Demo</div>
+          <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
+        </AnimationOnScroll>
+        <Footer />
+      </AnimationOnScroll>
     );
   }
 }

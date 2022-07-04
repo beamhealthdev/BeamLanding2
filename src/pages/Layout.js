@@ -60,7 +60,7 @@ const Layout = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg" className={url === 'home' ? `${scrollState} sticky` : 'sticky'}>
+      <Navbar bg="dark" expand="lg" className={url === 'home' ? `${scrollState} sticky` : 'sticky'}>
         <Container>
           <Navbar.Brand onClick={() => navigate("/home")}>
           <img width="231" height="auto" alt="" title=""

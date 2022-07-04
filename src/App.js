@@ -1,60 +1,90 @@
-import ReactDOM from "react-dom";
-import { Switch, BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home.js";
-import About from "./pages/About.js";
-import Solutions from "./pages/Solutions.js";
-import Contact from "./pages/Contact";
-import MentalHealth from "./pages/MentalHealth.js";
-import PatientEngagement from "./pages/PatientEngagement.js";
-import TelehealthLandingPage from "./pages/TelehealthLandingPage.js";
-import OnlinePayments from "./pages/OnlinePayments.js";
-import PatientIntake from "./pages/PatientIntake.js";
-import EnterprisePage from "./pages/EnterprisePage.js";
-import ForClinics from "./pages/ForClinics.js";
-import AffiliatePartnershipsResellerProgram from "./pages/AffiliatePartnershipsResellerProgram.js";
-import Blogs from "./pages/Blogs.js";
-import EHR from "./pages/EHR.js";
-import StateTelemedicinePolicies from "./pages/StateTelemedicinePolicies.js";
-import BeamVsOthers from "./pages/BeamVsOthers.js";
-import CaseStudies from "./pages/CaseStudies.js";
-import Patients from "./pages/Patients.js";
-import TelemedicineReibursement from "./pages/TelemedicineReibursement.js";
-import FAQ from "./pages/FAQ.js";
-import NoPage from "./pages/NoPage";
-import Footer from "./pages/Footer"
-import Demo from "./pages/Demo"
+import { Component } from 'react';
+import { BrowserRouter, Route, Routes, HashRouter} from 'react-router-dom';
+// import './pages/Styles/Main.cssx';
+import Home from './pages/Home';
+import About from './pages/About';
+import Solutions from './pages/Solutions'
+import Resources from './pages/Resources';
+import Blog from './pages/Blog';
+import CaseStudiesMain from './pages/CaseStudiesMain';
 
-export default function App() {
-  return (
-    <>
-          <Routes>
-             <Route path="/" element={<Layout />}>
-               <Route index element={<Home />} />
-               <Route path="home" element={<Home />} />
-               <Route path="about" element={<About />} />
-               <Route path="solutions" element={<Solutions />} />
-               <Route path="mentalhealth" element={<MentalHealth />} />
-               <Route path="patientengagement" element={<PatientEngagement />} />
-               <Route path="telehealth-landing-page" element={<TelehealthLandingPage />} />
-               <Route path="online-payments" element={<OnlinePayments />} />
-               <Route path="patient-intake" element={<PatientIntake />} />
-               <Route path="enterprise-page" element={<EnterprisePage />} />
-               <Route path="for-clinics" element={<ForClinics />} />
-               <Route path="affiliate-partnerships-reseller-program" element={<AffiliatePartnershipsResellerProgram />} />
-               <Route path="patients" element={<Patients />} />
-               <Route path="ehr-integrations" element={<EHR />} />
-               <Route path="case-studies" element={<CaseStudies />} />
-               <Route path="state-telemedicine-policies" element={<StateTelemedicinePolicies />} />
-               <Route path="telemedicine-reibursement" element={<TelemedicineReibursement />} />
-               <Route path="beam-vs-others" element={<BeamVsOthers />} />
-               <Route path="blogs" element={<Blogs />} />
-               <Route path="demo" element={<Demo />} />
-               <Route path="faq" element={<FAQ />} />
-               <Route path="*" element={<NoPage />} />
-             </Route>
-           </Routes>
-           <Footer/>
-          </>
-  );
+class App extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      active_page:'home'
+    };
+  }
+
+  async componentDidMount() {
+    // code
+    if(window.location.pathname == '/') {
+      this.setState({
+        active_page:'home'
+      })
+    }
+    else if(window.location.pathname == '/about') {
+      this.setState({
+        active_page:'about'
+      })
+    }
+    else if(window.location.pathname == '/solutions') {
+      this.setState({
+        active_page:'solutions'
+      })
+    }
+    else if(window.location.pathname == '/resources') {
+      this.setState({
+        active_page:'resources'
+      })
+    }
+    else if(window.location.pathname == '/blog') {
+      this.setState({
+        active_page:'blog'
+      })
+    }
+    else if(window.location.pathname == '/case_studies') {
+      this.setState({
+        active_page:'case_studies'
+      })
+    }
+  }
+
+  updateNav = (page) => {
+    console.log('1 ', page)
+    this.setState({
+      active_page: page
+    })
+  }
+
+  render() {
+    return(
+      <div>
+        <div className="parent-container">
+          {this.state.active_page == 'home' ?
+          <Home onUpdateNav={(page) => this.updateNav(page)} />
+          :
+          this.state.active_page == 'about' ?
+          <About />
+          :
+          this.state.active_page == 'solutions' ?
+          <Solutions />
+          :
+          this.state.active_page == 'resources' ?
+          <Resources />
+          :
+          this.state.active_page == 'blog' ?
+          <Blog />
+          :
+          this.state.active_page == 'case_studies' ?
+          <CaseStudiesMain />
+          :
+          <div></div>
+          }
+        </div>
+      </div>
+    )
+  }
 }
+
+export default App;

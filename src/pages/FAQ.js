@@ -103,7 +103,7 @@ const FAQ = () => {
             <div>
               <p className='main pointer' onClick={(e) => {toggle(e)}}>Does insurance cover telemedicine? What will patients pay?</p>
               <div className={"toggle " + Style.toggle}>
-                <p class="p2"><span>Most states include coverage for telemedicine from private insurers, Medicare and Medicaid. For more information, </span><a href="https://beam.health/state-telemedicine-policies/"><span>visit our state by state guide</span></a><span> to see where your state stands on covering telemedicine.</span></p>
+                <p className="p2"><span>Most states include coverage for telemedicine from private insurers, Medicare and Medicaid. For more information, </span><a href="https://beam.health/state-telemedicine-policies/"><span>visit our state by state guide</span></a><span> to see where your state stands on covering telemedicine.</span></p>
               </div>
             </div>
             <div>

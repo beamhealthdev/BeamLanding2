@@ -93,7 +93,7 @@ const EnterprisePage = () => {
           </div>
         </div>
         <div className={'row ' + Style.button}>
-            <Link to='/demo'><button type="button" class="btn btn-secondary homeButton">Learn More</button></Link>
+            <Link to='/demo'><button type="button" className="btn btn-secondary homeButton">Learn More</button></Link>
         </div>
       </div>
 

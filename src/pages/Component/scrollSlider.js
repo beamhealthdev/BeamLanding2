@@ -2,8 +2,8 @@
 
 const ScrollSlider = () => {
   return (
-    <div class="slider">
-      <div class="slide-track">
+    <div className="slider">
+      <div className="slide-track">
       <div className='slide'>
                 <img className='slider-img' src="https://beam.health/wp-content/uploads/2020/10/nbc-logo-png-939374.png" />
               </div>

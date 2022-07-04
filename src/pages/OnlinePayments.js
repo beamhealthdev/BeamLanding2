@@ -50,7 +50,7 @@ const OnlinePayments = () => {
             </div>
           </div>
           <div className={'row ' + Style.OnlinePaymentButton}>
-            <Link to='/demo'><button type="button" class="btn btn-secondary homeButton">Learn More</button></Link>
+            <Link to='/demo'><button type="button" className="btn btn-secondary homeButton">Learn More</button></Link>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ const OnlinePayments = () => {
             <div className={Style.section3_text}>
               <h1 className={'title ' + Style.titleMentalHealth}>Improve Cashflow</h1>
               <p className={Style.subtext}>Learn how AIM Medical’s Managing Director earned her practice an extra $100K!</p>
-              <Link to='/demo'><button type="button" class="btn btn-secondary homeButton">Learn More</button></Link>
+              <Link to='/demo'><button type="button" className="btn btn-secondary homeButton">Learn More</button></Link>
             </div>
           </div>
           <div className="col-md-6">

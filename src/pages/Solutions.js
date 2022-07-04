@@ -1,283 +1,130 @@
-import Style from './Styles/Solutions.module.css'
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import 'animate.css';
 
 class Solutions extends React.Component {
 
   state = {
-    care: true,
-    intelligent: false,
-    integrated: false,
-    direct: true,
-    built: false,
-    connected: false,
-    digital: true,
-    financial: false,
-    know: false,
-    always: true,
-    journey: false,
   }
 
   render() {
     return (
-      <div className={Style.backgroundImage}>
-        <div className='container'>
-          <div className={'row flip ' + Style.section}>
-            <div className='col-md-6 col-sm-0'>
-              <div>
-                <div className={Style.solutionsSection1Header}>A digital health platform designed for innovation</div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.section1Button}>Try Beam Free</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage} src="https://beam.health/wp-content/uploads/2021/11/group-video-enterprise-landing-page.png"></img>
-            </div>
+      <div>
+        <Navbar />
+        <div className="solutions-landing-container">
+          <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
+            <h1>A digital health platform designed for innovation</h1>
+            <h2>Built from the ground up for all your clinical needs</h2>
+          </AnimationOnScroll>
         </div>
-
-        <div className={'row ' + Style.section}>
-          <div className='col-md-6 col-sm-12'>
-            <img className={Style.solutionsImage3} src='https://beam.health/wp-content/uploads/2021/11/Image-124-2.png'></img>
-          </div>
-        {
-          this.state.care &&
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-            <div className='section2-header'>Telehealth Made Personal</div>
-            <div className='blue-background'>
-              <div>Care only a click away</div>
-              <div>HD, HIPAA compliant telehealth built to support a seamless face-to-face connection</div>
+        <div className="solutions-intro-container">
+          <AnimationOnScroll className="solutions-intro-item animate__fadeInLeft animate__fastest">
+            <div>
+              <img src="https://beam-provider-landing.s3.amazonaws.com/quality-icon.png" />
+              <h2>Raise Telehealth Standards</h2>
             </div>
-            <div className='pointer' onClick={() => this.setState({care: false, intelligent: true, integrated: false})}>Intelligent Group Therapy Controls</div>
-            <div className='pointer' onClick={() => this.setState({care: false, intelligent: false, integrated: true})}>Integrated note taking</div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
+            <p>Choppy video and audio that interrupt or kill conversations calls for a solution that is reliable.</p>
+          </AnimationOnScroll>
+          <AnimationOnScroll className="solutions-intro-item animate__fadeInUp animate__fastest">
+            <div>
+              <img src="https://beam-provider-landing.s3.amazonaws.com/scalability-icon.png" />
+              <h2>Built to Scale</h2>
             </div>
-          </div>
-        }
-        {
-          this.state.intelligent &&
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-            <div className='section2-header'>Telehealth Made Personal</div>
-            <div className='pointer' onClick={() => this.setState({care: true, intelligent: false, integrated: false})}>Care only a click away</div>
-            <div className='blue-background'>
-              <div>Intelligent Group Therapy Controls</div>
-              <div>Direct the flow of group therapy sessions. Use individual audio and video controls to make sure each patient has the chance to participate.</div>
+            <p>Beam is a platform that adapts to your needs - whether you're a private clinic or a large enterprise.</p>
+          </AnimationOnScroll>
+          <AnimationOnScroll className="solutions-intro-item animate__fadeInRight animate__fastest">
+            <div>
+              <img src="https://beam-provider-landing.s3.amazonaws.com/smartphone-icon.png" />
+              <h2>Patient Friendly Billing</h2>
             </div>
-            <div className='pointer' onClick={() => this.setState({care: false, intelligent: false, integrated: true})}>Integrated note taking</div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-            </div>
-          </div>
-        }
-        {
-          this.state.integrated &&
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-            <div className='section2-header'>Telehealth Made Personal</div>
-            <div className='pointer' onClick={() => this.setState({care: true, intelligent: false, integrated: false})}>Care only a click away</div>
-            <div className='pointer' onClick={() => this.setState({care: false, intelligent: true, integrated: false})}>Intelligent Group Therapy Controls</div>
-            <div className='blue-background'>
-              <div>Integrated note taking</div>
-              <div>When you are able to take accurate notes, you are much more likely to provide an accurate diagnosis. With Beam, you can capture live notes and instantly update your records including EHR integrations.</div>
-            </div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-            </div>
-          </div>
-        }
-
+            <p>Give your patients more payment options, less hassle, and peace of mind.</p>
+          </AnimationOnScroll>
         </div>
+        <div className="solutions-feature-container">
+          <div className="solutions-feature">
+            <div>
+              <AnimationOnScroll animateIn="rotate_it_right" animateOnce={true}>
+                <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" />
+              </AnimationOnScroll>
+            </div>
+            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+              <h2>Smart Group Sessions</h2>
+              <h4>Take full control of a virtual group session - just as you would in person.</h4>
+              <p>
+                <span>Connection Quality Assurance</span><br/>
+                See your patient's internet connection strength in real-time.
+              </p>
+              <p>
+                <span>Direct the Flow</span><br/>
+                Use individual video and audio controls to ensure each patient has their chance to participate.
+              </p>
+              <p>
+                <span>Picture in Picture Mode</span><br/>
+                Keep focus on your patients. Pop out of video calls to look up information or take notes while staying visually connected.
+              </p>
+              <p>
+                <span>Maximize Touchpoints</span><br/>
+                Get patients engaged from the start with a custom waiting room. Provide your own content or get help from one of our experts.
+              </p>
+              <hr/>
+              <h4>Ask us about all our telehealth features</h4>
+              <a className="cta-button-lg" href="#schedule-demo">Schedule a Demo</a>
+            </AnimationOnScroll>
+          </div>
+          <div className="solutions-feature">
+            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+              <img src="https://beam.health/wp-content/uploads/2021/11/Image-133.png" />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+              <h2>Simplify Practice Management</h2>
+              <h4>Elevate your practice with digital infrastructure designed to support seamless growth.</h4>
+              <p>
+                <span>Optimize Your Revenue</span><br/>
+                Grow your practice with digital insights from Beam. Unlock new KPIs such as retention rates and new patient transaction values.</p>
+              <p>
+                <span>Delegate Intelligently</span><br/>
+                Use Beam to share management roles responsibly. Control levels of employee access on our platform for comprehensive security and streamlined operations.</p>
+              <p>
+                <span>Share Documents Securely</span><br/>
+                Make your patient a partner-in-care. Instantly send test results through our HIPAA-compliant channels.</p>
+              <p>
+                <span>Connect with your EHR</span><br/>
+                Integrate with your EHR seamlessly and sync your patient data and notes.</p>
+              <hr/>
+              <h4>Find out how much you can make with Beam</h4>
+              <div className="cta-button-lg">See Your Savings</div>
+            </AnimationOnScroll>
+          </div>
+          <div className="solutions-feature">
+            <div>
+              <AnimationOnScroll animateIn="rotate_it_left" animateOnce={true}>
+                <img src="https://beam.health/wp-content/uploads/2021/11/Image-131.png" />
+              </AnimationOnScroll>
+            </div>
+            <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+              <h2>Expedite Administrative Work</h2>
+              <h4>Upgrade your patient intake system and collect the info you need before they ever set foot in your office.</h4>
+              <p>
+                <span>Collect Intake Data</span><br/>
+                Provide your patients with a simple intake form so you have all their information before starting.</p>
+              <p>
+                <span>Never lose a payment to collections</span><br/>
+                Collect and verify payment information before starting.</p>
+              <p>
+                <span>Flexible Payment Structures</span><br/>
+                Recurring billing that allows you to set up payment plans, subscriptions, and more.</p>
+            </AnimationOnScroll>
+          </div>
+        </div>
+        <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+          <div className='section-header' id="schedule-demo">Schedule a Demo</div>
+          <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
+        </AnimationOnScroll>
+        <Footer />
       </div>
-
-    <div>
-      {
-        this.state.direct &&  <div className={Style.backgroundImage2}>
-          <div className={'row flip ' + Style.sectionNoContainer}>
-            <div className='col-md-6 col-sm-12'>
-              <div className='section2-text'>
-                <div className='section2-header'>Telehealth Made Personal</div>
-                <div className='blue-background blue2'>
-                  <div>Direct control over your practice</div>
-                  <div>Delegate purposefully- Use Beam to share management roles and control levels of employee access on our platform for comprehensive security and streamlined operations.</div>
-                </div>
-                <div className='pointer' onClick={() => this.setState({direct: false, built: true, connected: false})}>Beam built your way</div>
-                <div className='pointer' onClick={() => this.setState({direct: false, built: false, connected: true})}>Stay connected from anywhere</div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage2} src='https://beam.health/wp-content/uploads/2021/11/image-4.png'></img>
-            </div>
-          </div>
-        </div>
-      }
-      {
-        this.state.built &&  <div className={Style.backgroundImage2}>
-          <div className={'row flip ' + Style.sectionNoContainer}>
-            <div className='col-md-6 col-sm-12'>
-              <div className='section2-text'>
-                <div className='section2-header'>Telehealth Made Personal</div>
-                <div className='pointer' onClick={() => this.setState({direct: true, built: false, connected: false})}>Direct control over your practice</div>
-                <div className='blue-background blue2'>
-                  <div>Beam built your way</div>
-                  <div>Customize your Beam platform by integrating calenders, EHRs, and more!</div>
-                </div>
-                <div className='pointer' onClick={() => this.setState({direct: false, built: false, connected: true})}>Stay connected from anywhere</div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage2} src='https://beam.health/wp-content/uploads/2021/11/image-4.png'></img>
-            </div>
-          </div>
-        </div>
-      }
-      {
-        this.state.connected &&  <div className={Style.backgroundImage2}>
-          <div className={'row flip ' + Style.sectionNoContainer}>
-            <div className='col-md-6 col-sm-12'>
-              <div className='section2-text'>
-                <div className='section2-header'>Telehealth Made Personal</div>
-                <div className='pointer' onClick={() => this.setState({direct: true, built: false, connected: false})}>Direct control over your practice</div>
-                <div className='pointer' onClick={() => this.setState({direct: false, built: true, connected: false})}>Beam built your way</div>
-                <div className='blue-background blue2'>
-                  <div>Stay connected from anywhere</div>
-                  <div>Use the chat feature to speak with patients anytime, anywhere</div>
-                </div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage2} src='https://beam.health/wp-content/uploads/2021/11/image-4.png'></img>
-            </div>
-          </div>
-        </div>
-      }
-    </div>
-
-    <div>
-    {this.state.digital &&
-      <div className='container'>
-        <div className={'row ' + Style.section}>
-          <div className='col-md-6 col-sm-12'>
-            <img className={Style.solutionsImage3} src='https://beam.health/wp-content/uploads/2021/11/Image-131.png'></img>
-          </div>
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-              <div className='section2-header'>Features Providers and Patients Love</div>
-              <div className='blue-background'>
-                <div>Digital charging and invoicing</div>
-                <div>Charge a credit card on-file for immediate payment collection or send them an invoice that can be paid in a set amount of time.</div>
-              </div>
-              <div className='pointer' onClick={() => this.setState({digital: false, financial: true, know: false})}>Financial Flexibility</div>
-              <div className='pointer' onClick={() => this.setState({digital: false, financial: false, know: true})}>Know your numbers</div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
-    {this.state.financial &&
-      <div className='container'>
-        <div className={'row ' + Style.section}>
-          <div className='col-md-6 col-sm-12'>
-            <img className={Style.solutionsImage3} src='https://beam.health/wp-content/uploads/2021/11/Image-131.png'></img>
-          </div>
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-              <div className='section2-header'>Features Providers and Patients Love</div>
-              <div className='pointer' onClick={() => this.setState({digital: true, financial: false, know: false})}>Digital charging and invoicing</div>
-              <div className='blue-background'>
-                <div>Financial Flexibility</div>
-                <div>Beam allows provider to set up recurring payments to make patient bills more manageable</div>
-              </div>
-              <div className='pointer' onClick={() => this.setState({digital: false, financial: false, know: true})}>Know your numbers</div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
-    {this.state.know &&
-      <div className='container'>
-        <div className={'row ' + Style.section}>
-          <div className='col-md-6 col-sm-12'>
-            <img className={Style.solutionsImage3} src='https://beam.health/wp-content/uploads/2021/11/Image-131.png'></img>
-          </div>
-          <div className='col-md-6 col-sm-12'>
-            <div className='section2-text'>
-              <div className='section2-header'>Features Providers and Patients Love</div>
-              <div className='pointer' onClick={() => this.setState({digital: true, financial: false, know: false})}>Digital charging and invoicing</div>
-              <div className='pointer' onClick={() => this.setState({digital: false, financial: true, know: false})}>Financial Flexibility</div>
-              <div className='blue-background'>
-                <div>Know your numbers</div>
-                <div>Grow your practice with digital insights from Beam. Unlock new KPIs, such as Retention Rates and New Patient Transaction Values</div>
-              </div>
-              <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
-    </div>
-
-    <div>
-      {
-        this.state.always &&
-        <div className={Style.backgroundImage2}>
-          <div className={'row flip ' + Style.sectionNoContainer}>
-            <div className='col-md-6 col-sm-12'>
-              <div className='section2-text'>
-                <div className='section2-header'>Telehealth Made Personal</div>
-                <div className='blue-background blue2'>
-                  <div>Always have up-to-date patient info</div>
-                  <div>Delegate purposefully- Use Beam to share management roles and control levels of employee access on our platform for comprehensive security and streamlined operations.</div>
-                </div>
-                <div className='pointer' onClick={() => this.setState({always: false, journey: true})}>Be there for the patient journey</div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage2} src='https://beam.health/wp-content/uploads/2021/11/image-1-1.png'></img>
-            </div>
-          </div>
-        </div>
-      }
-      {
-        this.state.journey &&
-        <div className={Style.backgroundImage2}>
-          <div className={'row flip ' + Style.sectionNoContainer}>
-            <div className='col-md-6 col-sm-12'>
-              <div className='section2-text'>
-                <div className='section2-header'>Telehealth Made Personal</div>
-                <div className='pointer' onClick={() => this.setState({always: true, journey: false})}>Always have up-to-date patient info</div>
-                <div className='blue-background blue2'>
-                  <div>Be there for the patient journey</div>
-                  <div>Patients appreciate open and convienient access to their provider. Give them what they desire right from your homepage with:</div>
-                  <ul>
-                    <li>Live Chat</li>
-                    <li>Appointment Requests</li>
-                    <li>Telehealth</li>
-                    <li>Much More</li>
-                  </ul>
-                </div>
-                <Link to='/demo'><button type="button" className={"btn btn-secondary " + Style.solutionsButton}>Learn More</button></Link>
-              </div>
-            </div>
-            <div className='col-md-6 col-sm-12'>
-              <img className={Style.solutionsImage2} src='https://beam.health/wp-content/uploads/2021/11/image-1-1.png'></img>
-            </div>
-          </div>
-        </div>
-      }
-    </div>
-
-    <div className='row'>
-      <div className='col'>
-        <div className='craft-and-measure'>Craft and Measure the Patient Experience</div>
-        <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
-      </div>
-    </div>
-
-  </div>
     );
   }
 }

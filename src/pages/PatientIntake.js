@@ -37,7 +37,7 @@ const PatientIntake = () => {
               <li>Medical History</li>
               <li>Preferred Payment Method</li>
             </ul>
-              <Link to='/demo'><button type="button" class="btn btn-secondary homeButton">Learn More</button></Link>
+              <Link to='/demo'><button type="button" className="btn btn-secondary homeButton">Learn More</button></Link>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const PatientIntake = () => {
                 <li>Telehealth</li>
                 <li>Much More!</li>
               </ul>
-                <Link to='/demo'><button type="button" class="btn btn-secondary homeButton">Learn More</button></Link>
+                <Link to='/demo'><button type="button" className="btn btn-secondary homeButton">Learn More</button></Link>
             </div>
             <div className="col-md-6">
               <img className='image1' src="https://beam.health/wp-content/uploads/2021/12/Image-140-1024x690.png"></img>

@@ -62,11 +62,11 @@ render () {
             <div className='col-md-4'>
             </div>
             <div className={'col-md-4 ' + Style.backgroundcolorblue + ' ' + Style.section2_img}>
-              <img alt="beamhealth" loading="lazy" data-src="https://beam.health/wp-content/uploads/2020/11/logo-white.png" class=" ls-is-cached lazyloaded" src="https://beam.health/wp-content/uploads/2020/11/logo-white.png"></img>
+              <img alt="beamhealth" loading="lazy" data-src="https://beam.health/wp-content/uploads/2020/11/logo-white.png" className=" ls-is-cached lazyloaded" src="https://beam.health/wp-content/uploads/2020/11/logo-white.png"></img>
               <div onClick={(e) => this.setState({modal: true})} className={Style.seeAllFeatures}>See All Features +</div>
             </div>
             <div className={'col-md-4 ' + Style.section2_img + ' ' + Style.section2_img_border}>
-              <img className={Style.img2} alt="doxy" loading="lazy" data-val="" data-src="https://beam.health/wp-content/uploads/2020/11/doxy-1.png" class=" ls-is-cached lazyloaded" src="https://beam.health/wp-content/uploads/2020/11/doxy-1.png"></img>
+              <img className={Style.img2} alt="doxy" loading="lazy" data-val="" data-src="https://beam.health/wp-content/uploads/2020/11/doxy-1.png" className=" ls-is-cached lazyloaded" src="https://beam.health/wp-content/uploads/2020/11/doxy-1.png"></img>
             </div>
           </div>
         </div>

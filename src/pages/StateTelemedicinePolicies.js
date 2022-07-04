@@ -52,7 +52,7 @@ const StateTelemedicinePolicies = () => {
               <div>
                 <h1 className='main pointer' onClick={(e) => {toggle(e)}}>Medicare +</h1>
                 <div className={"toggle " + Style.toggle}>
-                  <div class='state-p'><p>EXPANSION OF TELEHEALTH WITH 1135 WAIVER: Under this new waiver, Medicare can pay for office, hospital, and other visits done via telehealth in all 50 states, including visits in which the patient is doing a real-time video appointment from their home starting March 6, 2020. Currently, there is no end date for this waiver. Learn more here.</p>
+                  <div className='state-p'><p>EXPANSION OF TELEHEALTH WITH 1135 WAIVER: Under this new waiver, Medicare can pay for office, hospital, and other visits done via telehealth in all 50 states, including visits in which the patient is doing a real-time video appointment from their home starting March 6, 2020. Currently, there is no end date for this waiver. Learn more here.</p>
                   <p>The map below is interactive; please click on any state you would like to know how telemedicine is reimbursed.</p>
                   </div>
                 </div>
