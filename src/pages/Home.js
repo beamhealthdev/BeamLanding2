@@ -12,82 +12,70 @@ class Home extends React.Component {
 
   render() {
     return (
-      <AnimationOnScroll className="home-container animate__fadeIn">
-        <Navbar {...this.props} />
-        <AnimationOnScroll className='landing-page-container animate__fadeInRight animate__fastest'>
-          <div>
-            <img src='https://beam.health/wp-content/uploads/2021/12/group-video-enterprise-landing-page.png' />
-          </div>
-          <div>
-            <h1>Telehealth</h1>
-            <h2>Engineered For</h2>
-            <h1>Reliability</h1>
-            <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
-          </div>
-        </AnimationOnScroll>
-        <AnimationOnScroll className='landing-description-container animate__fastest' animateIn='animate__fadeInUp' animateOnce={true} >
-          <div>
-            <h2>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h2>
-          </div>
-          <div>
-            <img src='https://beam.health/wp-content/uploads/2021/12/Group-1172.png' />
-          </div>
-        </AnimationOnScroll>
-        <div className='landing-feature-container'>
-          <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='feature-card-parent'>
-            <div class="card-wrap">
-              <div class="card-header one">
-                <i className='fas fa-bolt'></i>
-              </div>
-              <div class="card-content">
-                <h1 class="card-title">Customizable Workflows</h1>
-                <p class="card-text">No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection.</p>
-                <div class="card-btn one"></div>
-              </div>
+      <div>
+        <AnimationOnScroll className="home-container animate__fadeIn">
+          {/* <Navbar {...this.props} /> */}
+          <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
+            <div>
+              <h1>Telehealth Engineered For Reliability</h1>
+              <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
+              <a className='cta-button-lg-alt'>Learn More</a>
+              <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
             </div>
-            <div class="card-wrap">
-              <div class="card-header four">
-                <i className='fas fa-laptop-medical'></i>
-              </div>
-              <div class="card-content">
-                <h1 class="card-title">HD, HIPPA-Compliant Telehealth</h1>
-                <p class="card-text">Reliable video connection that allows patients and providers to connect.</p>
-                <div class="card-btn four"></div>
-            </div>
-            </div>
-            <div class="card-wrap">
-              <div class="card-header three">
-                <i className='fas fa-calendar'></i>
-              </div>
-              <div class="card-content">
-                <h1 class="card-title">Intuitive Scheduling</h1>
-                <p class="card-text">No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment.</p>
-                <div class="card-btn three"></div>
-            </div>
+            <div>
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam-landing-image.png' />
             </div>
           </AnimationOnScroll>
-          <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='landing-brand-container'>
-            <div className='section-header'>Featured On</div>
+          <div className='landing-feature-container'>
+            <div className='landing-feature-item'>
+              <div className='center'>
+                <img src='https://beam-provider-landing.s3.amazonaws.com/final/landing-image-1.png' />
+              </div>
+              <div>
+                <h1>Customizable Workflows</h1>
+                <h4>No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection.</h4>
+              </div>
+            </div>
+            <div className='landing-feature-item'>
+              <div>
+                <h1>HD, HIPAA-Compliant Telehealth</h1>
+                <h4>Reliable video connection that allows patients and providers to connect.</h4>
+              </div>
+              <div className='center'>
+                <img src='https://beam-provider-landing.s3.amazonaws.com/final/landing-image-2.png' />
+              </div>
+            </div>
+            <div className='landing-feature-item'>
+              <div className='center'>
+                <img src='https://beam-provider-landing.s3.amazonaws.com/final/landing-image-3.png' />
+              </div>
+              <div>
+                <h1>Intuitive Scheduling</h1>
+                <h4>No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment.</h4>
+              </div>
+            </div>
+          </div>
+          <div className='landing-bottom-container'>
+            <div className='quote-container'>
+              “Beam's telehealth services lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+            </div>
             <div className='brand-logo-container'>
               <img src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo.png" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/The_Guardian_2018.svg/2560px-The_Guardian_2018.svg.png"  />
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Business_Insider_Logo.svg/2560px-Business_Insider_Logo.svg.png"  />
               <br/>
-              <img src="https://cdn.brandfolder.io/70W92OEX/as/q0vc05-3hg50o-8p4uw5/logo-dark.png" />
+              <img src="https://www.freelogovectors.net/svg08/techstars-logo-freelogovectors.net_.svg" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" />
               <img src="https://beam.health/wp-content/uploads/2020/10/Comcast_Lift_Labs.png" />
             </div>
-          </AnimationOnScroll>
-          
-          
-        </div>
-        
-        <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true} className='landing-demo-container'>
-          <div className='section-header' id="schedule-demo">Schedule a Demo</div>
-          <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
+            <div className='demo-container'>
+              <h1>Schedule a Demo</h1>
+              <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
+            </div>
+          </div>
         </AnimationOnScroll>
         <Footer />
-      </AnimationOnScroll>
+      </div>
     );
   }
 }
