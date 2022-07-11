@@ -31,17 +31,19 @@ class Navbar extends React.Component {
       <div className={this.state.scrolled ? 'scroll-nav' : 'nav-container'}>
         <div className='items-left'>
           <BrowserRouter basename="/">
+            <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
+            <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
+            <Link to='resources' onClick={()=> this.props.updateNav('resources')}>Resources</Link>
+          </BrowserRouter>
+        </div>
+        <div className='item-center'>
+          <BrowserRouter basename="/">
             <Link to='/' onClick={()=> this.props.updateNav('home')}>
               <img src={this.state.scrolled ? 'https://beam.health/wp-content/themes/beam-health/images/logo-white.png' : 'https://beam.health/wp-content/themes/beam-health/images/logo.png'} />
             </Link>
           </BrowserRouter>
         </div>
         <div className='items-right'>
-          <BrowserRouter basename="/">
-            <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
-            <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-            <Link to='resources' onClick={()=> this.props.updateNav('resources')}>Resources</Link>
-          </BrowserRouter>
           <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Schedule Demo</a>
         </div>
       </div>

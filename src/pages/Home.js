@@ -14,7 +14,7 @@ class Home extends React.Component {
     return (
       <div>
         <AnimationOnScroll className="home-container animate__fadeIn">
-          {/* <Navbar {...this.props} /> */}
+          <Navbar {...this.props} />
           <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
             <div>
               <h1>Telehealth Engineered For Reliability</h1>
