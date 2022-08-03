@@ -8,6 +8,10 @@ function Footer() {
       <div className='questions-copy'>
         <h1>Still have questions?</h1>
         <h4>Reach out to our Customer Success team</h4>
+        <div>
+          <a className='cta-button' href='#schedule-demo' style={{padding:'10px 20px'}}>Schedule Demo</a>
+          <div className='call-copy'>Call us at (929) 226-062</div>
+        </div>
       </div>
     </div>
     <div>

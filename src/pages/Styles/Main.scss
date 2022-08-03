@@ -253,6 +253,16 @@ h4 {
   margin-top: 60px;
 }
 
+@media (max-width:900px) {
+  .demo-container {
+    padding: 0;
+    overflow: hidden;
+    iframe {
+      min-width: 500px;
+    }
+  }
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -278,9 +288,32 @@ h4 {
       }
     }
   }
+  .questions-copy {
+    h4 {
+      margin-bottom: 40px;
+    }
+    .call-copy {
+      margin-top: 20px;
+    }
+  }
 }
 
 @media (max-width:900px) {
+  .footer-container {
+    >div:last-of-type{
+      flex-direction: column;
+      >div {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+      }
+      >div:last-of-type {
+        i {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
   .home-container {
     .landing-page-container {
       height: auto;
