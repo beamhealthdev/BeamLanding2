@@ -58,7 +58,7 @@ class Home extends React.Component {
           </div>
           <div className='landing-bottom-container'>
             <div className='quote-container'>
-              “Beam's telehealth services lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+              “Beam's mission to utilize patient and provider feedback allows them to provide a powerhouse full of opportunities. By understanding our needs and consistently innovating, they ensure any practice can be at the top of their game!"
             </div>
             <div className='brand-logo-container'>
               <img src="https://logodownload.org/wp-content/uploads/2020/06/nbc-logo.png" />
