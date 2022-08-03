@@ -8,6 +8,7 @@ import 'animate.css';
 class Solutions extends React.Component {
 
   state = {
+    selectedFeature: 1
   }
 
   render() {
@@ -36,7 +37,7 @@ class Solutions extends React.Component {
               </div>
             </div>
           </div>
-          <div className="grid-feature-container">
+          <div className="grid-feature-container-solutions">
             <h1>Smart Group Sessions</h1>
             <h4>Take full control of a virtual group session - just as you would in person.</h4>
             <div className="grid-feature-item-container">
@@ -68,28 +69,34 @@ class Solutions extends React.Component {
             <div className="accordion-feature-item-container">
               <div>
                 <div className="accordion-feature-item">
-                  <h2>Optimize Your Revenue</h2>
+                  <h2 onClick={() => this.setState({selectedFeature:1})}>Optimize Your Revenue</h2>
+                  {this.state.selectedFeature==1 &&
                   <h4>Grow your practice with digital insights from Beam. Unlock new KPIs such as retention rates and new patient transaction values.</h4>
+                  }
                 </div>
                 <div className="accordion-feature-item">
-                  <h2>Delegate Intelligently</h2>
-                  {/* <h4>Grow your practice with digital insights from Beam. Unlock new KPIs such as retention rates and new patient transaction values.</h4> */}
+                  <h2 onClick={() => this.setState({selectedFeature:2})}>Delegate Intelligently</h2>
+                  {this.state.selectedFeature==2 &&
+                  <h4>Use Beam to share management roles responsibly. Control levels of employee access on our platform for comprehensive security and streamlined operations.</h4>
+                  }
                 </div>
                 <div className="accordion-feature-item">
-                  <h2>Connect with your EHR</h2>
-                  {/* <h4>Grow your practice with digital insights from Beam. Unlock new KPIs such as retention rates and new patient transaction values.</h4> */}
+                  <h2 onClick={() => this.setState({selectedFeature:3})}>Connect with your EHR</h2>
+                  {this.state.selectedFeature==3 &&
+                  <h4>Integrate with your EHR seamlessly and sync your patient data and notes.</h4>
+                  }
                 </div>
               </div>
               <div>
-                <div className="accordion-feture-graphic">
+                <div className="accordion-feature-graphic">
                   <h2>$20,000</h2>
                   <h4>The average loss in revenue per year due to payment collections process. Beam gives that back to you.</h4>
                 </div>
               </div>
             </div>
-            <div className="cta-button" style={{margin:'auto'}}>Calculate Your Savings</div>
+            <a className="cta-button" style={{margin:'auto'}} href="https://providers.beam.health/revenue-calculator/" target="_blank">Calculate Your Savings</a>
           </div>
-          <div className="grid-feature-container">
+          <div className="grid-feature-container-solutions">
             <h1>Expedite Administrative Work</h1>
             <h4>Upgrade your patient intake system and collect the info you need before they ever set foot in your office.</h4>
             <div className="grid-feature-item-container">
