@@ -46,9 +46,22 @@ class Navbar extends React.Component {
             <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
             <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
             <div onClick={() => this.toggleResourcesModal()}>Resources</div>
-            {/* <Link to='resources' onClick={()=> this.props.updateNav('resources')}>Resources</Link> */}
           </BrowserRouter>
         </div>
+        <div className='mobile-nav'>
+          <i className='fas fa-bars' onClick={() => this.setState({mobileMenu:true})}></i>
+        </div>
+        {this.state.mobileMenu &&
+        <div className='mobile-overlay'>
+          <i className='fas fa-times' onClick={() => this.setState({mobileMenu:false})}></i>
+            <BrowserRouter basename="/">
+              <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
+              <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
+              <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
+              <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
+            </BrowserRouter>
+        </div>
+        }
         <div className='item-center'>
           <BrowserRouter basename="/">
             <Link to='/' onClick={()=> this.props.updateNav('home')}>
