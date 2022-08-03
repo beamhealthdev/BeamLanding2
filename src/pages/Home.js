@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import {BrowserRouter, Link} from "react-router-dom";
 import 'animate.css';
 
 class Home extends React.Component {
@@ -68,7 +69,7 @@ class Home extends React.Component {
               <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" />
               <img src="https://beam.health/wp-content/uploads/2020/10/Comcast_Lift_Labs.png" />
             </div>
-            <div className='demo-container'>
+            <div className='demo-container' id="schedule-demo">
               <h1>Schedule a Demo</h1>
               <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
             </div>

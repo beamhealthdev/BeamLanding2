@@ -1,16 +1,19 @@
 import './Styles/Main.scss';
 import React, { useState, useEffect } from "react";
 import {BrowserRouter, Link} from "react-router-dom";
+import ClickOutside from 'react-click-outside';
+import ResourcesModal from './ResourcesModal';
 
 class Navbar extends React.Component {
 
   state = {
     scrolled: false,
     showDemoBtn: true,
+    showModal: false
   }
 
   listenScrollEvent = e => {
-    if (window.scrollY > 120) {
+    if (window.scrollY > 140) {
       this.setState({scrolled:true})
     } else {
       this.setState({scrolled:false})
@@ -26,20 +29,30 @@ class Navbar extends React.Component {
     window.addEventListener('scroll', this.listenScrollEvent)
   }
 
+  toggleResourcesModal = () => {
+    this.setState({showModal: !this.state.showModal})
+  }
+
   render() {
     return (
       <div className={this.state.scrolled ? 'scroll-nav' : 'nav-container'}>
+        {this.state.showModal &&
+        <div className='hover-overlay'>
+          <ResourcesModal toggleResourcesModal={() => this.toggleResourcesModal()} />
+        </div>
+        }
         <div className='items-left'>
           <BrowserRouter basename="/">
             <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
             <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-            <Link to='resources' onClick={()=> this.props.updateNav('resources')}>Resources</Link>
+            <div onClick={() => this.toggleResourcesModal()}>Resources</div>
+            {/* <Link to='resources' onClick={()=> this.props.updateNav('resources')}>Resources</Link> */}
           </BrowserRouter>
         </div>
         <div className='item-center'>
           <BrowserRouter basename="/">
             <Link to='/' onClick={()=> this.props.updateNav('home')}>
-              <img src={this.state.scrolled ? 'https://beam.health/wp-content/themes/beam-health/images/logo-white.png' : 'https://beam.health/wp-content/themes/beam-health/images/logo.png'} />
+              <img src='https://beam.health/wp-content/themes/beam-health/images/logo.png' />
             </Link>
           </BrowserRouter>
         </div>
