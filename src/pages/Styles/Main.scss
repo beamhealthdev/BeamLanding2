@@ -296,6 +296,14 @@ h4 {
       margin-top: 20px;
     }
   }
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: $alt-light;
+    }
+  }
 }
 
 @media (max-width:900px) {

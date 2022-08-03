@@ -1,5 +1,5 @@
 import Style from './Styles/Footer.module.css'
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import {BrowserRouter, Link} from "react-router-dom";
 
 function Footer() {
   return (
@@ -18,11 +18,14 @@ function Footer() {
       <div>
         <img src='https://beam.health/wp-content/themes/beam-health/images/logo-white.png' />
       </div>
-      <div>
+      <div className='links-container'>
         <div>Explore Beam</div>
-        <div>About Us</div>
-        <div>Solutions</div>
-        <div>Resources</div>
+        <BrowserRouter basename="/">
+          <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
+          <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
+          <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
+          <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
+        </BrowserRouter>
       </div>
       <div>
         <div>Join us on Social Media</div>
