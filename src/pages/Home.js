@@ -20,7 +20,7 @@ class Home extends React.Component {
             <div>
               <h1>Telehealth Engineered For Reliability</h1>
               <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
-              <a className='cta-button-lg-alt' href='http://localhost:3000/solutions'>Learn More</a>
+              <a className='cta-button-lg-alt' href='https://final.d1ii85crqa7wly.amplifyapp.com/solutions'>Learn More</a>
               <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
             </div>
             <div>
