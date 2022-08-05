@@ -639,6 +639,8 @@ h4 {
     width: 45%;
     cursor: pointer;
     padding: 20px;
+    text-decoration: none;
+    color: $primary-dark;
     img {
       height: 160px;
     }
@@ -649,4 +651,40 @@ h4 {
       font-weight: 600;
     }
   }
+}
+
+@media (max-width:900px) {
+  .case-studies-container {
+    flex-direction: column;
+    margin: 0 30px;
+    .case-study-item {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.case-study-container {
+  padding: 30px 60px;
+  h4 {
+    font-weight: 600;
+    margin: 40px 0;
+  }
+  h6 {
+    font-weight: 600;
+  }
+  .quote {
+    padding-left: 20px;
+    border-left: 6px $primary solid;
+    font-style: italic;
+    margin-top: 40px;
+  }
+  hr {
+    margin: 40px 0;
+  }
+}
+
+.back-button {
+  text-decoration: none;
+  color: $primary;
 }

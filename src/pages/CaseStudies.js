@@ -5,7 +5,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'animate.css';
 import {BrowserRouter, Link} from "react-router-dom";
 
-class FrequentyAskedQuestions extends React.Component {
+class CaseStudies extends React.Component {
 
   state = {
   }
@@ -22,46 +22,48 @@ class FrequentyAskedQuestions extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-studies-container">
-            <div className="case-study-item">
-              <div>
-                <img src="https://beam.health/wp-content/uploads/2020/09/couchlogo-case1n.png" />
-              </div>
-              <div>
-                <h4>CASE #1 - Psychiatry</h4>
-                <h4>The Couch</h4>
-                <h4>The Couch is a Kentucky based mental health clinic that combines the immediacy of urgent care with the empathy of a world-class mental healthcare center.</h4>
-              </div>
-            </div>
-            <div className="case-study-item">
-              <div>
-                <img src="https://beam.health/wp-content/uploads/2020/11/medx-case2n.png" />
-              </div>
-              <div>
-                <h4>CASE #2 - Wellness / Medical Spa</h4>
-                <h4>MedX MedSpa</h4>
-                <h4>Led by Dr. Bart Gershenbaum, MedX MedSpa was created to help men and women overcome the challenges of growing older.</h4>
-              </div>
-            </div>
-            <div className="case-study-item">
-              <div>
-                <img src="https://beam.health/wp-content/uploads/2020/11/Urgent-case3n.png" />
-              </div>
-              <div>
-                <h4>CASE #3 - Urgent Care looking to scale</h4>
-                <h4>UrgentCare 24/7</h4>
-                <h4>Urgent Care 24/7 is a multi-office walk-in clinic in Georgia that constantly seeks out innovative tools that align with their workflows, culture, and goals.</h4>
-              </div>
-            </div>
-            <div className="case-study-item">
-              <div>
-                <img src="https://beam.health/wp-content/uploads/2020/11/emergicenter-case4n.png" />
-              </div>
-              <div>
-                <h4>CASE #4 - Urgent Care facing COVID-19</h4>
-                <h4>98point6 Emergicenter</h4>
-                <h4>98point6 Emergicenter was like everyone else in the world: they didn't anticipate a pandemic vastly altering the way society operates. So, when they were forced to temporarily close during the COVID19 outbreak, leadership was able to pivot quickly.</h4>
-              </div>
-            </div>
+            <BrowserRouter basename="/">
+              <Link to='case_study_1' onClick={()=> this.props.updateNav('case_study_1')} className="case-study-item">
+                <div>
+                  <img src="https://beam.health/wp-content/uploads/2020/09/couchlogo-case1n.png" />
+                </div>
+                <div>
+                  <h4>CASE #1 - Psychiatry</h4>
+                  <h4>The Couch</h4>
+                  <h4>The Couch is a Kentucky based mental health clinic that combines the immediacy of urgent care with the empathy of a world-class mental healthcare center.</h4>
+                </div>
+              </Link>
+              <Link to='case_study_2' onClick={()=> this.props.updateNav('case_study_2')} className="case-study-item">
+                <div>
+                  <img src="https://beam.health/wp-content/uploads/2020/11/medx-case2n.png" />
+                </div>
+                <div>
+                  <h4>CASE #2 - Wellness / Medical Spa</h4>
+                  <h4>MedX MedSpa</h4>
+                  <h4>Led by Dr. Bart Gershenbaum, MedX MedSpa was created to help men and women overcome the challenges of growing older.</h4>
+                </div>
+              </Link>
+              <Link to='case_study_3' onClick={()=> this.props.updateNav('case_study_3')} className="case-study-item">
+                <div>
+                  <img src="https://beam.health/wp-content/uploads/2020/11/Urgent-case3n.png" />
+                </div>
+                <div>
+                  <h4>CASE #3 - Urgent Care looking to scale</h4>
+                  <h4>UrgentCare 24/7</h4>
+                  <h4>Urgent Care 24/7 is a multi-office walk-in clinic in Georgia that constantly seeks out innovative tools that align with their workflows, culture, and goals.</h4>
+                </div>
+              </Link>
+              <Link to='case_study_4' onClick={()=> this.props.updateNav('case_study_4')} className="case-study-item">
+                <div>
+                  <img src="https://beam.health/wp-content/uploads/2020/11/emergicenter-case4n.png" />
+                </div>
+                <div>
+                  <h4>CASE #4 - Urgent Care facing COVID-19</h4>
+                  <h4>98point6 Emergicenter</h4>
+                  <h4>98point6 Emergicenter was like everyone else in the world: they didn't anticipate a pandemic vastly altering the way society operates. So, when they were forced to temporarily close during the COVID19 outbreak, leadership was able to pivot quickly.</h4>
+                </div>
+              </Link>
+            </BrowserRouter>
           </div>
           <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
             <div className='demo-container' id="schedule-demo">
@@ -76,4 +78,4 @@ class FrequentyAskedQuestions extends React.Component {
   }
 }
 
-export default FrequentyAskedQuestions;
+export default CaseStudies;

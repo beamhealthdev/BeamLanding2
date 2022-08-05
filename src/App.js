@@ -7,6 +7,10 @@ import Solutions from './pages/Solutions'
 import FrequentyAskedQuestions from './pages/FrequentyAskedQuestions';
 import Blog from './pages/Blog';
 import CaseStudies from './pages/CaseStudies';
+import CaseStudy1 from './pages/CaseStudy1';
+import CaseStudy2 from './pages/CaseStudy2';
+import CaseStudy3 from './pages/CaseStudy3';
+import CaseStudy4 from './pages/CaseStudy4';
 
 class App extends Component {
   constructor(props) {
@@ -48,10 +52,29 @@ class App extends Component {
         active_page:'case_studies'
       })
     }
+    else if(window.location.pathname == '/case_study_1') {
+      this.setState({
+        active_page:'case_study_1'
+      })
+    }
+    else if(window.location.pathname == '/case_study_2') {
+      this.setState({
+        active_page:'case_study_2'
+      })
+    }
+    else if(window.location.pathname == '/case_study_3') {
+      this.setState({
+        active_page:'case_study_3'
+      })
+    }
+    else if(window.location.pathname == '/case_study_4') {
+      this.setState({
+        active_page:'case_study_4'
+      })
+    }
   }
 
   updateNav = (page) => {
-    console.log('1 ', page)
     this.setState({
       active_page: page
     })
@@ -78,6 +101,18 @@ class App extends Component {
           :
           this.state.active_page == 'case_studies' ?
           <CaseStudies />
+          :
+          this.state.active_page == 'case_study_1' ?
+          <CaseStudy1 />
+          :
+          this.state.active_page == 'case_study_2' ?
+          <CaseStudy2 />
+          :
+          this.state.active_page == 'case_study_3' ?
+          <CaseStudy3 />
+          :
+          this.state.active_page == 'case_study_4' ?
+          <CaseStudy4 />
           :
           <div></div>
           }
