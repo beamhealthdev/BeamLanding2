@@ -1,4 +1,3 @@
-import Style from './Styles/Footer.module.css'
 import {BrowserRouter, Link} from "react-router-dom";
 
 function Footer() {
@@ -16,7 +15,7 @@ function Footer() {
     </div>
     <div>
       <div>
-        <img src='https://beam.health/wp-content/themes/beam-health/images/logo-white.png' />
+        <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo_white.png' />
       </div>
       <div className='links-container'>
         <div>Explore Beam</div>

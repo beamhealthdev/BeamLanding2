@@ -43,17 +43,17 @@ class Solutions extends React.Component {
             <div className="grid-feature-item-container">
               <div className="grid-feature-item"></div>
               <div className="grid-feature-item">
-                <img src="https://beam.health/wp-content/uploads/2021/11/group-video-enterprise-landing-page.png" style={{borderRadius:0}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/group_video.png" style={{borderRadius:0}} />
                 <h2>Connection Quality Assurance</h2>
                 <h4>See your patient's internet connection strength in real-time.</h4>
               </div>
               <div className="grid-feature-item">
-                <img src="https://beam.health/wp-content/uploads/2021/11/Image-132.png" style={{borderRadius:0}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/schedule.png" style={{borderRadius:0}} />
                 <h2>Picture in <br/>Picture Mode</h2>
                 <h4>Keep focus on your patients. Pop out of video calls to look up information or take notes while staying visually connected.</h4>
               </div>
               <div className="grid-feature-item">
-                <img src="https://beam.health/wp-content/uploads/2021/11/waiting-room-ad-enterprise-landing-page-768x452.png" style={{borderRadius:0}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" style={{borderRadius:0}} />
                 <h2>Maximize <br/>Touchpoints</h2>
                 <h4>Get patients engaged from the start with a custom waiting room. Provide your own content or get help from one of our experts.</h4>
               </div>

@@ -1,5 +1,3 @@
-import './Styles/About.css';
-import Scroll from './Component/scrollSlider'
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import React from "react";
@@ -36,7 +34,7 @@ class About extends React.Component {
               <div className="grid-feature-item-container">
                 <div className="grid-feature-item"></div>
                 <div className="grid-feature-item">
-                  <img src="https://beam.health/wp-content/uploads/2020/10/Sas-1.jpg" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/sas.jpeg" />
                   <h2>Sas Ponnapalli</h2>
                   <h4>CEO / Co-Founder</h4>
                   <div class="profile-bio">
@@ -44,7 +42,7 @@ class About extends React.Component {
                   </div>
                 </div>
                 <div className="grid-feature-item">
-                  <img src="https://beam.health/wp-content/uploads/2020/11/Ranga.jpg" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Ranga.jpeg" />
                   <h2>Ranga Jayawardena</h2>
                   <h4>COO / Co-Founder</h4>
                   <div class="profile-bio">
@@ -52,7 +50,7 @@ class About extends React.Component {
                   </div>
                 </div>
                 <div className="grid-feature-item">
-                  <img src="https://beam.health/wp-content/uploads/2020/10/Drew-1.jpg" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Drew.jpeg" />
                   <h2>Andrew Jayakody</h2>
                   <h4>VP of Customer Success</h4>
                   <div class="profile-bio">

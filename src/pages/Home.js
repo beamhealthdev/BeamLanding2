@@ -20,7 +20,7 @@ class Home extends React.Component {
             <div>
               <h1>Telehealth Engineered For Reliability</h1>
               <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
-              <a className='cta-button-lg-alt' href='https://final.d1ii85crqa7wly.amplifyapp.com/solutions'>Learn More</a>
+              <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
               <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
             </div>
             <div>
@@ -67,7 +67,7 @@ class Home extends React.Component {
               <br/>
               <img src="https://www.freelogovectors.net/svg08/techstars-logo-freelogovectors.net_.svg" />
               <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" />
-              <img src="https://beam.health/wp-content/uploads/2020/10/Comcast_Lift_Labs.png" />
+              <img src="https://dl.airtable.com/.attachments/3390f0098135b210e958beb9034bd5dc/12a89992/comcast.logo.png" />
             </div>
             <div className='demo-container' id="schedule-demo">
               <h1>Schedule a Demo</h1>

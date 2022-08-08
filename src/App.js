@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Solutions from './pages/Solutions'
 import FrequentyAskedQuestions from './pages/FrequentyAskedQuestions';
-import Blog from './pages/Blog';
+// import Blog from './pages/Blog';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudy1 from './pages/CaseStudy1';
 import CaseStudy2 from './pages/CaseStudy2';
@@ -95,9 +95,6 @@ class App extends Component {
           :
           this.state.active_page == 'faq' ?
           <FrequentyAskedQuestions />
-          :
-          this.state.active_page == 'blog' ?
-          <Blog />
           :
           this.state.active_page == 'case_studies' ?
           <CaseStudies />

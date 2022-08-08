@@ -25,7 +25,7 @@ class CaseStudies extends React.Component {
             <BrowserRouter basename="/">
               <Link to='case_study_1' onClick={()=> this.props.updateNav('case_study_1')} className="case-study-item">
                 <div>
-                  <img src="https://beam.health/wp-content/uploads/2020/09/couchlogo-case1n.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/couch_logo.png" />
                 </div>
                 <div>
                   <h4>CASE #1 - Psychiatry</h4>
@@ -35,7 +35,7 @@ class CaseStudies extends React.Component {
               </Link>
               <Link to='case_study_2' onClick={()=> this.props.updateNav('case_study_2')} className="case-study-item">
                 <div>
-                  <img src="https://beam.health/wp-content/uploads/2020/11/medx-case2n.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/medx_logo.png" />
                 </div>
                 <div>
                   <h4>CASE #2 - Wellness / Medical Spa</h4>
@@ -45,7 +45,7 @@ class CaseStudies extends React.Component {
               </Link>
               <Link to='case_study_3' onClick={()=> this.props.updateNav('case_study_3')} className="case-study-item">
                 <div>
-                  <img src="https://beam.health/wp-content/uploads/2020/11/Urgent-case3n.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/uc247_logo.png" />
                 </div>
                 <div>
                   <h4>CASE #3 - Urgent Care looking to scale</h4>
@@ -55,7 +55,7 @@ class CaseStudies extends React.Component {
               </Link>
               <Link to='case_study_4' onClick={()=> this.props.updateNav('case_study_4')} className="case-study-item">
                 <div>
-                  <img src="https://beam.health/wp-content/uploads/2020/11/emergicenter-case4n.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/986emergicenter_logo.png" />
                 </div>
                 <div>
                   <h4>CASE #4 - Urgent Care facing COVID-19</h4>

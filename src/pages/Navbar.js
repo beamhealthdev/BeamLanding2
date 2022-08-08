@@ -65,7 +65,7 @@ class Navbar extends React.Component {
         <div className='item-center'>
           <BrowserRouter basename="/">
             <Link to='/' onClick={()=> this.props.updateNav('home')}>
-              <img src='https://beam.health/wp-content/themes/beam-health/images/logo.png' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
             </Link>
           </BrowserRouter>
         </div>
