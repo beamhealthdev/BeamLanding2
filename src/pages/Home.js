@@ -21,7 +21,7 @@ class Home extends React.Component {
               <h1>Telehealth Engineered For Reliability</h1>
               <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
               <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
-              <a className='cta-button-lg' href="#schedule-demo">Schedule a Demo</a>
+              <a className='cta-button-lg' href="#schedule-demo">Schedule Demo</a>
             </div>
             <div>
               <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam-landing-image.png' />

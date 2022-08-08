@@ -83,13 +83,12 @@ h4 {
     width: calc(50vw - 150px);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     z-index: 999;
     cursor: pointer;
     a, div {
       text-decoration: none;
+      margin-right: 50px;
       color: $primary-dark;
-      margin-right: 80px;
       &:hover {
         color: $primary;
       }
@@ -115,7 +114,7 @@ h4 {
   }
 }
 
-@media(max-width:900px) {
+@media(max-width:1130px) {
   .nav-container {
     padding: 20px 30px;
     justify-content: space-between;
