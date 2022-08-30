@@ -48,7 +48,7 @@ class API extends React.Component {
                 <div>
                   <h2>Everything you need to rapidly build and deploy your <span style={{whiteSpace:'nowrap'}}>custom solution</span></h2>
                   <ul>
-                    <li>API includes full documentation, including sample requests and responses</li>
+                    <li>API includes full documentation, sample requests and responses</li>
                     <li>Leverage our developer support during your build, including training videos, dedicated Slack channel, and live 1-on-1 support</li>
                     <li>API keys provided same day so you can start building immediately</li>
                   </ul>  
@@ -60,7 +60,7 @@ class API extends React.Component {
                   <ul>
                     <li>A clean out of the box solution that will save you development time</li>
                     <li>Leverage all our features to create a unified client experience</li>
-                    <li>Connect Beam with your existing stack and EHR</li>
+                    <li>No limits on the number of clients or team members that can be added, and no storage limits for your account</li>
                   </ul>  
                 </div>
                 <div className="left-pad">
