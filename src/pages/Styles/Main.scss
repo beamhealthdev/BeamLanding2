@@ -699,6 +699,7 @@ h4 {
     display: flex;
     align-items: center;
     .cta-button-lg {
+      background-color: $primary-dark;
       padding: 8px 16px;
     }
     >div:first-of-type {
