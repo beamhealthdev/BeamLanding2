@@ -11,6 +11,7 @@ import CaseStudy1 from './pages/CaseStudy1';
 import CaseStudy2 from './pages/CaseStudy2';
 import CaseStudy3 from './pages/CaseStudy3';
 import CaseStudy4 from './pages/CaseStudy4';
+import API from './pages/API';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,11 @@ class App extends Component {
     else if(window.location.pathname == '/blog') {
       this.setState({
         active_page:'blog'
+      })
+    }
+    else if(window.location.pathname == '/api') {
+      this.setState({
+        active_page:'api'
       })
     }
     else if(window.location.pathname == '/case_studies') {
@@ -92,6 +98,9 @@ class App extends Component {
           :
           this.state.active_page == 'solutions' ?
           <Solutions />
+          :
+          this.state.active_page == 'api' ?
+          <API />
           :
           this.state.active_page == 'faq' ?
           <FrequentyAskedQuestions />
