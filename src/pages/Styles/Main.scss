@@ -790,9 +790,17 @@ h4 {
           margin-bottom: 40px;
           padding: 0;
           img {
-            width: 70%;
-            margin-left: 15%;
+            width: 90%;
+            margin-left: 5%;
           }
+        }
+        h2 {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+        li {
+          font-size: 1.2rem;
+          line-height: 1.9rem;
         }
       }
       .landing-feature-item:nth-of-type(1), .landing-feature-item:nth-of-type(3) {
