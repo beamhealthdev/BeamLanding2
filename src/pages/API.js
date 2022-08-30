@@ -19,7 +19,7 @@ class API extends React.Component {
             <Navbar />
             <div className="api-main-container">
               <div>
-                <h1>A lightweight API to kickstart your EHR or Clinical Platform</h1>
+                <h1>A lightweight API to kickstart your <span style={{whiteSpace:'nowrap'}}>Clinical Platform</span></h1>
                 <h4>Healthcare API built with developers in mind. Leverage our telehealth, payment processing, and scheduling features to build or enhance your own solution.</h4>
                 <a className='cta-button-lg' href="https://docs.beam.health" target="_blank">View Documentation</a>
               </div>
