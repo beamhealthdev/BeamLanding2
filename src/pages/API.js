@@ -21,62 +21,61 @@ class API extends React.Component {
               <div>
                 <h1>A lightweight API to kickstart your <span style={{whiteSpace:'nowrap'}}>Clinical Platform</span></h1>
                 <h4>Healthcare API built with developers in mind. Leverage our telehealth, payment processing, and scheduling features to build or enhance your own solution.</h4>
-                <a className='cta-button-lg' href="https://docs.beam.health" target="_blank">View Documentation</a>
+                <div style={{marginTop:'20px'}}>
+                  <a className='cta-button-lg' href="https://docs.beam.health" target="_blank">API Docs</a>
+                  <a className='cta-button-lg-alt' href='#schedule-demo'>Schedule Demo</a>
+                </div>
               </div>
               <div>
-                <img src="https://beam-provider-landing.s3.amazonaws.com/api_marketing_screen_1.png" />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/api_desktop.png" />
               </div>
             </div>
             <div className='landing-feature-container'>
-              <div className='landing-feature-item'>
+              <h2>Access Beam Health's <span style={{whiteSpace:'nowrap'}}>Complete API</span></h2>
+              <div className='landing-feature-item splash_2' style={{paddingTop:'30px'}}>
                 <div>
-                  <h2>Access Beam Health's <span style={{whiteSpace:'nowrap'}}>Complete API</span></h2>
-                  <ul>
-                    <li>Build a custom solution on top of Beam's telehealth, payment process, and scheduling feature set</li>
-                    <li>Connect Beam with your existing tech stack to improve workflows and client experience</li>
-                    <li>All of Beam's world-class features are available via the API for both desktop and mobile solutions</li>
-                  </ul>  
+                  <div className="bullet-point-container">
+                    <div>Build a custom solution on top of Beam's telehealth, payment process, and scheduling feature set</div>
+                    <div>Connect Beam with your existing tech stack to improve workflows and client experience</div>
+                    <div>All of Beam's world-class features are available via the API for both desktop and mobile solutions</div>
+                  </div>
+                  <div className="mobile-only">
+                    <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' />
+                  </div>
+                  <h2 style={{paddingTop:"100px", paddingBottom:"0px"}}>Everything you need to rapidly build and deploy your <span style={{whiteSpace:'nowrap'}}>custom solution</span></h2>
+                  <div className="bullet-point-container">
+                    <div>API includes full documentation, sample requests and responses</div>
+                    <div>Leverage our developer support during your build, including training videos, dedicated Slack channel, and live 1-on-1 support</div>
+                    <div>API keys provided same day so you can start building immediately</div>
+                  </div>
                 </div>
                 <div className="left-pad">
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/dashboard_marketing_screen_1.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' />
                 </div>
               </div>
               <div className='landing-feature-item'>
                 <div className="right-pad">
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/api_marketing_screen_2.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/desktop_ui_sample.png' style={{marginLeft:'-65px'}} />
                 </div>
                 <div>
-                  <h2>Everything you need to rapidly build and deploy your <span style={{whiteSpace:'nowrap'}}>custom solution</span></h2>
-                  <ul>
-                    <li>API includes full documentation, sample requests and responses</li>
-                    <li>Leverage our developer support during your build, including training videos, dedicated Slack channel, and live 1-on-1 support</li>
-                    <li>API keys provided same day so you can start building immediately</li>
-                  </ul>  
+                  <h2><span>Enterprise Businesses</span><br/>Seamlessly integrate in <span style={{whiteSpace:'nowrap'}}>no time</span></h2>
+                  <div className="bullet-point-container">
+                    <div>A clean out of the box solution that will save you development time</div>
+                    <div>Leverage all our features to create a unified client experience</div>
+                    <div>No limits on the number of clients or team members that can be added, and no storage limits for your account</div>
+                  </div>  
                 </div>
               </div>
               <div className='landing-feature-item'>
                 <div>
-                  <h2>Enterprise Businesses: Seamlessly integrate in <span style={{whiteSpace:'nowrap'}}>no time</span></h2>
-                  <ul>
-                    <li>A clean out of the box solution that will save you development time</li>
-                    <li>Leverage all our features to create a unified client experience</li>
-                    <li>No limits on the number of clients or team members that can be added, and no storage limits for your account</li>
-                  </ul>  
+                  <h2><span>Digital Health Startups</span><br/>A flexible API that centers around customizability</h2>
+                  <div className="bullet-point-container">
+                    <div>With our white labeled Telehealth API functionality, you can start seeing customers right away</div>
+                    <div>Say goodbye to emailing paperwork back and forth. Leverage our Intake API to provide patients with a clean onboarding experience</div>
+                  </div>  
                 </div>
                 <div className="left-pad">
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/invoicing_marketing_screen_1.png' />
-                </div>
-              </div>
-              <div className='landing-feature-item'>
-                <div className="right-pad">
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/patients_marketing_screen_1.png' />
-                </div>
-                <div>
-                  <h2>Digital Health Startups: A flexible API that centers around customizability</h2>
-                  <ul>
-                    <li>With our white labeled Telehealth API functionality, you can start seeing customers right away</li>
-                    <li>Say goodbye to emailing paperwork back and forth. Leverage our Intake API to provide patients with a clean onboarding experience</li>
-                  </ul>  
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/code_ui_sample.png' />
                 </div>
               </div>
             </div>

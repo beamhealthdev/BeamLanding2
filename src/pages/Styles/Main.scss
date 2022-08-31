@@ -692,49 +692,75 @@ h4 {
   background-color: $alt-light;
   border-radius: 0 0 60px 60px;
   .api-main-container {
-    background: rgb(242,248,246);
-    background: linear-gradient(180deg, rgba(242,248,246,1) 0%, rgb(165, 158, 232) 100%);
-    min-height: 70vh;
-    border-radius: 0 0 60px 60px;
+    height: calc(100vh - 100px);
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
+    background-image: url('https://beam-provider-landing.s3.amazonaws.com/API_splash_bg.png');
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
     .cta-button-lg {
       background-color: $primary-dark;
-      padding: 8px 16px;
+      padding: 8px 61px;
+      margin: 0 20px;
+    }
+    .cta-button-lg-alt {
+      background-color: #fff;
+      padding: 8px 25px;
+      border-color: $primary-dark;
+      color: $primary-dark;
+      margin: 0 20px;
+    }
+    h4 {
+      max-width: 1000px;
+      margin: 20px 0;
+    }
+    a {
+      white-space: nowrap;
     }
     >div:first-of-type {
-      width: 60%;
+      width: 100%;
       padding: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     >div:last-of-type {
-      width: 40%;
-      overflow: hidden;
-      text-align: right;
-      align-self: flex-end;
+      width: 100%;
       img {
-        // width: 100%;
-        max-height: 60vh;
-        overflow: hidden;
-        border-radius: 0 0 60px 0;
+        max-width: 700px;
+        max-height: 580px;
       }
     }
   } 
   .landing-feature-container {
-    margin-top: 80px;
+    margin-top: 420px;
     padding: 0;
+    >h2 {
+      padding: 0 60px;
+      padding-top: 60px;
+      margin-bottom: 0 !important;
+    }
     .landing-feature-item {
-      align-items: center;
       padding: 60px;
+      .bullet-point-container {
+        display: flex;
+        flex-direction: column;
+        >div {
+          border-left: 4px $primary-dark solid;
+          padding-left: 20px;
+          margin-bottom: 20px;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+          font-weight: 400;
+        }
+      }
       img {
         width: 100%;
         border-radius: 10px;
       }
-    }
-    li {
-      font-size: 1.4rem;
-      line-height: 2.2rem;
-      font-weight: 400;
-      margin-bottom: 15px;
     }
     h2 {
       font-size: 2.2rem;
@@ -742,16 +768,51 @@ h4 {
       font-weight: 600;
       margin-bottom: 30px;
     }
+    .splash_2 {
+      background-image: url('https://beam-provider-landing.s3.amazonaws.com/API_splash_bg_2.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+    }
   }
-  .landing-feature-item:nth-of-type(2), .landing-feature-item:nth-of-type(4) {
-    background-color: $primary-dark;
-    color: $primary-light;
+  .landing-feature-item:nth-of-type(2), .landing-feature-item:nth-of-type(3) {
+    align-items: center;
+    background-color: #CBF0FF;
+    h2 {
+      color: #205B73;
+      span:first-of-type {
+        font-size: 1.4rem;
+        line-height: 1rem;
+      }
+    }
+    .bullet-point-container {
+      >div {
+        border-color: #205B73;
+      }
+    }
+  }
+  .landing-feature-item:nth-of-type(2) {
+    img {
+      margin-left: -60px;
+      max-width: 400px;
+    }
+  }
+  .landing-feature-item:nth-of-type(3) {
+    img {
+      margin-left: 70px;
+    }
   }
   .api-bottom-container {
+    background-color: #CBF0FF;
     text-align: center;
     padding: 60px;
     font-size: 2rem;
     line-height: 3rem;
+  }
+  .demo-container {
+    margin-top: 0;
+    padding-top: 60px;
+    background-color: #CBF0FF;
   }
 }
 
@@ -762,10 +823,21 @@ h4 {
   padding-right: 60px;
 }
 
+.mobile-only {
+  display: none;
+}
+
 @media (max-width:800px) {
+  .mobile-only {
+    display: block;
+    padding-top: 80px;
+  }
   .api-parent-container {
     .api-main-container {
       flex-direction: column;
+      .cta-button-lg-alt {
+        display: none;
+      }
       >div:first-of-type {
         width: 100%;
         text-align: center;
@@ -773,14 +845,12 @@ h4 {
       >div:last-of-type {
         width: 100%;
         img {
-          // width: 100%;
-          max-height: 60vh;
-          overflow: hidden;
-          border-radius: 0 0 60px 0;
+          max-width: 50%;
         }
       }
     }
     .landing-feature-container {
+      margin-top: 40px;
       .landing-feature-item {
         flex-direction: column;
         >div {
@@ -803,8 +873,16 @@ h4 {
           line-height: 1.9rem;
         }
       }
-      .landing-feature-item:nth-of-type(1), .landing-feature-item:nth-of-type(3) {
+      .landing-feature-item:nth-of-type(1) {
+        .left-pad img {
+          display: none
+        };
+      }
+      .landing-feature-item:nth-of-type(3) {
         flex-direction: column-reverse;
+        img {
+          margin-left: 0;
+        }
       }
     }
   }
