@@ -89,8 +89,7 @@ class Solutions extends React.Component {
               </div>
               <div>
                 <div className="accordion-feature-graphic">
-                  <h2>$20,000</h2>
-                  <h4>The average loss in revenue per year due to payment collections process. Beam gives that back to you.</h4>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/landing-blob-solutions.png" />
                 </div>
               </div>
             </div>
