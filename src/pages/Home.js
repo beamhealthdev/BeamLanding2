@@ -9,7 +9,8 @@ import 'animate.css';
 class Home extends React.Component {
 
   state = {
-    testimonialStep:1
+    testimonialStep:1,
+    telehealthStep:'group'
   }
 
   componentDidMount = () => {
@@ -26,10 +27,10 @@ class Home extends React.Component {
               <h1>Telehealth Engineered For Reliability</h1>
               <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
               <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
-              <a className='cta-button-lg' href="#schedule-demo">Schedule Demo</a>
+              <a className='cta-button-lg' href="#schedule-demo">Book a Demo <i className='fas fa-arrow-right'></i></a>
             </div>
             <div>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/beam_dashboard_desktop.png' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png' />
               <img src='https://beam-provider-landing.s3.amazonaws.com/beam_login_mobile.png' />
             </div>
           </AnimationOnScroll>
@@ -44,37 +45,93 @@ class Home extends React.Component {
               <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_liftlabs.png" />
             </div>
           </div>
+          <AnimationOnScroll className='landing-api-container' animateIn='animate__fadeIn'>
+            <div>
+              <i className='fas fa-laptop-code'></i>
+              <h1><span>Integrate</span> Beam into your platform <span style={{whiteSpace:'nowrap'}}>in minutes</span></h1>
+              <h4>Healthcare API built with developers in mind. Leverage our telehealth, payment processing, and scheduling features to build or enhance your own solution.</h4>
+              <a className='cta-button-white' href='https://beam.health/api'>Beam API <i className='fas fa-arrow-right'></i></a>
+            </div>
+            <div>
+              <img src="https://beam-provider-landing.s3.amazonaws.com/final/laptop-code-block-img.png" />
+            </div>
+          </AnimationOnScroll>
+          <div className='review-container'>
+            <div>
+              <h4>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h4>
+              <h6>• Dr. Robert Strayhan • Serendipity Wellness</h6>
+            </div>
+          </div>
+          <div className='landing-telehealth-container'>
+            <h1><span>Powerful</span>, <span style={{whiteSpace:'nowrap'}}>all-in-one</span> <span style={{whiteSpace:'nowrap'}}>telehealth solution</span></h1>
+            <h4>With custom digital waiting rooms, group video, note-taking, and more, our feature-rich telehealth has everything you need to provide great care to your patients.</h4>
+            <div className='telehealth-features-container'>
+              <div className='telehealth-features-content'>
+                {this.state.telehealthStep=='group' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Group Video</h4>
+                  <p>Allow multiple participants in a single video session with our group video conferencing. Intuitive features include signal strength monitoring, screen sharing, volume control, and more.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" />
+                </AnimationOnScroll>
+                }
+                {this.state.telehealthStep=='customize' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Customizability</h4>
+                  <p>A virtual waiting room that comes with custom content to educate and promote services to patients as they wait for your providers. Every provider gets a unique waiting room link that can be used anywhere in the world, at any time.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" />
+                </AnimationOnScroll>
+                }
+                {this.state.telehealthStep=='screen' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Screen Sharing</h4>
+                  <p>Easily share your screen during patient encounters within the Beam dashboard with just one-click.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.png" />
+                </AnimationOnScroll>
+                }
+                {this.state.telehealthStep=='pip' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Picture in Picture</h4>
+                  <p>Keep your focus on the patient. With picture-in-picture,  you can review test results or take notes while staying visually engaged.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" />
+                </AnimationOnScroll>
+                }
+                {this.state.telehealthStep=='chat' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Live Chat</h4>
+                  <p>Interact with patients while they wait in your custom waiting room. Support staff can now triage patients, as well as share and receive documents, prior to the provider entering the digital exam room.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_chat.png" />
+                </AnimationOnScroll>
+                }
+                {this.state.telehealthStep=='notes' &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Note Taking</h4>
+                  <p>Construct and complete visit notes during video appointments. Beam’s note taking feature comes equipped with SOAP functionality and can easily be integrated to share data with your EHR.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_notes.png" />
+                </AnimationOnScroll>
+                }
+              </div>
+              <div className='telehealth-features-buttons'>
+                <div className={this.state.telehealthStep=='group' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'group'})}><i className='fas fa-video'></i><span>Group Video</span></div>
+                <div className={this.state.telehealthStep=='customize' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'customize'})}><i className='fas fa-cog'></i><span>Customizability</span></div>
+                <div className={this.state.telehealthStep=='screen' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'screen'})}><i className='fas fa-display'></i><span>Screen Sharing</span></div>
+                <div className={this.state.telehealthStep=='pip' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'pip'})}><i className='fas fa-window-restore'></i><span>Picture in Picture</span></div>
+                <div className={this.state.telehealthStep=='chat' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'chat'})}><i className='fas fa-comments'></i><span>Live Chat</span></div>
+                <div className={this.state.telehealthStep=='notes' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'notes'})}><i className='fas fa-clipboard'></i><span>Note Taking</span></div>
+              </div>
+            </div>
+            <a className='cta-button-lg' href="#schedule-demo" style={{marginTop:'60px'}}>Book a Demo <i className='fas fa-arrow-right'></i></a>
+          </div>
           <div className='landing-feature-container'>
             <div className='landing-feature-item'>
-              <div className='modular-img-container'>
-                <div>
-                  <AnimationOnScroll animateIn='animate__fadeIn animate__rotate1' animateOnce={true}>
-                    <img src='https://beam-provider-landing.s3.amazonaws.com/landing_module_img_3.png' />
-                  </AnimationOnScroll>
-                </div>
-                <div>
-                  <AnimationOnScroll animateIn='animate__fadeIn animate__rotate2' animateOnce={true}>
-                    <img src='https://beam-provider-landing.s3.amazonaws.com/landing_module_img_1.png' />
-                  </AnimationOnScroll>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/landing_module_img_2.png' />
-                </div>
-              </div>
               <div>
-                <h1>Customizable Workflows</h1>
-                <h4>No workflow in Beam is set in stone. You can easily craft a better experience from telehealth, to onboarding, to online chat, to payment collection.</h4>
+                <div className='landing-feature-label'>Scheduling</div>
+                <h1><span>Organize</span> your day around <span style={{whiteSpace:'nowrap'}}>your schedule</span></h1>
+                <h4>No shows cost money. Beam's scheduling tool makes it easy for providers to set their availability, and for patients to book <span style={{whiteSpace:'nowrap'}}>appointments online.</span></h4>
+                <h6><i className='fas fa-check-circle'></i>Integrate with your calendar.</h6>
+                <h6><i className='fas fa-check-circle'></i>Send automated text/email reminders.</h6>
+                <h6><i className='fas fa-check-circle'></i>Set your own hours.</h6>
               </div>
-            </div>
-            <div className='landing-feature-item'>
-              <div>
-                <h1>Powerful, all-in-one telehealth solution</h1>
-                <h4>With custom digital waiting rooms, group video, note-taking, and more, our feature-rich telehealth has everything you need to provide great care to your patients.</h4>
-              </div>
-              <AnimationOnScroll animateIn='animate__fadeIn' className='landing-second-feature-img-container' animateOnce={true}>
-                <img src='https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png' />
-              </AnimationOnScroll>
-            </div>
-            <div className='landing-feature-item'>
-              <div className='landing-third-feature-img-container'>
+              <div className='landing-first-feature-img-container'>
                 <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
                   <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-1.png' />
                 </AnimationOnScroll>
@@ -82,13 +139,51 @@ class Home extends React.Component {
                   <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-2.png' />
                 </AnimationOnScroll>
               </div>
+            </div>
+
+            <div className='landing-feature-item'>
+              <div className='landing-second-feature-img-container'>
+                <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_1.png' />
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__slideInLeft' delay={2} className='slide-in' animateOnce={true}>
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_2.png' />
+                </AnimationOnScroll>
+              </div>
               <div>
-                <h1>Intuitive Scheduling</h1>
-                <h4>No shows cost money. With Beam, you can now send custom reminders to a patient's email before their scheduled appointment.</h4>
+                <div className='landing-feature-label'>Payments</div>
+                <h1><span>Collect</span> consult <span style={{whiteSpace:'nowrap'}}>charges instantly</span></h1>
+                <h4>Beam's database securely stores payment information for future transactions, decreasing overdue payments while increasing <span style={{whiteSpace:'nowrap'}}>cash flow.</span></h4>
+                <h6><i className='fas fa-check-circle'></i>Accept multiple payment forms.</h6>
+                <h6><i className='fas fa-check-circle'></i>Create subscriptions and pay-over-time options.</h6>
+                <h6><i className='fas fa-check-circle'></i>Request payment details prior to consults.</h6>
               </div>
             </div>
+
+            <div className='landing-feature-item'>
+              <div>
+                <div className='landing-feature-label'>Patient Intake</div>
+                <h1><span>Build</span> forms tailored to <span style={{whiteSpace:'nowrap'}}>your workflow</span></h1>
+                <h4>Patient demographics, medical history, consent forms - collect the information you need when you need it. Simply upload a template or build your own custom intake forms directly within the <span style={{whiteSpace:'nowrap'}}>Beam dashboard.</span></h4>
+                <h6><i className='fas fa-check-circle'></i>Integrate with your EHR.</h6>
+                <h6><i className='fas fa-check-circle'></i>View aggregated patient response data.</h6>
+                <h6><i className='fas fa-check-circle'></i>Customize intake forms based on purpose.</h6>
+              </div>
+              <div className='landing-third-feature-img-container'>
+                <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_1.png' />
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_2.png' />
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_3.png' />
+                </AnimationOnScroll>
+              </div>
+            </div>
+            
           </div>
-          <div className='testimonial-container'>
+          {/* <div className='testimonial-container'>
             <div>
               <i className='fas fa-caret-left' onClick={() => this.setState({testimonialStep:!this.state.testimonialStep})}></i>
             </div>
@@ -106,7 +201,7 @@ class Home extends React.Component {
               {this.state.testimonialStep==false && 
               <>
               <div className='quote-container'>
-                “Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting  them later! Our patients are loving it as well since they don't have to leave home or work."
+                “Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work."
               </div>
               <div className='quote-attr'>
                 • Dr. Robert Strayhan - Serendipity Wellness
@@ -117,7 +212,7 @@ class Home extends React.Component {
             <div>
               <i className='fas fa-caret-right' onClick={() => this.setState({testimonialStep:!this.state.testimonialStep})}></i>
             </div>
-          </div>
+          </div> */}
           <div className='demo-container' id="schedule-demo">
             <h1>Schedule a Demo</h1>
             <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{height: "756px", border: "none"}}></iframe>

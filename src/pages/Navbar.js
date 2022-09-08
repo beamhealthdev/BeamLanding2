@@ -43,9 +43,13 @@ class Navbar extends React.Component {
         }
         <div className='items-left'>
           <BrowserRouter basename="/">
+            <Link to='/' onClick={()=> this.props.updateNav('home')}>
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
+            </Link>
             <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
+            <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
             <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-            <div onClick={() => this.toggleResourcesModal()}>Resources</div>
+            <div onClick={() => this.toggleResourcesModal()}>Resources&nbsp;<i className='fas fa-chevron-down'></i></div>
           </BrowserRouter>
         </div>
         <div className='mobile-nav'>
@@ -56,22 +60,15 @@ class Navbar extends React.Component {
           <i className='fas fa-times' onClick={() => this.setState({mobileMenu:false})}></i>
             <BrowserRouter basename="/">
               <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
+              <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
               <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
               <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
               <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
-              <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
             </BrowserRouter>
         </div>
         }
-        <div className='item-center'>
-          <BrowserRouter basename="/">
-            <Link to='/' onClick={()=> this.props.updateNav('home')}>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
-            </Link>
-          </BrowserRouter>
-        </div>
         <div className='items-right'>
-          <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Schedule Demo</a>
+          <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book a Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
         </div>
       </div>
     );

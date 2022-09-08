@@ -15,7 +15,6 @@ class ResourcesModal extends React.Component {
             {/* <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link> */}
             <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
             <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
-            <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
           </BrowserRouter>
         </div>
       </div>

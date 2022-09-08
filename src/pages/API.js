@@ -35,7 +35,7 @@ class API extends React.Component {
               <div className='landing-feature-item splash_2' style={{paddingTop:'30px'}}>
                 <div>
                   <div className="bullet-point-container">
-                    <div>Build a custom solution on top of Beam's telehealth, payment process, and scheduling feature set</div>
+                    <div>Build a custom solution on top of Beam's telehealth, payment processing, and scheduling feature set</div>
                     <div>Connect Beam with your existing tech stack to improve workflows and client experience</div>
                     <div>All of Beam's world-class features are available via the API for both desktop and mobile solutions</div>
                   </div>
