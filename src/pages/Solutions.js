@@ -61,6 +61,9 @@ class Solutions extends React.Component {
                 </div>
               </div>
             </div>
+            <div style={{textAlign:'center'}}>
+              <a className='cta-button-lg' href="#schedule-demo" style={{padding:'14px 30px', marginTop:'20px'}}>Book a Demo <i className='fas fa-arrow-right'></i></a>
+            </div>
           </div>
           {/* <div className="grid-feature-container-solutions">
             <h1>Smart Group Sessions</h1>
@@ -118,29 +121,27 @@ class Solutions extends React.Component {
                 </div>
               </div>
             </div>
-            <a className="cta-button" style={{margin:'auto'}} href="https://providers.beam.health/revenue-calculator/" target="_blank">Calculate Your Savings</a>
+            <a className="cta-button" style={{padding:'14px 30px', marginTop:'20px'}} href="https://providers.beam.health/revenue-calculator/" target="_blank">Calculate Your Savings</a>
           </div>
           <div className="grid-feature-container-solutions">
             <h1>Expedite Administrative Work</h1>
             <h4>Upgrade your patient intake system and collect the info you need before they ever set foot in your office.</h4>
             <div className="grid-feature-item-container">
-              <div className="grid-feature-item"></div>
               <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-bottom-image-1.png" style={{width:'120px'}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_4.png" />
                 <h2>Collect Intake Data</h2>
                 <h4>Provide your patients with a simple intake form so you have all their information before starting.</h4>
               </div>
               <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-bottom-image-2.png" style={{width:'120px'}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/payment_info_screen.png" />
                 <h2>Never lose a payment to collections</h2>
                 <h4>Collect and verify payment information before starting.</h4>
               </div>
               <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-bottom-image-3.png" style={{width:'120px'}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/invoicing_marketing_screen_1.png" />
                 <h2>Flexible Payment Structures</h2>
                 <h4>Recurring billing that allows you to set up payment plans, subscriptions, and more.</h4>
               </div>
-              <div className="grid-feature-item"></div>
             </div>
           </div>
           <div className='demo-container' style={{marginTop:'60px'}} id="schedule-demo">
