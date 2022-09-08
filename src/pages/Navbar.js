@@ -59,6 +59,7 @@ class Navbar extends React.Component {
         <div className='mobile-overlay'>
           <i className='fas fa-times' onClick={() => this.setState({mobileMenu:false})}></i>
             <BrowserRouter basename="/">
+              <Link to='/' onClick={()=> this.props.updateNav('home')}>Home</Link>
               <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
               <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
               <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
