@@ -127,6 +127,9 @@ h4 {
       background-color: $primary-dark;
       font-weight: 700;
     }
+    img {
+      display: none;
+    }
   }
 }
 
@@ -146,10 +149,16 @@ h4 {
     .items-right {
       order: 2;
       margin: 0 20px;
-      width: 50%;
+      width: calc(100% - 60px);
       .cta-button {
         width: 100%;
-        font-size: 0.8rem
+        font-size: 0.8rem;
+        white-space: nowrap;
+      }
+      img {
+        display: block;
+        max-width: calc(100% - 40px);
+        margin-right: 40px;
       }
     }
     .item-center {
@@ -590,7 +599,7 @@ h4 {
     padding: 0;
     overflow: hidden;
     iframe {
-      min-width: 500px;
+      // min-width: 500px;
     }
   }
 }

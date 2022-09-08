@@ -59,7 +59,6 @@ class Navbar extends React.Component {
         <div className='mobile-overlay'>
           <i className='fas fa-times' onClick={() => this.setState({mobileMenu:false})}></i>
             <BrowserRouter basename="/">
-              <Link to='/' onClick={()=> this.props.updateNav('home')}>Home</Link>
               <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
               <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
               <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
@@ -69,6 +68,11 @@ class Navbar extends React.Component {
         </div>
         }
         <div className='items-right'>
+          <BrowserRouter basename="/">
+            <Link to='/' onClick={()=> this.props.updateNav('home')}>
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
+            </Link>
+          </BrowserRouter>
           <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book a Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
         </div>
       </div>
