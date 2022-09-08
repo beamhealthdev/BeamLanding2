@@ -1021,6 +1021,9 @@ h4 {
       .accordion-feature-graphic {
         padding: 0;
         padding-bottom: 40px;
+        img {
+          max-width: 100%;
+        }
       }
     }
 
