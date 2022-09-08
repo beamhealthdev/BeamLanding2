@@ -9,7 +9,7 @@ import 'animate.css';
 class Home extends React.Component {
 
   state = {
-    testimonialStep:1,
+    reviewStep:true,
     telehealthStep:'group'
   }
 
@@ -58,8 +58,22 @@ class Home extends React.Component {
           </AnimationOnScroll>
           <div className='review-container'>
             <div>
+              {this.state.reviewStep &&
+              <AnimationOnScroll animateIn='animate__fadeIn'>
               <h4>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h4>
               <h6>• Dr. Robert Strayhan • Serendipity Wellness</h6>
+              </AnimationOnScroll>
+              }
+              {!this.state.reviewStep &&
+              <AnimationOnScroll animateIn='animate__fadeIn'>
+              <h4>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h4>
+              <h6>• Novia Castro • Office Manager • Access-A-Doc</h6>
+              </AnimationOnScroll>
+              }
+              <div>
+                <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:!this.state.reviewStep})}></i>
+                <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:!this.state.reviewStep})}></i>
+              </div>
             </div>
           </div>
           <div className='landing-telehealth-container'>

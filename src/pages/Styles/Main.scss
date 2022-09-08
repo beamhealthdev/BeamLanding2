@@ -1483,7 +1483,7 @@ h4 {
   h6 {
     font-family: 'DM Sans', sans-serif;
   }
-  div {
+  >div {
     padding: 40px;
     background: rgba( 255, 255, 255, 0.55 );
     box-shadow: 0 8px 32px 0 rgba( 89, 206, 255, 0.37 );
@@ -1491,6 +1491,23 @@ h4 {
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    div {
+      i {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        line-height: 40px;
+        background-color: #59CEFF;
+        color: #fff;
+        margin: 20px 20px 0 20px;
+        cursor: pointer;
+        transition: all ease 0.4s;
+        &:hover {
+          background-color: #168bbd;
+          transition: background-color 0.4s;
+        }
+      }
+    }
   }
 }
 
