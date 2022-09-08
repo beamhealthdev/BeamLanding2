@@ -17,27 +17,52 @@ class Solutions extends React.Component {
         <div className="solutions-container">
           <Navbar />
           <div className="solutions-landing-container">
-            <h1>A digital health platform designed for innovation</h1>
-            <h4>Built from the ground up for all your clinical needs</h4>
-            <div className="solutions-landing-item-container">
-              <div className="solutions-landing-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-landing-image-1.png" />
-                <h2>Raise Telehealth Standards</h2>
-                <h4>Choppy video and audio that hinder conversations call for reliable solutions.</h4>
+            <div className="solutionsPageAnimation">
+              <h1>A digital health platform designed for innovation</h1>
+              <h4>Built from the ground up for all your clinical needs</h4>
+            </div>
+            <div className='solutions-feature-container'>
+              <div className='landing-feature-item'>
+                <div>
+                  <div className='landing-feature-label'>Quality</div>
+                  <h1><span>Raise</span> telehealth standards</h1>
+                  <h4>Choppy video and audio that hinder conversations call for <span style={{whiteSpace:'nowrap'}}>reliable solutions.</span></h4>
+                </div>
+                <div className='landing-first-feature-img-container'>
+                  <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
+                    <img src='https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png' />
+                  </AnimationOnScroll>
+                </div>
               </div>
-              <div className="solutions-landing-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-landing-image-2.png" />
-                <h2>Built to Scale</h2>
-                <h4>A platform that adapts to your needs - from private clinics to large enterprise.</h4>
+
+              <div className='landing-feature-item'>
+                <div className='solutions-second-feature-img-container'>
+                  <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
+                    <img src='https://beam-provider-landing.s3.amazonaws.com/patients_marketing_screen_1.png' />
+                  </AnimationOnScroll>
+                </div>
+                <div>
+                  <div className='landing-feature-label'>Scalability</div>
+                  <h1><span>Built</span> for practices of <span style={{whiteSpace:'nowrap'}}>all sizes</span></h1>
+                  <h4>A platform that adapts to your needs - from private clinics to <span style={{whiteSpace:'nowrap'}}>large enterprise.</span></h4>
+                </div>
               </div>
-              <div className="solutions-landing-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/solutions-landing-image-3.png" />
-                <h2>Patient Friendly Billing</h2>
-                <h4>Give your patients more payment options and peace of mind.</h4>
+
+              <div className='landing-feature-item'>
+                <div>
+                  <div className='landing-feature-label'>Flexibility</div>
+                  <h1><span>Patient</span> friendly philosophy</h1>
+                  <h4>Designed with the patient's core experience in mind, giving them more payment options, easy communication, and <span style={{whiteSpace:'nowrap'}}>peace of mind.</span></h4>
+                </div>
+                <div className='solutions-third-feature-img-container'>
+                  <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
+                    <img src='https://beam-provider-landing.s3.amazonaws.com/final/wr_screen_1.png' />
+                  </AnimationOnScroll>
+                </div>
               </div>
             </div>
           </div>
-          <div className="grid-feature-container-solutions">
+          {/* <div className="grid-feature-container-solutions">
             <h1>Smart Group Sessions</h1>
             <h4>Take full control of a virtual group session - just as you would in person.</h4>
             <div className="grid-feature-item-container">
@@ -48,7 +73,7 @@ class Solutions extends React.Component {
                 <h4>See your patient's internet connection strength in real-time.</h4>
               </div>
               <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/schedule.png" style={{borderRadius:0}} />
+                <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" style={{borderRadius:0}} />
                 <h2>Picture in <br/>Picture Mode</h2>
                 <h4>Keep focus on your patients. Pop out of video calls to look up information or take notes while staying visually connected.</h4>
               </div>
@@ -62,7 +87,7 @@ class Solutions extends React.Component {
             <a href="#schedule-demo" style={{textDecoration:'none'}}>
               <div className="cta-button" href="#schedule-demo">Schedule Demo</div>
             </a>
-          </div>
+          </div> */}
           <div className="accordion-feature-container">
             <h1>Simplify Practice Management</h1>
             <h4>Elevate your practice with digital infrastructure designed to support seamless growth.</h4>

@@ -92,7 +92,7 @@ class Home extends React.Component {
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Picture in Picture</h4>
                   <p>Keep your focus on the patient. With picture-in-picture,  you can review test results or take notes while staying visually engaged.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='chat' &&
