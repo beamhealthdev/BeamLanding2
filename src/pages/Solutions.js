@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'animate.css';
+import DocumentMeta from 'react-document-meta';
 
 class Solutions extends React.Component {
 
@@ -12,8 +13,20 @@ class Solutions extends React.Component {
   }
 
   render() {
+    const meta = {
+      title: 'Beam Health - Solutions',
+      description: 'A digital solution built from the ground up for all your clinical needs.',
+      canonical: 'http://beam.health/api',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags'
+        }
+      }
+    }
     return (
       <div>
+        <DocumentMeta {...meta} />
         <div className="solutions-container">
           <Navbar />
           <div className="solutions-landing-container">
