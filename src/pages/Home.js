@@ -9,7 +9,7 @@ import 'animate.css';
 class Home extends React.Component {
 
   state = {
-    reviewStep:true,
+    reviewStep:1,
     telehealthStep:'group'
   }
 
@@ -58,22 +58,37 @@ class Home extends React.Component {
           </AnimationOnScroll>
           <div className='review-container'>
             <div>
-              {this.state.reviewStep &&
+              {this.state.reviewStep==1 &&
+              <AnimationOnScroll animateIn='animate__fadeIn'>
+              <h4>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h4>
+              <h6>• Luke Butler • Executive Director Startup Engagement • Comcast NBCUniversal</h6>
+              <div>
+                <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:3})}></i>
+                <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:2})}></i>
+              </div>
+              </AnimationOnScroll>
+              }
+              {this.state.reviewStep==2 &&
               <AnimationOnScroll animateIn='animate__fadeIn'>
               <h4>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h4>
               <h6>• Dr. Robert Strayhan • Serendipity Wellness</h6>
+              <div>
+                <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:1})}></i>
+                <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:3})}></i>
+              </div>
               </AnimationOnScroll>
               }
-              {!this.state.reviewStep &&
+              {this.state.reviewStep==3 &&
               <AnimationOnScroll animateIn='animate__fadeIn'>
               <h4>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h4>
               <h6>• Novia Castro • Office Manager • Access-A-Doc</h6>
+              <div>
+                <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:2})}></i>
+                <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:1})}></i>
+              </div>
               </AnimationOnScroll>
               }
-              <div>
-                <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:!this.state.reviewStep})}></i>
-                <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:!this.state.reviewStep})}></i>
-              </div>
+              
             </div>
           </div>
           <div className='landing-telehealth-container'>
