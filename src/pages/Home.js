@@ -59,9 +59,15 @@ class Home extends React.Component {
           <div className='review-container'>
             <div>
               {this.state.reviewStep==1 &&
-              <AnimationOnScroll animateIn='animate__fadeIn'>
+              <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
               <h4>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h4>
-              <h6>• Luke Butler • Executive Director Startup Engagement • Comcast NBCUniversal</h6>
+              <div className='review-attr'>
+                <img src="https://images.weserv.nl/?url=emamo.com/storage/avatars/86/84/31945_e9a7304f0c1c88b5ce0d0b82e04f8684.jpg&w=400&h=400" />
+                <div>
+                  <h5>Luke Butler</h5>
+                  <h6>Executive Director Startup Engagement - <span>Comcast NBCUniversal</span></h6>
+                </div>
+              </div>
               <div>
                 <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:3})}></i>
                 <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:2})}></i>
@@ -69,9 +75,14 @@ class Home extends React.Component {
               </AnimationOnScroll>
               }
               {this.state.reviewStep==2 &&
-              <AnimationOnScroll animateIn='animate__fadeIn'>
+              <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
               <h4>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h4>
-              <h6>• Dr. Robert Strayhan • Serendipity Wellness</h6>
+              <div className='review-attr'>
+                <div>
+                  <h5>Dr. Robert Strayhan</h5>
+                  <h6>Provider - <span>Serendipity Wellness</span></h6>
+                </div>
+              </div>
               <div>
                 <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:1})}></i>
                 <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:3})}></i>
@@ -79,9 +90,14 @@ class Home extends React.Component {
               </AnimationOnScroll>
               }
               {this.state.reviewStep==3 &&
-              <AnimationOnScroll animateIn='animate__fadeIn'>
+              <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
               <h4>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h4>
-              <h6>• Novia Castro • Office Manager • Access-A-Doc</h6>
+              <div className='review-attr'>
+                <div>
+                  <h5>Novia Castro</h5>
+                  <h6>Office Manager - <span>Access-A-Doc</span></h6>
+                </div>
+              </div>
               <div>
                 <i className='fas fa-chevron-left' onClick={() => this.setState({reviewStep:2})}></i>
                 <i className='fas fa-chevron-right' onClick={() => this.setState({reviewStep:1})}></i>

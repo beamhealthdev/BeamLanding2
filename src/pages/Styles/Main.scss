@@ -1489,12 +1489,27 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  .review-attr {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
+    div {
+      padding-left: 10px;
+    }
+  }
   h4 {
     font-family: 'PT Serif', serif;
     margin-bottom: 30px;
   }
   h6 {
     font-family: 'DM Sans', sans-serif;
+    span {
+      color: #205B73;
+    }
   }
   >div {
     padding: 40px;
@@ -1565,6 +1580,21 @@ h4 {
 @media (max-width:800px) {
   .review-container {
     width: calc(100% - 60px);
+    >div {
+      padding: 20px;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .review-attr {
+      flex-direction: column;
+      align-items: center;
+      div {
+        padding-left: 0;
+        padding-top: 10px;
+      }
+    }
   }
   .team-container {
     padding: 0 30px;
