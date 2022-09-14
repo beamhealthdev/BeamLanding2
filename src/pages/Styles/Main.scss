@@ -419,7 +419,37 @@ h4 {
   }
 }
 
+.api-solutions-container {
+  padding: 60px;
+  background: url('https://beam-provider-landing.s3.amazonaws.com/final/landing-api-container-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  h4 {
+    font-weight: 600;
+  }
+  >div {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgb(89 206 255 / 37%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    .cta-button {
+      padding: 14px 30px;
+    }
+  }
+}
+
 @media (max-width:800px) {
+  .api-solutions-container {
+    padding: 60px 30px;
+    margin-top: 60px;
+    >div {
+      padding: 20px;
+    }
+  }
   .landing-feature-container {
     padding: 0 30px;
   }

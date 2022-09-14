@@ -104,6 +104,24 @@ class Solutions extends React.Component {
               <div className="cta-button" href="#schedule-demo">Schedule Demo</div>
             </a>
           </div> */}
+          <div className="api-solutions-container">
+            <div>
+              <h4>Welcome to Beam Health</h4>
+              <p>Building custom digital health solutions are more important than ever before. Delivering a “wow-experience” for patients is vital to growth in the age of consumer driven healthcare. 
+                However, imagine having to build an experience to rival tech giants like Teladoc, Zoom, Stripe, or Zocdoc - platforms that took years to design and develop. 
+                You could try leveraging these and other SaaS platforms, but in doing so you would lose flexibility, interoperability, and most importantly brand recognition. 
+                You could also try building your own solution from scratch - an endeavor that would require a team of designers and engineers working months or even years before a finished product was 
+                ready for launch. An option that would also prove to be immensely expensive.</p>
+              <p>This is where we come in. With Beam Health's API, you get the exact same API, feature set, and documentation our developers use internally. 
+                This means you can jumpstart your development and get your solution to market in weeks, not years.</p>
+              <p>Our clean, pre-built components allow you to get started immediately and come with advanced features that can be customized to fit your needs. 
+                Whether it's telehealth, patient intake, payment collection, or scheduling, Beam is ready to help make your platform a virtual healthcare powerhouse.
+              </p>
+              <a className='cta-button' href='https://beam.health/api'>Beam API <i className='fas fa-arrow-right'></i></a>
+            </div>
+            
+
+          </div>
           <div className="accordion-feature-container">
             <h1>Simplify Practice Management</h1>
             <h4>Elevate your practice with digital infrastructure designed to support seamless growth.</h4>
