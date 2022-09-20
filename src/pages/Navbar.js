@@ -49,6 +49,7 @@ class Navbar extends React.Component {
             <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
             <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
             <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
+            <Link to='faq' onClick={()=> this.props.updateNav('faq')}>FAQ</Link>
             <div onClick={() => this.toggleResourcesModal()}>Resources&nbsp;<i className='fas fa-chevron-down'></i></div>
           </BrowserRouter>
         </div>

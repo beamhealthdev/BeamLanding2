@@ -25,65 +25,74 @@ class FrequentyAskedQuestions extends React.Component {
           <div className="faq-container">
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:1})}>
               <div className="faq-question">
-                <div>What is Beam?</div>
+                <div>How do I get started with Beam?</div>
                 {this.state.expandedFAQ == 1 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==1 &&
-              <div className="faq-answer">Beam is the first digital operations platform built for doctors. Beam's suite of digital services allows healthcare providers to effortlessly integrate virtual care into their practice.</div>
+              <div className="faq-answer">Simply <a href="#schedule-demo">Schedule a demo</a> with one of our account managers or send us your info to <a href="mailto:info@beamhealthgroup.com" target="_blank">info@beamhealthgroup.com</a>. Registrations take seconds and we can launch to thousands of providers in a matter of minutes.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:2})}>
               <div className="faq-question">
-                <div>How do I sign up for Beam?</div>
+                <div>Can I bill Insurance through Beam Health?</div>
                 {this.state.expandedFAQ == 2 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==2 &&
-              <div className="faq-answer">If you're a healthcare provider, you can get started with Beam by creating a free account in just 90 seconds! 95% of providers are able to set-up a Beam account without any help whatsoever. You can also request a personalized demo today! If you're a patient, you can have Beam sent to your physician by emailing us at info@beamhealthgroup.com. Note that there is no app download requirement for patients!</div>
+              <div className="faq-answer">Yes! Our customer success team can help you earn the most out of your telehealth consults by filing &amp; checking claims on your behalf or working with your biller to ensure your revenue cycles are uninterrupted.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:3})}>
               <div className="faq-question">
-                <div>As a provider, why should I use Beam?</div>
+                <div>How is Beam different from most other telehealth companies?</div>
                 {this.state.expandedFAQ == 3 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==3 &&
-              <div className="faq-answer">Beam allows providers the rare opportunity to increase profitability while increasing patient satisfaction. While other platforms offer just telehealth, Beam supplies a HIPAA compliant, HD telehealth platform and empowers providers with a vast array of digital tools that improve practices; inclindg billing, scheduling, marketing, and customer service.</div>
+              <div className="faq-answer">At Beam - we act as an extension of our clients' team - which means we treat their wins as our own. This is why we have a 93 net promoter score with our customers and also why most of our customers choose to stay with us long term. Many other software companies will just give away their software and leave implementation and integration up to the client. As Healthcare entrepreneurs - we know how hard this is for tech companies - let alone clinicians who frankly have better things to focus their time and attention on.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:4})}>
               <div className="faq-question">
-                <div>How much will Beam charge me?</div>
+                <div>Are there discounts for nonprofits, solo practitioners, or researchers?</div>
                 {this.state.expandedFAQ == 4 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==4 &&
-              <div className="faq-answer">Beam offers custom pricing solutions based on each practice's needs. For more information, set up a demo today!</div>
+              <div className="faq-answer">Yes - we love helping those looking to get started &amp; non-profits who are in business to help others! Contact us and tell us how you're looking to get started.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:5})}>
               <div className="faq-question">
-                <div>Will integrating telemedicine into my practice be an intensive process?</div>
+                <div>What do you mean by patient operations platform?</div>
                 {this.state.expandedFAQ == 5 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==5 &&
-              <div className="faq-answer">Not with Beam. Our platform allows providers to set up an account on their own in 90 seconds, giving access to not only telemedicine but an entire digital operations platform designed for doctors. If desired, Beam's team can consult you on how to begin offering telemedicine services.</div>
+              <div className="faq-answer">We believe the pandemic has created a shift in the way patient care is done. Beforehand, all you needed was video chat software to see patients remotely. In 2022, the increase in telemedicine usage combined with the shift to remote workforces has created a need in the market for operations software that extend beyond the video chat. Specifically, this means a waiting room for patients, custom interfaces for practice administrators, billers, providers, and business operators.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:6})}>
               <div className="faq-question">
-                <div>What if I am already too busy as it is?</div>
+                <div>Do you provide an EHR?</div>
                 {this.state.expandedFAQ == 6 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==6 &&
-              <div className="faq-answer">Beam doesn't only provide HIPAA compliant, HD telemedicine services, but it offers a suite of digital tools that help providers run their practices more efficiently. Offering services from scheduling to billing to marketing, Beam helps busy practices become better at not only providing care to their patients but improving practice workflows, allowing them to increase the patient workload.</div>
+              <div className="faq-answer">We focus on providing the best telehealth and patient operations platform - though we can integrate our services with hundreds of EHRs. We recommend finding a good EHR company (we're happy to recommend you one if needed)!</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:7})}>
               <div className="faq-question">
-                <div>When would I conduct telemedicine visits?</div>
+                <div>Am I locked down to a contract?</div>
                 {this.state.expandedFAQ == 7 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==7 &&
-              <div className="faq-answer">Through the Beam platform you have complete autonomy to decide whether to fully integrate in-person and telemedicine hours, carve out time during normal business hours exclusively for telemedicine or conduct telemedicine exclusively after-hours or on weekends.</div>
+              <div className="faq-answer">Not at all - we want happy customers who like working with us.</div>
+              }
+            </div>
+            <div className="faq-item" onClick={() => this.setState({expandedFAQ:8})}>
+              <div className="faq-question">
+                <div>How long does it take to get a whitelabel version of the product branded?</div>
+                {this.state.expandedFAQ == 8 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
+              </div>
+              {this.state.expandedFAQ==8 &&
+              <div className="faq-answer">We can do it in under 24 hours! All we need is your logo and color choices.</div>
               }
             </div>
           </div>

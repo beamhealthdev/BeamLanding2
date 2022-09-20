@@ -14,7 +14,7 @@ class ResourcesModal extends React.Component {
           <BrowserRouter basename="/">
             {/* <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link> */}
             <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
-            <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
+            {/* <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link> */}
           </BrowserRouter>
         </div>
       </div>
