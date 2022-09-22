@@ -1505,17 +1505,38 @@ h4 {
     100%{transform: rotate(0deg);}
   }
 }
-
+.review-controls {
+  padding: 30px;
+  i {
+    font-size: 1.6rem;
+    background-color: #fff;
+    box-shadow: $drop-shadow;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+  }
+  .fa-chevron-right {
+    margin-left: 30px;
+  }
+}
 .review-container {
-  margin: 60px auto;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 1000px;
-  background: url('https://beam-provider-landing.s3.amazonaws.com/final/testimonial-blob-blue.png');
+  width: 100%;
+  margin-bottom: 60px;
+  // max-width: 1000px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  display: flex;
+  .test_logo {
+    max-height: 60px;
+    margin-bottom: 20px;
+  }
   .review-attr {
     display: flex;
     justify-content: center;
@@ -1528,24 +1549,27 @@ h4 {
       padding-left: 10px;
     }
   }
-  h4 {
+  h6 {
     font-family: 'PT Serif', serif;
     margin-bottom: 30px;
   }
-  h6 {
-    font-family: 'DM Sans', sans-serif;
-    span {
-      color: #205B73;
-    }
-  }
-  >div {
-    padding: 40px;
+  .review-item {
+    margin: 0 10px;
+    padding: 30px;
+    width: 25%;
     background: rgba( 255, 255, 255, 0.55 );
     box-shadow: 0 8px 32px 0 rgba( 89, 206, 255, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: left;
+    >div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
     div {
       i {
         height: 40px;
@@ -1563,6 +1587,9 @@ h4 {
         }
       }
     }
+  }
+  .review-hidden {
+    @extend .review-item;
   }
 }
 
@@ -1604,11 +1631,20 @@ h4 {
   }
 }
 
-@media (max-width:800px) {
+@media (max-width:1000px) {
+  .review-controls {
+    display: block;
+    i {
+      display: inline-block;
+    }
+  }
   .review-container {
-    width: calc(100% - 60px);
-    >div {
+    .review-item {
       padding: 20px;
+      width: 100%;
+    }
+    .review-hidden {
+      display: none;
     }
     h4 {
       font-size: 1rem;
@@ -1616,7 +1652,7 @@ h4 {
     }
     .review-attr {
       flex-direction: column;
-      align-items: center;
+      // align-items: center;
       div {
         padding-left: 0;
         padding-top: 10px;
