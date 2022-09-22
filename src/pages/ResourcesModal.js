@@ -11,8 +11,9 @@ class ResourcesModal extends React.Component {
       <div className='resource-modal'>
         <i className='fas fa-times' onClick={() => this.props.toggleResourcesModal()}></i>
         <div className='modal-menu'>
+          <a href="https://blog.beam.health" target="_blank">Blog</a>
           <BrowserRouter basename="/">
-            <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link>
+            {/* <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link> */}
             <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
             {/* <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link> */}
           </BrowserRouter>
