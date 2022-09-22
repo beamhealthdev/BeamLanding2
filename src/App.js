@@ -48,7 +48,6 @@ class App extends Component {
       })
     }
     else if(window.location.pathname == '/blog' || window.location.pathname == '/blog/') {
-      console.log('bloog')
       this.setState({
         active_page:'blog'
       })
@@ -84,7 +83,7 @@ class App extends Component {
       })
     }
     else {
-      console.log('hmm we got ', window.location.pathname)
+      // console.log('hmm we got ', window.location.pathname)
     }
     // else if(window.location.pathname == '/blog/' + this.state.postSlug) {
     //   console.log('11')
