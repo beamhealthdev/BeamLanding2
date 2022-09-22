@@ -64,6 +64,7 @@ class Navbar extends React.Component {
               <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
               <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
               <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
+              <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link>
               <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
             </BrowserRouter>
         </div>
