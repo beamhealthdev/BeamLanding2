@@ -10,7 +10,8 @@ class Home extends React.Component {
 
   state = {
     reviewStep:1,
-    telehealthStep:'group'
+    telehealthStep:'group',
+    reviewMargin:'0px'
   }
 
   componentDidMount = () => {
@@ -18,19 +19,31 @@ class Home extends React.Component {
 
   togglePrev = (step) => {
     if(step==1) {
-      this.setState({reviewStep:4})
+      this.setState({reviewMargin:'-1260px', reviewStep:4})
+    }
+    else if(step==2) {
+      this.setState({reviewMargin:'0px', reviewStep: 1})
+    }
+    else if(step==3) {
+      this.setState({reviewMargin:'-420px', reviewStep: 2})
     }
     else {
-      this.setState({reviewStep: step-1})
+      this.setState({reviewMargin:'-840px',reviewStep: 3})
     }
   }
 
   toggleNext = (step) => {
-    if(step==4) {
-      this.setState({reviewStep:1})
+    if(step==1) {
+      this.setState({reviewMargin:'-420px', reviewStep:2})
+    }
+    else if(step==2) {
+      this.setState({reviewMargin:'-840px', reviewStep: 3})
+    }
+    else if(step==3) {
+      this.setState({reviewMargin:'-1260px', reviewStep: 4})
     }
     else {
-      this.setState({reviewStep: step+1})
+      this.setState({reviewMargin:'0px',reviewStep: 1})
     }
   }
 
@@ -74,11 +87,14 @@ class Home extends React.Component {
               <img src="https://beam-provider-landing.s3.amazonaws.com/final/laptop-code-block-img.png" />
             </div>
           </AnimationOnScroll>
-          <div className='review-controls'>
-            <i className='fas fa-chevron-left' onClick={() => this.togglePrev(this.state.reviewStep)}></i>
-            <i className='fas fa-chevron-right' onClick={() => this.toggleNext(this.state.reviewStep)}></i>
+          <div className='review-header-container'>
+            <h1>Love From Our Partners</h1>
+            <div className='review-controls'>
+              <i className='fas fa-chevron-left' onClick={() => this.togglePrev(this.state.reviewStep)}></i>
+              <i className='fas fa-chevron-right' onClick={() => this.toggleNext(this.state.reviewStep)}></i>
+            </div>
           </div>
-          <div className='review-container'>
+          <div className='review-container' style={{marginLeft:this.state.reviewMargin}}>
             <div className={this.state.reviewStep == 1 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
@@ -97,21 +113,6 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 2 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" className='test_logo' />
-                  <h6>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h6>
-                </div>
-                <div className='review-attr'>
-                  <img src="https://images.weserv.nl/?url=emamo.com/storage/avatars/86/84/31945_e9a7304f0c1c88b5ce0d0b82e04f8684.jpg&w=400&h=400" />
-                  <div>
-                    <h5>Luke Butler</h5>
-                    <h6>Executive Director Startup Engagement</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={this.state.reviewStep == 3 ? 'review-item' : 'review-hidden'}>
-              <div>
-                <div>
                   <h3>Serendipity Wellness</h3>
                   <h6>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h6>
                 </div>
@@ -123,7 +124,7 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
+            <div className={this.state.reviewStep == 3 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
                   <h3>Access-A-Doc</h3>
@@ -133,6 +134,21 @@ class Home extends React.Component {
                   <div>
                     <h5>Novia Castro</h5>
                     <h6>Office Manager</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
+              <div>
+                <div>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" className='test_logo' />
+                  <h6>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h6>
+                </div>
+                <div className='review-attr'>
+                  <img src="https://images.weserv.nl/?url=emamo.com/storage/avatars/86/84/31945_e9a7304f0c1c88b5ce0d0b82e04f8684.jpg&w=400&h=400" />
+                  <div>
+                    <h5>Luke Butler</h5>
+                    <h6>Executive Director Startup Engagement</h6>
                   </div>
                 </div>
               </div>

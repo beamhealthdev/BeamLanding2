@@ -1506,7 +1506,7 @@ h4 {
   }
 }
 .review-controls {
-  padding: 30px;
+  padding: 0px;
   i {
     font-size: 1.6rem;
     background-color: #fff;
@@ -1517,22 +1517,30 @@ h4 {
     line-height: 50px;
     text-align: center;
     cursor: pointer;
-    display: none;
+    // display: none;
   }
   .fa-chevron-right {
     margin-left: 30px;
   }
 }
+.review-header-container {
+  padding: 60px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .review-container {
   padding: 20px;
   border-radius: 8px;
-  width: 100%;
+  width: 1780px;
   margin-bottom: 60px;
   // max-width: 1000px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   display: flex;
+  transition: margin-left 0.3s;
   .test_logo {
     max-height: 60px;
     margin-bottom: 20px;
@@ -1544,26 +1552,33 @@ h4 {
       width: 60px;
       height: 60px;
       border-radius: 30px;
+      filter: grayscale(1);
     }
     div {
       padding-left: 10px;
     }
   }
   h6 {
-    font-family: 'PT Serif', serif;
+    // font-family: 'PT Serif', serif;
     margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.5rem;
   }
   .review-item {
-    margin: 0 10px;
     padding: 30px;
-    width: 25%;
+    width: 400px;
+    margin-right: 20px;
     background: rgba( 255, 255, 255, 0.55 );
-    box-shadow: 0 8px 32px 0 rgba( 89, 206, 255, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(60, 60, 60, 0.05 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: left;
+    h3 {
+      height: 60px;
+      margin-bottom: 20px;
+    }
     >div {
       display: flex;
       flex-direction: column;
@@ -1638,7 +1653,17 @@ h4 {
       display: inline-block;
     }
   }
+  .review-header-container {
+    padding: 30px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   .review-container {
+    width: 100%;
+    margin-left: 0 !important;
     .review-item {
       padding: 20px;
       width: 100%;
