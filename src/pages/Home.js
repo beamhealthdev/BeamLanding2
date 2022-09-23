@@ -113,10 +113,11 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 2 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <h3>Serendipity Wellness</h3>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/serendipitylogo.png" className='test_logo' />
                   <h6>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h6>
                 </div>
                 <div className='review-attr'>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Robert+Strayhan.png" />
                   <div>
                     <h5>Dr. Robert Strayhan</h5>
                     <h6>Provider</h6>
@@ -142,7 +143,7 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <h3>Access-A-Doc</h3>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/accessadoclogo.png" className='test_logo' />
                   <h6>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h6>
                 </div>
                 <div className='review-attr'>
