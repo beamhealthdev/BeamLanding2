@@ -127,20 +127,6 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 3 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <h3>Access-A-Doc</h3>
-                  <h6>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h6>
-                </div>
-                <div className='review-attr'>
-                  <div>
-                    <h5>Novia Castro</h5>
-                    <h6>Office Manager</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
-              <div>
-                <div>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" className='test_logo' />
                   <h6>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h6>
                 </div>
@@ -149,6 +135,20 @@ class Home extends React.Component {
                   <div>
                     <h5>Luke Butler</h5>
                     <h6>Executive Director Startup Engagement</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
+              <div>
+                <div>
+                  <h3>Access-A-Doc</h3>
+                  <h6>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h6>
+                </div>
+                <div className='review-attr'>
+                  <div>
+                    <h5>Novia Castro</h5>
+                    <h6>Office Manager</h6>
                   </div>
                 </div>
               </div>
