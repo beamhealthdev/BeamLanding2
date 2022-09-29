@@ -554,6 +554,28 @@ h4 {
   }
 }
 
+.landing-telehealth-container-solutions {
+  @extend .landing-telehealth-container;
+  background: none;
+  .telehealth-features-container {
+    .telehealth-features-buttons {
+      div {
+        width: 310px;
+      }
+    }
+  }
+}
+
+.bullet-point-container {
+  >div {
+    padding: 5px 0;
+    i {
+      margin-right: 10px;
+      color: #13AD43;
+    }
+  }
+}
+
 @media (max-width:900px) {
   .landing-telehealth-container {
     padding: 60px 30px;

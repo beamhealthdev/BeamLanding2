@@ -9,7 +9,8 @@ import DocumentMeta from 'react-document-meta';
 class Solutions extends React.Component {
 
   state = {
-    selectedFeature: 1
+    selectedFeature: 1,
+    featureStep: 1
   }
 
   render() {
@@ -94,33 +95,222 @@ class Solutions extends React.Component {
               <a className='cta-button-lg' href="#schedule-demo" style={{padding:'14px 30px', marginTop:'20px'}}>Book a Demo <i className='fas fa-arrow-right'></i></a>
             </div>
           </div>
-          {/* <div className="grid-feature-container-solutions">
-            <h1>Smart Group Sessions</h1>
-            <h4>Take full control of a virtual group session - just as you would in person.</h4>
-            <div className="grid-feature-item-container">
-              <div className="grid-feature-item"></div>
-              <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/group_video.png" style={{borderRadius:0}} />
-                <h2>Connection Quality Assurance</h2>
-                <h4>See your patient's internet connection strength in real-time.</h4>
+          <div className='landing-telehealth-container-solutions'>
+            <h1><span>Maximize</span> on Beam's full set of features</h1>
+            <h4>With dozens of features, Beam can help you at every stage of your clinical business.</h4>
+            <div className='telehealth-features-container'>
+              <div className='telehealth-features-content'>
+                {this.state.featureStep==1 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Telehealth</h4>
+                  {/* <p>Allow multiple participants in a single video session with our group video conferencing. Intuitive features include signal strength monitoring, screen sharing, volume control, and more.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>HIPAA Compliant</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Waiting Room Messaging</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Private Waiting Room</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Chat Translation</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Video Closed Captioning</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Screen Sharing</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Group Calling Options (up to 100 participants)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Low-Bandwidth Support</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Waiting Room Smart Alerts (to provider)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Patient Queue</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>On-Demand Telehealth / Waiting Room</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Waiting Room Passcode</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Check In / Check Out</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
+                {this.state.featureStep==2 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Clinical Operations</h4>
+                  {/* <p>A virtual waiting room that comes with custom content to educate and promote services to patients as they wait for your providers. Every provider gets a unique waiting room link that can be used anywhere in the world, at any time.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Clinical Documentation (note taking)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Document / File Sharing (in meeting, pre, post)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Triage</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
+                {this.state.featureStep==3 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Patient Engagement</h4>
+                  {/* <p>Easily share your screen during patient encounters within the Beam dashboard with just one-click.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Automated Reminders</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Custom Patient-facing website</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Widget</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Post-Visit Survey</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Messaging During Appointment</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Interactive Waiting Room Experience</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
+                {this.state.featureStep==4 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Practice Management</h4>
+                  {/* <p>Keep your focus on the patient. With picture-in-picture,  you can review test results or take notes while staying visually engaged.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Digital Forms</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Patient Intake form builder</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Insurance Capture</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Admin Kiosk</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Analytics Dashboard (Bank Account Integration)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Provider/Operations/Billing roles</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Scheduling (Integrations through Google/Apple Calendar)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Billing / Payment Capture</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Flexible payment collections</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
+                {this.state.featureStep==5 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Customizations / Integrations</h4>
+                  {/* <p>Interact with patients while they wait in your custom waiting room. Support staff can now triage patients, as well as share and receive documents, prior to the provider entering the digital exam room.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>55+ EHR Integrations</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Customizable colors, look &amp; feel</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>API with webhooks to customize &amp; whitelabel interface</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Practice branding</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
+                {this.state.featureStep==6 &&
+                <AnimationOnScroll animateIn='animate__fadeIn'>
+                  <h4>Ease of Use</h4>
+                  {/* <p>Construct and complete visit notes during video appointments. Beam's note taking feature comes equipped with SOAP functionality and can easily be integrated to share data with your EHR.</p> */}
+                  <div className="bullet-point-container">
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Single Sign On (Apple, Google, EHR)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Phone App (iOS)</span>
+                    </div>
+                    <div>
+                      <i className="fas fa-check-circle"></i>
+                      <span>Browser-Based Option</span>
+                    </div>
+                  </div>
+                </AnimationOnScroll>
+                }
               </div>
-              <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" style={{borderRadius:0}} />
-                <h2>Picture in <br/>Picture Mode</h2>
-                <h4>Keep focus on your patients. Pop out of video calls to look up information or take notes while staying visually connected.</h4>
+              <div className='telehealth-features-buttons'>
+                <div className={this.state.featureStep==1 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:1})}><i className='fas fa-video'></i><span>Telehealth</span></div>
+                <div className={this.state.featureStep==2 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:2})}><i className='fas fa-clinic-medical'></i><span>Clinical Operations</span></div>
+                <div className={this.state.featureStep==3 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:3})}><i className='fas fa-users'></i><span>Patient Engagement</span></div>
+                <div className={this.state.featureStep==4 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:4})}><i className='fas fa-building'></i><span>Practice Management</span></div>
+                <div className={this.state.featureStep==5 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:5})}><i className='fas fa-network-wired'></i><span>Customizations / Integrations</span></div>
+                <div className={this.state.featureStep==6 ? 'active-th-button' : ''} onClick={() => this.setState({featureStep:6})}><i className='fas fa-mouse-pointer'></i><span>Ease of Use</span></div>
               </div>
-              <div className="grid-feature-item">
-                <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" style={{borderRadius:0}} />
-                <h2>Maximize <br/>Touchpoints</h2>
-                <h4>Get patients engaged from the start with a custom waiting room. Provide your own content or get help from one of our experts.</h4>
-              </div>
-              <div className="grid-feature-item"></div>
             </div>
-            <a href="#schedule-demo" style={{textDecoration:'none'}}>
-              <div className="cta-button" href="#schedule-demo">Schedule Demo</div>
-            </a>
-          </div> */}
-          
+          </div>
           <div className="accordion-feature-container">
             <h1>Simplify Practice Management</h1>
             <h4>Elevate your practice with digital infrastructure designed to support seamless growth.</h4>
