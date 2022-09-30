@@ -42,16 +42,14 @@ class Navbar extends React.Component {
         </div>
         }
         <div className='items-left'>
-          <BrowserRouter basename="/">
-            <Link to='/' onClick={()=> this.props.updateNav('home')}>
+            <Link to='/'>
               <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
             </Link>
-            <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
-            <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
-            <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-            <Link to='faq' onClick={()=> this.props.updateNav('faq')}>FAQ</Link>
-            <div onClick={() => this.toggleResourcesModal()}>Resources&nbsp;<i className='fas fa-chevron-down'></i></div>
-          </BrowserRouter>
+            <Link to='/about'>About Us</Link>
+            <Link to='/api'>API</Link>
+            <Link to='/solutions'>Solutions</Link>
+            <Link to='/faq'>FAQ</Link>
+          <div onClick={() => this.toggleResourcesModal()}>Resources&nbsp;<i className='fas fa-chevron-down'></i></div>
         </div>
         <div className='mobile-nav'>
           <i className='fas fa-bars' onClick={() => this.setState({mobileMenu:true})}></i>
@@ -59,23 +57,18 @@ class Navbar extends React.Component {
         {this.state.mobileMenu &&
         <div className='mobile-overlay'>
           <i className='fas fa-times' onClick={() => this.setState({mobileMenu:false})}></i>
-            <BrowserRouter basename="/">
-              <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
-              <Link to='api' onClick={()=> this.props.updateNav('api')}>API</Link>
-              <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-              <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
-              {/* <Link to='blog' onClick={()=> this.props.updateNav('blog')}>Blog</Link> */}
-              <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
-            </BrowserRouter>
+            <Link to='/about'>About Us</Link>
+            <Link to='/api'>API</Link>
+            <Link to='/solutions'>Solutions</Link>
+            <Link to='/case_studies'>Case Studies</Link>
+            <Link to='/faq'>Frequenty Asked Questions</Link>
             <a href="https://blog.beam.health" target="_blank">Blog</a>
         </div>
         }
         <div className='items-right'>
-          <BrowserRouter basename="/">
-            <Link to='/' onClick={()=> this.props.updateNav('home')}>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
-            </Link>
-          </BrowserRouter>
+          <Link to='/'>
+            <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
+          </Link>
           <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book a Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
         </div>
       </div>

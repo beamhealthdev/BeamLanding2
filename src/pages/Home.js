@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import {BrowserRouter, Link} from "react-router-dom";
 import 'animate.css';
+import DocumentMeta from 'react-document-meta';
 
 class Home extends React.Component {
 
@@ -48,10 +48,22 @@ class Home extends React.Component {
   }
 
   render() {
+    const meta = {
+      title: 'Beam Health',
+      description: 'A digital solution built from the ground up for all your clinical needs.',
+      canonical: 'http://beam.health/',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags'
+        }
+      }
+    }
     return (
       <div>
+        <DocumentMeta {...meta} />
         <AnimationOnScroll className="home-container animate__fadeIn">
-          <Navbar {...this.props} />
+          {/* <Navbar {...this.props} /> */}
           <div className='ColorGradientAnimation'></div>
           <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
             <div>
@@ -311,7 +323,7 @@ class Home extends React.Component {
             <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{height: "756px", border: "none"}}></iframe>
           </div>
         </AnimationOnScroll>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

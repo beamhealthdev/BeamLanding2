@@ -19,12 +19,11 @@ function Footer() {
       </div>
       <div className='links-container'>
         <div>Explore Beam</div>
-        <BrowserRouter basename="/">
-          <Link to='about' onClick={()=> this.props.updateNav('about')}>About Us</Link>
-          <Link to='solutions' onClick={()=> this.props.updateNav('solutions')}>Solutions</Link>
-          <Link to='case_studies' onClick={()=> this.props.updateNav('cases')}>Case Studies</Link>
-          <Link to='faq' onClick={()=> this.props.updateNav('faq')}>Frequenty Asked Questions</Link>
-        </BrowserRouter>
+        <Link to='about'>About Us</Link>
+        <Link to='api'>API</Link>
+        <Link to='solutions'>Solutions</Link>
+        <Link to='case_studies'>Case Studies</Link>
+        <Link to='faq'>Frequenty Asked Questions</Link>
       </div>
       <div>
         <div>Join us on Social Media</div>

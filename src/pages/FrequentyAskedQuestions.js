@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'animate.css';
 import {BrowserRouter, Link} from "react-router-dom";
+import DocumentMeta from 'react-document-meta';
 
 class FrequentyAskedQuestions extends React.Component {
 
@@ -12,10 +13,21 @@ class FrequentyAskedQuestions extends React.Component {
   }
 
   render() {
+    const meta = {
+      title: 'Beam Health - FAQ',
+      description: 'Get answers to common questions.',
+      canonical: 'http://beam.health/faq',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags'
+        }
+      }
+    }
     return (
       <div>
+        <DocumentMeta {...meta} />
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Frequently Asked Questions</h1>
@@ -103,7 +115,6 @@ class FrequentyAskedQuestions extends React.Component {
             </div>
           </AnimationOnScroll>
         </div>
-        <Footer />
       </div>
     );
   }

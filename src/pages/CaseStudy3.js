@@ -14,7 +14,6 @@ class CaseStudy3 extends React.Component {
     return (
       <div>
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Case Study - Urgent Care looking to scale</h1>
@@ -22,9 +21,7 @@ class CaseStudy3 extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-study-container">
-            <BrowserRouter basename="/">
-            <Link className="back-button" to='case_studies' onClick={()=> this.props.updateNav('case_studies')}>&lt; Back to Case Studies</Link>
-            </BrowserRouter>
+            <Link className="back-button" to='../case_studies'>&lt; Back to Case Studies</Link>
             <h4></h4>
             <h6>The Challenge</h6>
             <p>I'm always looking for ways to acquire more patients AND improve patient satisfaction. As the Chief Operating Officer of Urgent Care 24/7, a multi-office walk-in clinic in Georgia, I constantly seek out innovative tools that align with our practice's workflows, culture, and goals.</p>
@@ -42,7 +39,6 @@ class CaseStudy3 extends React.Component {
             <p>Furthermore, being a customer at Beam feels like being a partner in something big. I love having a direct line of communication with Beam's leadership team, three ambitious entrepreneurs with a great track record and a deep appreciation for their early customers.</p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -32,7 +32,6 @@ class API extends React.Component {
       <div>
         <DocumentMeta {...meta} />
         <div className='api-parent-container'>
-          <Navbar />
           <div className="api-main-container">
             <div>
               <h1>A lightweight API to kickstart your <span style={{whiteSpace:'nowrap'}}>Clinical Platform</span></h1>
@@ -103,7 +102,6 @@ class API extends React.Component {
             </div>
           </AnimationOnScroll>
         </div>
-        <Footer />
       </div>
     );
   }

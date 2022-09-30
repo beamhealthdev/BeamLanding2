@@ -22,6 +22,7 @@
     "react-helmet": "^6.1.0",
     "react-moment": "^1.1.2",
     "react-multi-carousel": "^2.8.0",
+    "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.0",
     "sass": "^1.52.3",
     "web-vitals": "^2.1.4"
@@ -53,7 +54,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "react-router-dom": "^6.2.1"
-  }
+  "devDependencies": {}
 }

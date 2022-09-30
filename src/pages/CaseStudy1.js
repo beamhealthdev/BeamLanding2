@@ -14,7 +14,6 @@ class CaseStudy1 extends React.Component {
     return (
       <div>
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Case Study - Psychiatry</h1>
@@ -22,9 +21,7 @@ class CaseStudy1 extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-study-container">
-            <BrowserRouter basename="/">
-            <Link className="back-button" to='case_studies' onClick={()=> this.props.updateNav('case_studies')}>&lt; Back to Case Studies</Link>
-            </BrowserRouter>
+            <Link className="back-button" to='../case_studies'>&lt; Back to Case Studies</Link>
             <h4>
               The Couch is a Kentucky based mental health clinic that combines the immediacy of urgent care with the empathy of a world-class mental healthcare center. Serving Northern Kentucky and Southern Indiana, The Couch accounts for the fact that mental health crises don't always wait until the next appointment and in turn has created a new service: walk-in appointments for psychiatry.
             </h4>
@@ -41,7 +38,6 @@ class CaseStudy1 extends React.Component {
             <p className="quote">“Beam's platform was intuitive, helping our team and patients to begin using telehealth immediately with absolutely no training.”<br/><strong>Dr. Ora Frankel</strong></p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

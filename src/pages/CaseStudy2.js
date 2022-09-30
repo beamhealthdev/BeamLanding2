@@ -14,7 +14,6 @@ class CaseStudy2 extends React.Component {
     return (
       <div>
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Case Study - Wellness / Medical Spa</h1>
@@ -22,9 +21,7 @@ class CaseStudy2 extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-study-container">
-            <BrowserRouter basename="/">
-            <Link className="back-button" to='case_studies' onClick={()=> this.props.updateNav('case_studies')}>&lt; Back to Case Studies</Link>
-            </BrowserRouter>
+            <Link className="back-button" to='../case_studies'>&lt; Back to Case Studies</Link>
             <h4>
               Led by Dr. Bart Gershenbaum, MedX MedSpa was created to help men and women overcome the challenges of growing older. Whether it's hair loss, hormone replacement therapy, erectile dysfunction, weight loss therapy, battle with addiction, or basic primary health care, the professionals at MedX Medspa are there to guide their patients through the difficult phases of life with state of the art treatment. 
             </h4>
@@ -44,7 +41,6 @@ class CaseStudy2 extends React.Component {
             <p className="quote">“What separates Beam from other telemedicine offerings is their attention to detail. They realize that not all practices are the same and strive to make sure that their service fits your unique needs.”<br/><strong>Dr. Bart Gershenbaum</strong></p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import 'animate.css';
 import {BrowserRouter, Link} from "react-router-dom";
+import DocumentMeta from 'react-document-meta';
 
 class CaseStudies extends React.Component {
 
@@ -11,10 +12,21 @@ class CaseStudies extends React.Component {
   }
 
   render() {
+    const meta = {
+      title: 'Beam Health - Case Studies',
+      description: 'Learn how our customers gained momentum with Beam.',
+      canonical: 'http://beam.health/case_studies',
+      meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'react,meta,document,html,tags'
+        }
+      }
+    }
     return (
       <div>
+        <DocumentMeta {...meta} />
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Case Studies</h1>
@@ -22,8 +34,7 @@ class CaseStudies extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-studies-container">
-            <BrowserRouter basename="/">
-              <Link to='case_study_1' onClick={()=> this.props.updateNav('case_study_1')} className="case-study-item">
+              <Link to='case_study_1' className="case-study-item">
                 <div>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/couch_logo.png" />
                 </div>
@@ -33,7 +44,7 @@ class CaseStudies extends React.Component {
                   <h4>The Couch is a Kentucky based mental health clinic that combines the immediacy of urgent care with the empathy of a world-class mental healthcare center.</h4>
                 </div>
               </Link>
-              <Link to='case_study_2' onClick={()=> this.props.updateNav('case_study_2')} className="case-study-item">
+              <Link to='case_study_2' className="case-study-item">
                 <div>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/medx_logo.png" />
                 </div>
@@ -43,7 +54,7 @@ class CaseStudies extends React.Component {
                   <h4>Led by Dr. Bart Gershenbaum, MedX MedSpa was created to help men and women overcome the challenges of growing older.</h4>
                 </div>
               </Link>
-              <Link to='case_study_3' onClick={()=> this.props.updateNav('case_study_3')} className="case-study-item">
+              <Link to='case_study_3' className="case-study-item">
                 <div>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/uc247_logo.png" />
                 </div>
@@ -53,7 +64,7 @@ class CaseStudies extends React.Component {
                   <h4>Urgent Care 24/7 is a multi-office walk-in clinic in Georgia that constantly seeks out innovative tools that align with their workflows, culture, and goals.</h4>
                 </div>
               </Link>
-              <Link to='case_study_4' onClick={()=> this.props.updateNav('case_study_4')} className="case-study-item">
+              <Link to='case_study_4' className="case-study-item">
                 <div>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/986emergicenter_logo.png" />
                 </div>
@@ -63,7 +74,6 @@ class CaseStudies extends React.Component {
                   <h4>98point6 Emergicenter was like everyone else in the world: they didn't anticipate a pandemic vastly altering the way society operates. So, when they were forced to temporarily close during the COVID19 outbreak, leadership was able to pivot quickly.</h4>
                 </div>
               </Link>
-            </BrowserRouter>
           </div>
           <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
             <div className='demo-container' id="schedule-demo">
@@ -72,7 +82,6 @@ class CaseStudies extends React.Component {
             </div>
           </AnimationOnScroll>
         </div>
-        <Footer />
       </div>
     );
   }

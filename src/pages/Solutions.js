@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
@@ -17,7 +16,7 @@ class Solutions extends React.Component {
     const meta = {
       title: 'Beam Health - Solutions',
       description: 'A digital solution built from the ground up for all your clinical needs.',
-      canonical: 'http://beam.health/api',
+      canonical: 'http://beam.health/solutions',
       meta: {
         charset: 'utf-8',
         name: {
@@ -26,10 +25,9 @@ class Solutions extends React.Component {
       }
     }
     return (
-      <div>
+      <div className="parent-container">
         <DocumentMeta {...meta} />
         <div className="solutions-container">
-          <Navbar />
           <div className="solutions-landing-container">
             <div className="solutionsPageAnimation">
               <h1>A digital health platform designed for innovation</h1>
@@ -74,7 +72,7 @@ class Solutions extends React.Component {
                 <div>
                   <div className='landing-feature-label'>Scalability</div>
                   <h1><span>Built</span> for practices of <span style={{whiteSpace:'nowrap'}}>all sizes</span></h1>
-                  <h4>A platform that adapts to your needs - from private clinics to <span style={{whiteSpace:'nowrap'}}>large enterprise.</span></h4>
+                  <h4>A platform that adapts to your needs - from private clinics to <span style={{whiteSpace:'nowrap'}}>large enterprises.</span></h4>
                 </div>
               </div>
 
@@ -369,7 +367,6 @@ class Solutions extends React.Component {
             <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

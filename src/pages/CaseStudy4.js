@@ -14,7 +14,6 @@ class CaseStudy4 extends React.Component {
     return (
       <div>
         <div className="about-parent-container">
-          <Navbar />
           <div className="about-main-container">
             <AnimationOnScroll className="solutions-landing-top animate__fadeInDown animate__fastest">
               <h1>Case Study - Urgent Care facing COVID-19</h1>
@@ -22,9 +21,7 @@ class CaseStudy4 extends React.Component {
             </AnimationOnScroll>
           </div>
           <div className="case-study-container">
-            <BrowserRouter basename="/">
-            <Link className="back-button" to='case_studies' onClick={()=> this.props.updateNav('case_studies')}>&lt; Back to Case Studies</Link>
-            </BrowserRouter>
+            <Link className="back-button" to='../case_studies'>&lt; Back to Case Studies</Link>
             <h4>
               Located in Lansing, Michigan, 98point6 Emergicenter offers an alternative option to the long waits at the ER. Staffed by board-certified emergency physicians, 98point6 Emergicenter provides expedited access to medical care when patients are in real need. This care is available 7 days a week, 10am-6pm, except major holidays.
             </h4>
@@ -41,7 +38,6 @@ class CaseStudy4 extends React.Component {
             <p className="quote">“Virtual is where it's at, especially during the rise of this contagious disease. We're using Beam to continue to provide care to people and hopefully keep the well away from the sick. A telemedicine visit allows us to know if a patient is sick enough to direct to a hospital. Beam is a great tool to minimize the burden on hospitals.”<br/><strong>Dr. Susan Fedewa, owner of 98point6 Emergicenter</strong></p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
