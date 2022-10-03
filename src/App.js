@@ -16,6 +16,9 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Navbar from './pages/Navbar';
 import Footer from './pages/Footer';
 import ScrollToTop from './ScrollToTop';
+import PartnersDigitalHealth from './pages/PartnersDigitalHealth';
+import PartnersHealthcareSystems from './pages/PartnersHealthcareSystems';
+import PartnersHealthPlans from './pages/PartnersHealthPlans';
 
 function App() {
 
@@ -36,6 +39,9 @@ function App() {
             <Route path="/case_studies/case_study_2" element={ <CaseStudy2 /> } />
             <Route path="/case_studies/case_study_3" element={ <CaseStudy3 /> } />
             <Route path="/case_studies/case_study_4" element={ <CaseStudy4 /> } />
+            <Route path="/digital_health" element={ <PartnersDigitalHealth /> } />
+            <Route path="/healthcare_systems" element={ <PartnersHealthcareSystems /> } />
+            <Route path="/health_plans" element={ <PartnersHealthPlans /> } />
             <Route path="*" exact={true} element={ <NotFound /> } />
           </Routes>
           <Footer />

@@ -25,6 +25,12 @@ function Footer() {
         <Link to='case_studies'>Case Studies</Link>
         <Link to='faq'>Frequenty Asked Questions</Link>
       </div>
+      <div className='links-container'>
+        <div>Our Partners</div>
+        <Link to='digital_health'>Digital Health</Link>
+        <Link to='healthcare_systems'>Practices &amp; Healthcare Systems</Link>
+        <Link to='health_plans'>Health Plans</Link>
+      </div>
       <div>
         <div>Join us on Social Media</div>
         <div>
