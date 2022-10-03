@@ -1835,6 +1835,14 @@ h4 {
     i {
       font-size: 3rem;
       margin-bottom: 20px;
+      background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
+      color: rgb(32, 91, 115);
+      height: 80px;
+      width: 80px;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 80px;
+      box-shadow: $drop-shadow;
     }
   }
   >div:nth-of-type(1), >div:nth-of-type(2) {
