@@ -29,8 +29,10 @@ class PartnersDigitalHealth extends React.Component {
           <div className="solutions-landing-container">
             <div className="partner-section-1">
               <img src="https://cdn.pixabay.com/photo/2017/06/25/10/09/board-2440249_1280.jpg" />
-              <h1>High Quality Building Blocks for <span style={{whiteSpace:'nowrap'}}>HealthTech Companies</span></h1>
-              <h4>HealthTech companies are leading the effort to revolutionize the healthcare industry. Use Beam's flagship technology to build your brand, enhance your offering, and speed up your time to market.</h4>
+              <div>
+                <h1>High Quality Building Blocks for <span style={{whiteSpace:'nowrap'}}>HealthTech Companies</span></h1>
+                <h4>HealthTech companies are leading the effort to revolutionize the healthcare industry. Use Beam's flagship technology to build your brand, enhance your offering, and speed up your time to market.</h4>
+              </div>
             </div>
             <div className="partner-section-2">
               <h2>Leverage Beam's Tech Stack to deliver an unparalleled digital <span style={{whiteSpace:'nowrap'}}>healthcare experience.</span></h2>

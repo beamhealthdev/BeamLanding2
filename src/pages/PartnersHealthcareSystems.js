@@ -29,8 +29,10 @@ class PartnersHealthcareSystems extends React.Component {
           <div className="solutions-landing-container">
             <div className="partner-section-1">
               <img src="https://cdn.pixabay.com/photo/2017/06/25/10/09/board-2440249_1280.jpg" />
-              <h1>Exceptional digital care for practices and <span style={{whiteSpace:'nowrap'}}>healthcare systems</span></h1>
-              <h4>Healthcare delivery has radically changed in the last few years. Choose a partner with a proven track record amongst providers and patients - talk to Beam.</h4>
+              <div>
+                <h1>Exceptional digital care for practices and <span style={{whiteSpace:'nowrap'}}>healthcare systems</span></h1>
+                <h4>Healthcare delivery has radically changed in the last few years. Choose a partner with a proven track record amongst providers and patients - talk to Beam.</h4>
+              </div>
             </div>
             <div className="partner-section-2">
               <h2>Improve patient engagement and outcomes with our <span style={{whiteSpace:'nowrap'}}>digital care offering.</span></h2>

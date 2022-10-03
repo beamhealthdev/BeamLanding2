@@ -910,7 +910,6 @@ h4 {
   padding: 0 60px;
   // height: 100vh;
   text-align: left;
-  padding-top: 40px;
   .solutions-landing-item-container {
     display: flex;
     justify-content: space-evenly;
@@ -1795,9 +1794,18 @@ h4 {
   margin-left: -60px;
   padding: 60px;
   background: linear-gradient(300deg, #31274A, #4c3d71);
-  color: #ffffff;
   position: relative;
   overflow: hidden;
+  color: #ffffff;
+  >div {
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
   img {
     position: absolute;
     top: 0;
@@ -1808,12 +1816,14 @@ h4 {
   }
   h1, h4 {
     z-index: 2;
+    font-weight: 800;
   }
 }
 
 .partner-section-2 {
   padding: 100px 60px;
   text-align: center;
+  background: url('https://beam-provider-landing.s3.amazonaws.com/final/landing-api-container-bg.png');
   h2 {
     margin-bottom: 30px;
     font-weight: 600;
@@ -1855,8 +1865,13 @@ h4 {
 }
 
 @media (max-width:900px) {
+  .partner-section-1 {
+    padding: 30px;
+  }
   .partner-section-2 {
     padding: 100px 0;
+    background-size: contain;
+
   }
   .partner-section-3 {
     >div {

@@ -29,8 +29,10 @@ class PartnersHealthPlans extends React.Component {
           <div className="solutions-landing-container">
             <div className="partner-section-1">
               <img src="https://cdn.pixabay.com/photo/2017/06/25/10/09/board-2440249_1280.jpg" />
-              <h1>Exceptional digital care for <span style={{whiteSpace:'nowrap'}}>health plans</span></h1>
-              <h4>Enhance your offering and value to members with high-quality telehealth tools from Beam.</h4>
+              <div>
+                <h1>Exceptional digital care for <span style={{whiteSpace:'nowrap'}}>health plans</span></h1>
+                <h4>Enhance your offering and value to members with high-quality telehealth tools from Beam.</h4>
+              </div>
             </div>
             <div className="partner-section-2">
               <h2>Give your members more, with virtual access to your network of providers <span style={{whiteSpace:'nowrap'}}>from anywhere.</span></h2>
