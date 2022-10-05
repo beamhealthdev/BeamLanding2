@@ -15,7 +15,7 @@ function Footer() {
     </div>
     <div>
       <div>
-        <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo_white.png' />
+        <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo_white.png' style={{maxWidth:'300px', width:'calc(100% - 20px)'}} />
       </div>
       <div className='links-container'>
         <div>Explore Beam</div>

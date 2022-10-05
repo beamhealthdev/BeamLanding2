@@ -57,20 +57,6 @@ class About extends React.Component {
             <AnimationOnScroll animateIn='animate__fadeInRight' className="team-user-container" animateOnce={true}>
               <div>
                 <div>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Ranga.jpeg" />
-                </div>
-                <div>
-                  <h2>Ranga Jayawardena</h2>
-                  <h4>COO / Co-Founder</h4>
-                </div>
-              </div>
-              <div>
-              <p>Ranga has a foundation of business experience across several fields. His previous lives include roles as an award-winning National Sales Trainer at Bristol Myers Squibb, Enterprise Procurement Officer for healthcare data, and Ultra-High Net Worth Private Banker at J.P. Morgan. Ranga brings the spirit of a hustler to Beam.</p>
-              </div>
-            </AnimationOnScroll>
-            <AnimationOnScroll animateIn='animate__fadeInLeft' className="team-user-container" animateOnce={true}>
-              <div>
-                <div>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/Drew.jpeg" />
                 </div>
                 <div>
