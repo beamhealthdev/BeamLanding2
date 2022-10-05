@@ -682,6 +682,10 @@ h4 {
     a {
       text-decoration: none;
       color: $alt-light;
+      i {
+        margin-left: 10px;
+        font-size: 1rem !important;
+      }
     }
   }
 }
@@ -1152,6 +1156,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   z-index: 999;
+  overflow-y: scroll;
   i {
     position: absolute;
     top: 30px;

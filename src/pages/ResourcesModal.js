@@ -12,6 +12,7 @@ class ResourcesModal extends React.Component {
         <div className='modal-menu'>
           <a href="https://blog.beam.health" target="_blank">Blog</a>
           <Link to='case_studies' onClick={() => this.props.toggleResourcesModal()}>Case Studies</Link>
+          <a href="https://careers.beam.health" target="_blank">Careers</a>
         </div>
       </div>
     )

@@ -24,6 +24,8 @@ function Footer() {
         <Link to='solutions'>Solutions</Link>
         <Link to='case_studies'>Case Studies</Link>
         <Link to='faq'>Frequenty Asked Questions</Link>
+        <a href="https://blog.beam.health" target="_blank">Blog<i class="fas fa-arrow-up-right-from-square"></i></a>
+        <a href="https://careers.beam.health" target="_blank">Careers<i class="fas fa-arrow-up-right-from-square"></i></a>
       </div>
       <div className='links-container'>
         <div>Our Partners</div>

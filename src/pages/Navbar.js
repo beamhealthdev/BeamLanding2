@@ -63,6 +63,7 @@ class Navbar extends React.Component {
             <Link to='/case_studies'>Case Studies</Link>
             <Link to='/faq'>Frequenty Asked Questions</Link>
             <a href="https://blog.beam.health" target="_blank">Blog</a>
+            <a href="https://careers.beam.health" target="_blank">Careers</a>
         </div>
         }
         <div className='items-right'>
