@@ -28,14 +28,15 @@ class About extends React.Component {
       <div>
         <DocumentMeta {...meta} />
         <div className='about-parent-container'>
-          <div className="about-main-container aboutPageAnimation">
+          {/* <div className="about-main-container aboutPageAnimation">
             <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" className="about-landing-img" />
             <img src="https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png" className="about-landing-img-2" />
             <AnimationOnScroll className="about-landing-top animate__fadeInDown animate__fastest">
-              <h1>It's time to give virtual healthcare a checkup.</h1>
+              
             </AnimationOnScroll>
-          </div>
+          </div> */}
           <div className="about-content">
+            <h1>It's time to give virtual healthcare a checkup.</h1>
             <div>Whether you're a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, delivering an experience-driven digital health solution is more important than ever.</div>
             <div>Up until now you've had <strong>two choices</strong> - either try to piece together disparate software platforms into something resembling a complete offering, or build your own solution from scratch.</div>
             <div> Neither option offers the best of all worlds - <strong>a holistic approach to telehealth that is </strong></div>
