@@ -40,10 +40,10 @@ class About extends React.Component {
             <div>Up until now you've had <strong>two choices</strong> - either try to piece together disparate software platforms into something resembling a complete offering, or build your own solution from scratch.</div>
             <div> Neither option offers the best of all worlds - <strong>a holistic approach to telehealth that is </strong></div>
             <div className="about-points">
-              <div><i className="fas fa-check-circle"></i> simple to use</div>
-              <div><i className="fas fa-check-circle"></i> endlessly customizable</div>
-              <div><i className="fas fa-check-circle"></i> puts your brand front and center</div>
-              <div><i className="fas fa-check-circle"></i> gives patients an enjoyable experience that keeps them coming back.</div>
+              <div><i className="fas fa-check-circle"></i> Simple to use</div>
+              <div><i className="fas fa-check-circle"></i> Endlessly customizable</div>
+              <div><i className="fas fa-check-circle"></i> Puts your brand front and center</div>
+              <div><i className="fas fa-check-circle"></i> Gives patients an enjoyable experience that keeps them coming back.</div>
             </div>
             <div>Beam exists to remove all barriers to effective virtual care with a fast, reliable and easy to implement solution. Our platform is built to help clinics scale, expand patient access, improve health outcomes and reshape healthcare for the benefit of all - providers, patients, employers, and enterprises.</div>
           </div>
