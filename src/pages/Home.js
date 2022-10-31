@@ -67,8 +67,8 @@ class Home extends React.Component {
           <div className='ColorGradientAnimation'></div>
           <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
             <div>
-              <h1>A telehealth experience that leaves everyone feeling <span style={{whiteSpace:'nowrap'}}>cared for</span></h1>
-              <h4>See more patients, capture 100% of your revenue and create a feel-good virtual practice with Beam, the all-in-one telehealth solution for healthcare providers.</h4>
+              <h1>Telehealth Engineered <span style={{whiteSpace:'nowrap'}}>for Reliability</span></h1>
+              <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
               <div>
                 <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
                 <a className='cta-button-lg' href="#schedule-demo">Book Demo <i className='fas fa-arrow-right'></i></a>
