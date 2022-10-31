@@ -30,21 +30,16 @@ class Solutions extends React.Component {
         <div className="solutions-container">
           <div className="solutions-landing-container">
             <div className="solutionsPageAnimation">
-              <h1>A digital health platform designed for innovation</h1>
+              <h1>Empower your clinic with tools to provide more innovative care</h1>
               <h4>Built from the ground up for all your clinical needs</h4>
             </div>
             <div className="api-solutions-container">
               <div>
                 <h4>Welcome to Beam Health</h4>
-                <p>Building custom digital health solutions are more important than ever before. Delivering a “wow-experience” for patients is vital to growth in the age of consumer driven healthcare. 
-                  However, imagine having to build an experience to rival tech giants like Teladoc, Zoom, Stripe, or Zocdoc - platforms that took years to design and develop. 
-                  You could try leveraging these and other SaaS platforms, but in doing so you would lose flexibility, interoperability, and most importantly brand recognition. 
-                  You could also try building your own solution from scratch - an endeavor that would require a team of designers and engineers working months or even years before a finished product was 
-                  ready for launch. An option that would also prove to be immensely expensive.</p>
-                <p>This is where we come in. With Beam Health's API, you get the exact same API, feature set, and documentation our developers use internally. 
-                  This means you can jumpstart your development and get your solution to market in weeks, not years.</p>
-                <p>Our clean, pre-built components allow you to get started immediately and come with advanced features that can be customized to fit your needs. 
-                  Whether it's telehealth, patient intake, payment collection, or scheduling, Beam is ready to help make your platform a virtual healthcare powerhouse.
+                <p>Telehealth represents the biggest growth opportunity in healthcare since the establishment of the doctor's office. So why do so many virtual platforms cause additional headaches for providers and patients?</p>
+                <p>The complexity and cost of building a comprehensive telehealth tech stack means that most companies struggle to extend their quality real-world care into the virtual space.</p>
+                <p>Enter Beam Health. Our clean, pre-built components allow you to get started immediately (at a lower cost) and come with advanced features that can be customized to fit your needs.
+                  Whether it's virtual visits, patient intake, payment collection, or scheduling, Beam is ready to help make your platform a digital healthcare powerhouse.
                 </p>
                 <a className='cta-button' href='https://beam.health/api'>Beam API <i className='fas fa-arrow-right'></i></a>
               </div>
@@ -53,8 +48,8 @@ class Solutions extends React.Component {
               <div className='landing-feature-item'>
                 <div>
                   <div className='landing-feature-label'>Quality</div>
-                  <h1><span>Raise</span> telehealth standards</h1>
-                  <h4>Choppy video and audio that hinder conversations call for <span style={{whiteSpace:'nowrap'}}>reliable solutions.</span></h4>
+                  <h1><span>Care</span> without a glitch</h1>
+                  <h4>Best-in-class video and audio quality for precise communication during every <span style={{whiteSpace:'nowrap'}}>virtual visit.</span></h4>
                 </div>
                 <div className='landing-first-feature-img-container'>
                   <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
@@ -72,7 +67,7 @@ class Solutions extends React.Component {
                 <div>
                   <div className='landing-feature-label'>Scalability</div>
                   <h1><span>Built</span> for practices of <span style={{whiteSpace:'nowrap'}}>all sizes</span></h1>
-                  <h4>A platform that adapts to your needs - from private clinics to <span style={{whiteSpace:'nowrap'}}>large enterprises.</span></h4>
+                  <h4>From private clinics to large enterprises, our platform adapts to your needs - and to <span style={{whiteSpace:'nowrap'}}>your goals.</span></h4>
                 </div>
               </div>
 
@@ -80,7 +75,7 @@ class Solutions extends React.Component {
                 <div>
                   <div className='landing-feature-label'>Flexibility</div>
                   <h1><span>Patient</span> friendly philosophy</h1>
-                  <h4>Designed with the patient's core experience in mind, giving them more payment options, easy communication, and <span style={{whiteSpace:'nowrap'}}>peace of mind.</span></h4>
+                  <h4>More payment options, simple scheduling and better communication make receiving care <span style={{whiteSpace:'nowrap'}}>a joy.</span></h4>
                 </div>
                 <div className='solutions-third-feature-img-container'>
                   <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
@@ -94,8 +89,8 @@ class Solutions extends React.Component {
             </div>
           </div>
           <div className='landing-telehealth-container-solutions'>
-            <h1><span>Maximize</span> on Beam's full set of features</h1>
-            <h4>With dozens of features, Beam can help you at every stage of your clinical business.</h4>
+            <h1>We've got every part of your clinic covered.</h1>
+            <h4>Maximize your capacity for care with dozens of features made to grow with you.</h4>
             <div className='telehealth-features-container'>
               <div className='telehealth-features-content'>
                 {this.state.featureStep==1 &&

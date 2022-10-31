@@ -67,8 +67,8 @@ class Home extends React.Component {
           <div className='ColorGradientAnimation'></div>
           <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
             <div>
-              <h1>Design a Custom Telehealth Experience Within Your Platform</h1>
-              <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians - you need a reliable platform to capture 100% of your patients revenue, an immersive patient experience that delights, and a scalable infrastructure that can handle your growth every step of the way.</h4>
+              <h1>A telehealth experience that leaves everyone feeling cared for</h1>
+              <h4>See more patients, capture 100% of your revenue and create a feel-good virtual practice with Beam, the all-in-one telehealth solution for healthcare providers.</h4>
               <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
               <a className='cta-button-lg' href="#schedule-demo">Book a Demo <i className='fas fa-arrow-right'></i></a>
             </div>
@@ -91,8 +91,8 @@ class Home extends React.Component {
           <AnimationOnScroll className='landing-api-container' animateIn='animate__fadeIn'>
             <div>
               <i className='fas fa-laptop-code'></i>
-              <h1><span>Integrate</span> Beam into your platform <span style={{whiteSpace:'nowrap'}}>in minutes</span></h1>
-              <h4>Healthcare API built with developers in mind. Leverage our telehealth, payment processing, and scheduling features to build or enhance your own solution.</h4>
+              <h1><span>Build</span> a more innovative platform <span style={{whiteSpace:'nowrap'}}>in minutes</span></h1>
+              <h4>Our healthcare API includes a full suite of features that can be seamlessly integrated into your existing solution. Built with developers in mind, Beam helps providers of all sizes scale their virtual offerings with customizable telehealth, payment processing and scheduling.</h4>
               <a className='cta-button-white' href='https://beam.health/api'>Beam API <i className='fas fa-arrow-right'></i></a>
             </div>
             <div>
@@ -100,7 +100,7 @@ class Home extends React.Component {
             </div>
           </AnimationOnScroll>
           <div className='review-header-container'>
-            <h1>Love From Our Partners</h1>
+            <h1>Partners that make us Beam with pride</h1>
             <div className='review-controls'>
               <i className='fas fa-chevron-left' onClick={() => this.togglePrev(this.state.reviewStep)}></i>
               <i className='fas fa-chevron-right' onClick={() => this.toggleNext(this.state.reviewStep)}></i>
@@ -168,8 +168,8 @@ class Home extends React.Component {
             </div>
           </div>
           <div className='landing-telehealth-container'>
-            <h1><span>Powerful</span>, <span style={{whiteSpace:'nowrap'}}>all-in-one</span> <span style={{whiteSpace:'nowrap'}}>telehealth solution</span></h1>
-            <h4>With custom digital waiting rooms, group video, note-taking, and more, our feature-rich telehealth has everything you need to provide great care to your patients.</h4>
+            <h1><span>Turn</span> every doctor visit into a can't-miss appointment.</h1>
+            <h4>With custom digital waiting rooms, group video, note-taking, and more, our feature-rich telehealth solution has everything you need to provide great virtual care to your patients.</h4>
             <div className='telehealth-features-container'>
               <div className='telehealth-features-content'>
                 {this.state.telehealthStep=='group' &&
@@ -189,7 +189,7 @@ class Home extends React.Component {
                 {this.state.telehealthStep=='screen' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Screen Sharing</h4>
-                  <p>Easily share your screen during patient encounters within the Beam dashboard with just one-click.</p>
+                  <p>Share your screen with one click from within the Beam dashboard during patient video calls.</p>
                   <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.png" />
                 </AnimationOnScroll>
                 }
