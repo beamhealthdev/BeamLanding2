@@ -67,10 +67,12 @@ class Home extends React.Component {
           <div className='ColorGradientAnimation'></div>
           <AnimationOnScroll className='landing-page-container animate__fadeIn animate__fastest'>
             <div>
-              <h1>A telehealth experience that leaves everyone feeling cared for</h1>
+              <h1>A telehealth experience that leaves everyone feeling <span style={{whiteSpace:'nowrap'}}>cared for</span></h1>
               <h4>See more patients, capture 100% of your revenue and create a feel-good virtual practice with Beam, the all-in-one telehealth solution for healthcare providers.</h4>
-              <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
-              <a className='cta-button-lg' href="#schedule-demo">Book a Demo <i className='fas fa-arrow-right'></i></a>
+              <div>
+                <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
+                <a className='cta-button-lg' href="#schedule-demo">Book Demo <i className='fas fa-arrow-right'></i></a>
+              </div>
             </div>
             <div>
               <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png' />
@@ -224,7 +226,7 @@ class Home extends React.Component {
                 <div className={this.state.telehealthStep=='notes' ? 'active-th-button' : ''} onClick={() => this.setState({telehealthStep:'notes'})}><i className='fas fa-clipboard'></i><span>Note Taking</span></div>
               </div>
             </div>
-            <a className='cta-button-lg' href="#schedule-demo" style={{marginTop:'60px'}}>Book a Demo <i className='fas fa-arrow-right'></i></a>
+            <a className='cta-button-lg' href="#schedule-demo" style={{marginTop:'60px'}}>Book Demo <i className='fas fa-arrow-right'></i></a>
           </div>
           <div className='landing-feature-container'>
             <div className='landing-feature-item'>
@@ -319,7 +321,7 @@ class Home extends React.Component {
             </div>
           </div> */}
           <div className='demo-container' id="schedule-demo">
-            <h1>Schedule a Demo</h1>
+            <h1>Book Demo</h1>
             <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{height: "756px", border: "none"}}></iframe>
           </div>
         </AnimationOnScroll>

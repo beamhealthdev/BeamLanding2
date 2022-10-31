@@ -41,7 +41,7 @@ class FrequentyAskedQuestions extends React.Component {
                 {this.state.expandedFAQ == 1 ? <i className="fas fa-minus" onClick={() => this.setState({expandedFAQ:0})}></i> : <i className="fas fa-plus"></i>}
               </div>
               {this.state.expandedFAQ==1 &&
-              <div className="faq-answer">Simply <a href="#schedule-demo">Schedule a demo</a> with one of our account managers or send us your info to <a href="mailto:info@beamhealthgroup.com" target="_blank">info@beamhealthgroup.com</a>. Registrations take seconds and we can launch to thousands of providers in a matter of minutes.</div>
+              <div className="faq-answer">Simply <a href="#schedule-demo">Book a demo</a> with one of our account managers or send us your info to <a href="mailto:info@beamhealthgroup.com" target="_blank">info@beamhealthgroup.com</a>. Registrations take seconds and we can launch to thousands of providers in a matter of minutes.</div>
               }
             </div>
             <div className="faq-item" onClick={() => this.setState({expandedFAQ:2})}>
@@ -110,7 +110,7 @@ class FrequentyAskedQuestions extends React.Component {
           </div>
           <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
             <div className='demo-container' id="schedule-demo">
-              <h1>Schedule a Demo</h1>
+              <h1>Book Demo</h1>
               <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
             </div>
           </AnimationOnScroll>

@@ -38,7 +38,7 @@ class API extends React.Component {
               <h4>Leverage our advanced suite of telehealth, payment processing and scheduling tools to build or enhance your own solution, without sacrificing your brand.</h4>
               <div style={{marginTop:'20px'}}>
                 <a className='cta-button-lg' href="https://docs.beam.health" target="_blank">API Docs</a>
-                <a className='cta-button-lg-alt' href='#schedule-demo'>Schedule Demo</a>
+                <a className='cta-button-lg-alt' href='#schedule-demo'>Book Demo</a>
               </div>
             </div>
             <div>
@@ -97,7 +97,7 @@ class API extends React.Component {
           <div className="api-bottom-container">With Beam Health's API, you get the exact API, feature set, and documentation our developers use internally to create the industry's leading digital health platform.</div>
           <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
             <div className='demo-container' id="schedule-demo">
-              <h1>Schedule a Demo</h1>
+              <h1>Book Demo</h1>
               <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
             </div>
           </AnimationOnScroll>

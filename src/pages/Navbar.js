@@ -70,7 +70,7 @@ class Navbar extends React.Component {
           <Link to='/'>
             <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
           </Link>
-          <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book a Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
+          <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
         </div>
       </div>
     );
