@@ -77,7 +77,7 @@ class Resources extends React.Component {
         </div>
         <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
           <div className='section-header' id="schedule-demo">Book Demo</div>
-          <iframe src="https://meetings.hubspot.com/drew160/beam-health-demo?embed=true&amp;parentHubspotUtk=653dcb903fc615dc2dcbbcb3f3f109ec&amp;parentPageUrl=https://beam.health/request-a-free-demo/&amp;ab=undefined&amp;abStatus=undefined&amp;contentId=undefined" width="100%" style={{minWidth: "312px", minHeight: '516px', height: "756px", border: "none"}}></iframe>
+          <iframe src="https://meetings.hubspot.com/beam/platform-demo?embed=true" width="100%" style={{height: "756px", border: "none"}}></iframe>
         </AnimationOnScroll>
         <Footer />
       </div>
