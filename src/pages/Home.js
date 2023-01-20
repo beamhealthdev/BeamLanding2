@@ -75,7 +75,7 @@ class Home extends React.Component {
               </div>
             </div>
             <div>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png' alt='Marketing Screen of web dashboard' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.webp' alt='Marketing Screen of web dashboard' />
               <img src='https://beam-provider-landing.s3.amazonaws.com/beam_login_mobile.png' alt='Login Screen for mobile dashboard' />
             </div>
           </AnimationOnScroll>
@@ -178,42 +178,42 @@ class Home extends React.Component {
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Group Video</h4>
                   <p>Allow multiple participants in a single video session with our group video conferencing. Intuitive features include signal strength monitoring, screen sharing, volume control, and more.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" alt='Group call screen' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.webp" alt='Group call screen' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='customize' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Customizability</h4>
                   <p>A virtual waiting room that comes with custom content to educate and promote services to patients as they wait for your providers. Every provider gets a unique waiting room link that can be used anywhere in the world, at any time.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" alt='Waiting Room with Sponsored Content' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.webp" alt='Waiting Room with Sponsored Content' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='screen' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Screen Sharing</h4>
                   <p>Share your screen with one click from within the Beam dashboard during patient video calls.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.png" alt='Screenshare feature' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.webp" alt='Screenshare feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='pip' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Picture in Picture</h4>
                   <p>Keep your focus on the patient. With picture-in-picture,  you can review test results or take notes while staying visually engaged.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" alt='Picture in Picture feature' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.webp" alt='Picture in Picture feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='chat' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Live Chat</h4>
                   <p>Interact with patients while they wait in your custom waiting room. Support staff can now triage patients, as well as share and receive documents, prior to the provider entering the digital exam room.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_chat.png" alt='Chat feature' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_chat.webp" alt='Chat feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='notes' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Note Taking</h4>
                   <p>Construct and complete visit notes during video appointments. Beam's note taking feature comes equipped with SOAP functionality and can easily be integrated to share data with your EHR.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_notes.png" alt='Note traking feature' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_notes.webp" alt='Note traking feature' />
                 </AnimationOnScroll>
                 }
               </div>
