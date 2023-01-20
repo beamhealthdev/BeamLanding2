@@ -70,24 +70,24 @@ class Home extends React.Component {
               <h1>The future of healthcare, built <span style={{whiteSpace:'nowrap'}}>your way.</span></h1>
               <h4>Whether you are a new practice trying to acquire patients or a healthcare enterprise with thousands of clinicians, you need a fail-proof way to see patients remotely.</h4>
               <div>
-                <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Learn More</a>
+                <a className='cta-button-lg-alt' href='https://beam.health/solutions'>Our Solutions</a>
                 <a className='cta-button-lg' href="#schedule-demo">Book Demo <i className='fas fa-arrow-right'></i></a>
               </div>
             </div>
             <div>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png' />
-              <img src='https://beam-provider-landing.s3.amazonaws.com/beam_login_mobile.png' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/dashboard_marketing_screen_2.png' alt='Marketing Screen of web dashboard' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/beam_login_mobile.png' alt='Login Screen for mobile dashboard' />
             </div>
           </AnimationOnScroll>
           <div className='landing-bottom-container'>
             <div className='brand-logo-container'>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/The_Guardian_2018.svg/2560px-The_Guardian_2018.svg.png"  />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Business_Insider_Logo.svg/2560px-Business_Insider_Logo.svg.png"  />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" alt='NBC Universal Logo' />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/The_Guardian_2018.svg/2560px-The_Guardian_2018.svg.png" alt='The Guardian Logo' />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Business_Insider_Logo.svg/2560px-Business_Insider_Logo.svg.png" alt='Business Insider Logo' />
               <br/>
-              <img src="https://www.freelogovectors.net/svg08/techstars-logo-freelogovectors.net_.svg" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_liftlabs.png" />
+              <img src="https://www.freelogovectors.net/svg08/techstars-logo-freelogovectors.net_.svg" alt='Techstars Logo' />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Plug_and_Play_Logo_HR.png" alt='Plug and Play Logo' />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_liftlabs.png" alt='Lift Labs Logo' />
             </div>
           </div>
           <AnimationOnScroll className='landing-api-container' animateIn='animate__fadeIn'>
@@ -98,7 +98,7 @@ class Home extends React.Component {
               <a className='cta-button-white' href='https://beam.health/api'>Beam API <i className='fas fa-arrow-right'></i></a>
             </div>
             <div>
-              <img src="https://beam-provider-landing.s3.amazonaws.com/final/laptop-code-block-img.png" />
+              <img src="https://beam-provider-landing.s3.amazonaws.com/final/laptop-code-block-img.png" alt='Graphic of laptop with code' />
             </div>
           </AnimationOnScroll>
           <div className='review-header-container'>
@@ -112,11 +112,11 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 1 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Comcast_Logo.svg" className='test_logo' />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Comcast_Logo.svg" className='test_logo' alt='Comcast Logo' />
                   <h6>Beam Health's ease of implementation and interoperability gives healthcare institutions and clinics a clear competitive advantage. Their API allows enterprises to develop custom solutions on top of Beam's suite of tools for both desktop and mobile - a game changer for large enterprises that go the extra mile to meet patient needs.</h6>
                 </div>
                 <div className='review-attr'>
-                  <img src="https://fuse.show/wp-content/uploads/2021/08/Fuse-Stephen-Hoelper-of-Doceree-Square-Pic.png" />
+                  <img src="https://fuse.show/wp-content/uploads/2021/08/Fuse-Stephen-Hoelper-of-Doceree-Square-Pic.png" alt='Person' />
                   <div>
                     <h5>Stephen Hoelper</h5>
                     <h6>VP Total Rewards Innovation &amp; Product</h6>
@@ -127,11 +127,11 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 2 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/serendipitylogo.png" className='test_logo' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/serendipitylogo.png" className='test_logo' alt='Serendipity Logo' />
                   <h6>Beam has been a wonderful addition to our EMR, especially with taking copays on the site and not having to worry about collecting them later! Our patients are loving it as well since they don't have to leave home or work.</h6>
                 </div>
                 <div className='review-attr'>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Robert+Strayhan.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/Robert+Strayhan.png" alt='Person' />
                   <div>
                     <h5>Dr. Robert Strayhan</h5>
                     <h6>Provider</h6>
@@ -142,11 +142,11 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 3 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" className='test_logo' />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Comcast_NBCUniversal_logo.svg" className='test_logo' alt='NBC Universal Logo' />
                   <h6>Beam Health is building a best in class virtual care and patient operations platform. This team has the expertise, the agility and the tenacity to succeed. As a member of the Comcast NBCUniversal LIFT Labs portfolio, we couldn't be prouder of the progress they continue to make.</h6>
                 </div>
                 <div className='review-attr'>
-                  <img src="https://images.weserv.nl/?url=emamo.com/storage/avatars/86/84/31945_e9a7304f0c1c88b5ce0d0b82e04f8684.jpg&w=400&h=400" />
+                  <img src="https://images.weserv.nl/?url=emamo.com/storage/avatars/86/84/31945_e9a7304f0c1c88b5ce0d0b82e04f8684.jpg&w=400&h=400" alt='Person' />
                   <div>
                     <h5>Luke Butler</h5>
                     <h6>Executive Director Startup Engagement</h6>
@@ -157,7 +157,7 @@ class Home extends React.Component {
             <div className={this.state.reviewStep == 4 ? 'review-item' : 'review-hidden'}>
               <div>
                 <div>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/accessadoclogo.png" className='test_logo' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/accessadoclogo.png" className='test_logo' alt='Access a Doc Logo' />
                   <h6>Beam's mission to utilize patient/provider feedback allows them to adapt to changing needs and regulations surrounding telemedicine. Thank you for consistently innovating to ensure we can get any practice at the top of their game!</h6>
                 </div>
                 <div className='review-attr'>
@@ -178,42 +178,42 @@ class Home extends React.Component {
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Group Video</h4>
                   <p>Allow multiple participants in a single video session with our group video conferencing. Intuitive features include signal strength monitoring, screen sharing, volume control, and more.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.png" alt='Group call screen' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='customize' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Customizability</h4>
                   <p>A virtual waiting room that comes with custom content to educate and promote services to patients as they wait for your providers. Every provider gets a unique waiting room link that can be used anywhere in the world, at any time.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/wr_ad.png" alt='Waiting Room with Sponsored Content' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='screen' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Screen Sharing</h4>
                   <p>Share your screen with one click from within the Beam dashboard during patient video calls.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_screenshare.png" alt='Screenshare feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='pip' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Picture in Picture</h4>
                   <p>Keep your focus on the patient. With picture-in-picture,  you can review test results or take notes while staying visually engaged.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_pip.png" alt='Picture in Picture feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='chat' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Live Chat</h4>
                   <p>Interact with patients while they wait in your custom waiting room. Support staff can now triage patients, as well as share and receive documents, prior to the provider entering the digital exam room.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_chat.png" />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_chat.png" alt='Chat feature' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='notes' &&
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Note Taking</h4>
-                  <p>Construct and complete visit notes during video appointments. Beam’s note taking feature comes equipped with SOAP functionality and can easily be integrated to share data with your EHR.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_notes.png" />
+                  <p>Construct and complete visit notes during video appointments. Beam's note taking feature comes equipped with SOAP functionality and can easily be integrated to share data with your EHR.</p>
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/landing_th_notes.png" alt='Note traking feature' />
                 </AnimationOnScroll>
                 }
               </div>
@@ -240,10 +240,10 @@ class Home extends React.Component {
               </div>
               <div className='landing-first-feature-img-container'>
                 <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-1.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-1.png' alt='Schedule Screen' />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__slideInLeft' delay={2} className='slide-in' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-2.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/beam-dashboard-schedule-2.png' alt='Schedule Modal graphic' />
                 </AnimationOnScroll>
               </div>
             </div>
@@ -251,10 +251,10 @@ class Home extends React.Component {
             <div className='landing-feature-item'>
               <div className='landing-second-feature-img-container'>
                 <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_1.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_1.png' alt='Payments screen' />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__slideInLeft' delay={2} className='slide-in' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_2.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/payments_screen_2.png' alt='Payment notification graphic' />
                 </AnimationOnScroll>
               </div>
               <div>
@@ -278,13 +278,13 @@ class Home extends React.Component {
               </div>
               <div className='landing-third-feature-img-container'>
                 <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_1.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_1.png' alt='Intake screen element 1' />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_2.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_2.png' alt='Intake screen element 2' />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__slideInRight' animateOnce={true}>
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_3.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/final/intake_screen_3.png' alt='Intake screen element 3' />
                 </AnimationOnScroll>
               </div>
             </div>

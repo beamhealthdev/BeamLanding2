@@ -42,7 +42,7 @@ class API extends React.Component {
               </div>
             </div>
             <div>
-              <img src="https://beam-provider-landing.s3.amazonaws.com/api_desktop.png" />
+              <img src="https://beam-provider-landing.s3.amazonaws.com/api_desktop.png" alt="Beam API Documentation screenshot" />
             </div>
           </div>
           <div className='landing-feature-container'>
@@ -55,7 +55,7 @@ class API extends React.Component {
                   <div>All of Beam's world-class features are available via the API for both desktop and mobile solutions</div>
                 </div>
                 <div className="mobile-only">
-                  <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' />
+                  <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' alt="Three screenshots of Beam platform" />
                 </div>
                 <h2 style={{paddingTop:"100px", paddingBottom:"0px"}}>Everything you need to rapidly build and deploy your <span style={{whiteSpace:'nowrap'}}>custom solution</span></h2>
                 <div className="bullet-point-container">
@@ -65,12 +65,12 @@ class API extends React.Component {
                 </div>
               </div>
               <div className="left-pad">
-                <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' />
+                <img src='https://beam-provider-landing.s3.amazonaws.com/tripe_ui_desktop.png' alt="Three screenshots of Beam platform" />
               </div>
             </div>
             <div className='landing-feature-item'>
               <div className="right-pad">
-                <img src='https://beam-provider-landing.s3.amazonaws.com/desktop_ui_sample.png' style={{marginLeft:'-65px'}} />
+                <img src='https://beam-provider-landing.s3.amazonaws.com/desktop_ui_sample.png' style={{marginLeft:'-65px'}} alt="Graphic showing code" />
               </div>
               <div>
                 <h2><span>Enterprise Businesses</span><br/>Seamlessly integrate in <span style={{whiteSpace:'nowrap'}}>no time</span></h2>
@@ -90,7 +90,7 @@ class API extends React.Component {
                 </div>  
               </div>
               <div className="left-pad">
-                <img src='https://beam-provider-landing.s3.amazonaws.com/code_ui_sample.png' />
+                <img src='https://beam-provider-landing.s3.amazonaws.com/code_ui_sample.png' alt="Code sample of SDK" />
               </div>
             </div>
           </div>
