@@ -43,7 +43,7 @@ class Navbar extends React.Component {
         }
         <div className='items-left'>
             <Link to='/'>
-              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
+              <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' alt='Beam Health logo' />
             </Link>
             <Link to='/about'>About Us</Link>
             <Link to='/api'>API</Link>
@@ -68,7 +68,7 @@ class Navbar extends React.Component {
         }
         <div className='items-right'>
           <Link to='/'>
-            <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' />
+            <img src='https://beam-provider-landing.s3.amazonaws.com/final/beam_logo.png' alt='Beam Health logo' />
           </Link>
           <a className={this.state.showDemoBtn ? 'cta-button' : 'cta-button-hidden'} href='#schedule-demo'>Book Demo&nbsp;<i className='fas fa-arrow-right'></i></a>
         </div>
