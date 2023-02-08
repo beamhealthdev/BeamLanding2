@@ -178,7 +178,7 @@ class Home extends React.Component {
                 <AnimationOnScroll animateIn='animate__fadeIn'>
                   <h4>Group Video</h4>
                   <p>Allow multiple participants in a single video session with our group video conferencing. Intuitive features include signal strength monitoring, screen sharing, volume control, and more.</p>
-                  <img src="https://beam-provider-landing.s3.amazonaws.com/group-call-screen.webp" alt='Group call screen' />
+                  <img src="https://beam-provider-landing.s3.amazonaws.com/final/group-call-screen.webp" alt='Group call screen' />
                 </AnimationOnScroll>
                 }
                 {this.state.telehealthStep=='customize' &&

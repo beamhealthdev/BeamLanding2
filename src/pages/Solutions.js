@@ -53,7 +53,7 @@ class Solutions extends React.Component {
                 </div>
                 <div className='landing-first-feature-img-container'>
                   <AnimationOnScroll animateIn='animate__fadeIn' animateOnce={true}>
-                    <img src='https://beam-provider-landing.s3.amazonaws.com/group-call-screen.webp' />
+                    <img src='https://beam-provider-landing.s3.amazonaws.com/final/group-call-screen.webp' />
                   </AnimationOnScroll>
                 </div>
               </div>
