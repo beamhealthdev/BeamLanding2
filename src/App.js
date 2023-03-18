@@ -19,6 +19,7 @@ import ScrollToTop from './ScrollToTop';
 import PartnersDigitalHealth from './pages/PartnersDigitalHealth';
 import PartnersHealthcareSystems from './pages/PartnersHealthcareSystems';
 import PartnersHealthPlans from './pages/PartnersHealthPlans';
+import ShineAI from './pages/ShineAI';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="/digital_health" element={ <PartnersDigitalHealth /> } />
             <Route path="/healthcare_systems" element={ <PartnersHealthcareSystems /> } />
             <Route path="/health_plans" element={ <PartnersHealthPlans /> } />
+            <Route path="/shine_ai" element={ <ShineAI /> } />
             <Route path="*" exact={true} element={ <NotFound /> } />
           </Routes>
           <Footer />

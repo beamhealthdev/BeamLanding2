@@ -13,6 +13,7 @@
     "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "moment": "^2.29.4",
+    "openai": "^3.2.1",
     "react": "^17.0.2",
     "react-animation-on-scroll": "^5.1.0",
     "react-bootstrap": "^2.1.2",
