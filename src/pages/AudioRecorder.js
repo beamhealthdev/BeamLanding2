@@ -1,31 +1,43 @@
 import React, { useState } from "react";
 
+
+async function blobToAudioBuffer(blob) {
+  const arrayBuffer = await blob.arrayBuffer();
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  return new Promise((resolve, reject) => {
+    audioContext.decodeAudioData(arrayBuffer, resolve, reject);
+  });
+}
+
+const toWav = require('audiobuffer-to-wav');
+
 async function sendAudioToServer(audioBlob) {
     console.log("Sending audio to server...", audioBlob)
+    const audioBuffer = await blobToAudioBuffer(audioBlob);
+
+
+    // Convert the AudioBuffer to a WAV Blob
+    const wavBuffer = toWav(audioBuffer);
+    const wavBlob = new Blob([wavBuffer], { type: 'audio/wav' });
     const formData = new FormData();
-    formData.append("audio", audioBlob);
-    console.log("formData", formData)
-  
-    const { Configuration, OpenAIApi } = require('openai');
-    const configuration = new Configuration({
-        apiKey: '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',
-    });
-    const openai = new OpenAIApi(configuration);
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: "Say this is a test",
-        temperature: 0,
-        max_tokens: 7,
-    }, {
+    formData.append("file", wavBlob, "audio.wav");
+    formData.append("model", "whisper-1");
+    const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+        method: 'POST',
         headers: {
-            "Content-Type": "application/json",
-            "Authorization": 'Bearer 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',
-        }
+          "Authorization": 'Bearer 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',
+        },
+        body: formData,
     });
-    console.log("Response: ", response.data.choices[0].text);
+    if(response.ok) {
+      const data = await response.json();
+      console.log("Data: ", data['text']);
+      return data['text'];
+    }
+    
 }  
 
-function AudioRecorder() {
+function AudioRecorder(props) {
   const [recording, setRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
 
@@ -46,6 +58,7 @@ function AudioRecorder() {
         // Send the audio blob to the server for transcription
         const transcription = await sendAudioToServer(audioBlob);
         console.log("Transcription:", transcription);
+        props.onTranscription(transcription)
       };
       setRecording(false);
     }
@@ -53,6 +66,7 @@ function AudioRecorder() {
 
   return (
     <div onClick={handleButtonClick}>
+      <i className={recording ? "fas fa-microphone-slash" : "fas fa-microphone"}></i>
       {recording ? "Stop Recording" : "Start Recording"}
     </div>
   );

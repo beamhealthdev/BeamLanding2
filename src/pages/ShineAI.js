@@ -6,6 +6,7 @@ import 'animate.css';
 import {BrowserRouter, Link} from "react-router-dom";
 import DocumentMeta from 'react-document-meta';
 import AudioRecorder from "./AudioRecorder";
+import Amplify, { API } from 'aws-amplify';
 
 
 class ShineAI extends React.Component {
@@ -17,25 +18,21 @@ class ShineAI extends React.Component {
       demoStarted: false,
       messages: [
         "Dr. Lee",
-        "Hi, I'm Dr. Lee. I'm a board-certified physician and I'm here to help you with your concerns.",
+        "Hi, I'm Dr. Lee. What brings you here today?",
         "Me",
-        "Hi, Dr. Lee. I'm having some trouble sleeping lately. I'm not sure if it's because of the stress of my job or if it's something else.",
+        "Hi, Dr. Lee. I'm having some trouble sleeping and focusing lately. I'm not sure if it's because of the stress of my job or if it's something else.",
         "Dr. Lee",
         "I see. How long have you been having trouble sleeping?",
         "Me",
         "It's been about a month now. I've tried taking melatonin and other sleep aids, but they don't seem to work.",
         "Dr. Lee",
-        "I'm sorry to hear that. Have you tried any other methods to help you sleep?",
+        "I'm sorry to hear that. Can you tell me more about your diet and exercise habits?",
         "Me",
-        "I've tried meditation, but it doesn't seem to help. I've also tried taking a warm bath before bed, but that doesn't seem to help either.",
+        "I've tried meditation and working out whenever I can, but it doesn't seem to help. I'm eating normally for the most part, although I sometimes overeat.",
         "Dr. Lee",
-        "Have you noticed any new patterns in your lifestyle lately?",
+        "Hmm, is this your first time seeing a behavioral therapist? And have you noticed any new patterns in your lifestyle lately?",
         "Me",
-        "I've been feeling a little more tired than usual. I've also been feeling a little more anxious than usual.",
-        "Dr. Lee",
-        "Any other noticeable changes?",
-        "Me",
-        "Not that I can think of.",
+        "Yes, it's my first time here. I've just been feeling a little more tired than usual. I've also been feeling a little more anxious than usual.",
         "Dr. Lee",
         "Okay. Anything else about your medical history that you'd like to add?",
       ],
@@ -45,10 +42,10 @@ class ShineAI extends React.Component {
       animationComplete: false,
       showFastForward: false,
       consultNotes: [
-        "Patient reports having trouble sleeping for about a month. They have tried melatonin, sleep aids, meditation, and taking a warm bath before bed without success. The patient also mentions feeling more tired and anxious than usual.",
-        "The patient is experiencing insomnia, fatigue, and increased anxiety. No other significant changes in lifestyle or medical history were reported.",
-        "The patient is likely suffering from insomnia, potentially related to stress from their job. The increased anxiety and fatigue may be contributing factors to the sleep disturbance.",
-        "Recommend the patient to maintain a consistent sleep schedule and create a relaxing bedtime routine. Encourage the patient to exercise regularly and to avoid caffeine and alcohol before bed. If the patient's symptoms persist, recommend they seek professional help.",
+        "The patient reports having trouble sleeping and focusing for about a month. They have tried melatonin and other sleep aids without success. They have also tried meditation and exercise, but these have not helped. They report eating normally but occasionally overeating. The patient feels more tired and anxious than usual.",
+        "This is the patient's first time seeing a behavioral therapist. No other objective data is provided during the conversation.",
+        "The patient is experiencing difficulty sleeping and focusing, which may be due to stress, anxiety, or other factors. Their attempts to self-treat with melatonin, sleep aids, meditation, and exercise have not been effective.",
+        "The patient should undergo a thorough evaluation to determine the root cause of their sleep and focus issues. Further assessment of their mental health, lifestyle, and potential stressors is necessary. Based on the evaluation, the therapist should develop an appropriate treatment plan to address the patient's concerns.",
       ],
     }
   }
@@ -56,6 +53,17 @@ class ShineAI extends React.Component {
   componentDidMount() {
     this.cycleHeaders();
   }
+
+  scrollToBottom(element) {
+    const container = document.querySelector('.shine-element-content-container');
+    const rect = element.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    if (rect.bottom > containerRect.bottom) {
+      container.scrollTop += rect.bottom - containerRect.bottom;
+    }
+  }
+  
+  
 
   cycleHeaders() {
     const texts = document.querySelectorAll(".shine-cta-header");
@@ -109,6 +117,7 @@ class ShineAI extends React.Component {
           // firstWord.addEventListener('animationstart', () => {
           //   message.scrollIntoView({ behavior: 'smooth', block: 'end' });
           // });
+          words[words.length - 1].addEventListener('animationstart', () => this.scrollToBottom(words[words.length - 1]));
     
           // Set animationComplete to true when the last word of the last message finishes animating
           if (messageIndex === messageElements.length - 1) {
@@ -122,8 +131,37 @@ class ShineAI extends React.Component {
     }
   }
 
-  showNotes = () => {
-    this.setState({ showNotes: true });
+  showNotes = async () => {
+    if(this.state.userRecorded) {
+      this.setState({ generateLoading: true });
+      let subjective = "Subjective: " + this.state.consultNotes[0]
+      let objective = "Objective: " + this.state.consultNotes[1]
+      let assessment = "Assessment: " + this.state.consultNotes[2]
+      let plan = "Plan: " + this.state.consultNotes[3]
+      let prompt = "Here is the JSON stringified version of SOAP notes, where each element is the S,O,A,P note respectively: " + JSON.stringify(this.state.consultNotes) + "Adjust the notes with the following additional quote from the patient, and return your response in the same stringified json format as the initial notes: " + this.state.userTranscript
+      console.log("prompt ", prompt)
+      const requestBody = {
+        prompt: prompt,
+        max_tokens: 2048,
+        model: "text-davinci-003",
+      };
+      const response = await fetch('https://api.openai.com/v1/completions', {
+        method: 'POST',
+        headers: {
+          "Authorization": 'Bearer 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',
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+      if(response.ok) {
+        const data = await response.json();
+        console.log("Data: ", data['choices'][0]['text']);
+        this.setState({ showNotes: true, consultNotes: JSON.parse(data['choices'][0]['text']), generateLoading: false });
+      }
+    }
+    else {
+      this.setState({ showNotes: true, generateLoading: false });
+    }
   }
 
   scrollToDemo() {
@@ -137,13 +175,21 @@ class ShineAI extends React.Component {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   }
+
+  updateTranscript = (transcript) => {
+    let messages = this.state.messages;
+    messages.push("Me");
+    messages.push(transcript);
+    console.log(transcript);
+    this.setState({ userTranscript: transcript, messages: messages, replyComplete: true, userRecorded: true})
+  }
   
 
   render() {
     const meta = {
       title: 'Beam Health - Shine AI',
       description: 'Your reliable healthtech copilot..',
-      canonical: 'http://beam.health/shine-ai',
+      canonical: 'http://beam.health/shineai',
       meta: {
         charset: 'utf-8',
         name: {
@@ -209,25 +255,39 @@ class ShineAI extends React.Component {
                     </div>
                   </div>
                 ))}
+                {this.state.userTranscript &&
+                <div>
+                  <div className='user-patient'>
+                    <span className="animate-word">Me</span>
+                  </div>
+                </div>
+                }
+                {this.state.userTranscript &&
+                <div>
+                  <div className='user-message'>
+                    <span className="animate-word">{this.state.userTranscript}</span>
+                  </div>
+                </div>
+                }
               </div>
               :
               <div className="shine-element-content-container-notes">
-                <AnimationOnScroll animateIn="animate__fadeIn animate__fastest" animationDelay={100}>
+                <div>
                   <div className="shine-element-soap-label">Subjective</div>
                   <div>{this.state.consultNotes[0]}</div>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeIn" animationDelay={400}>
+                </div>
+                <div>
                   <div className="shine-element-soap-label">Objective</div>
                   <div>{this.state.consultNotes[1]}</div>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeIn" animationDelay={700}>
+                </div>
+                <div>
                   <div className="shine-element-soap-label">Assessment</div>
                   <div>{this.state.consultNotes[2]}</div>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn="animate__fadeIn" animationDelay={1000}>
+                </div>
+                <div>
                   <div className="shine-element-soap-label">Plan</div>
                   <div>{this.state.consultNotes[3]}</div>
-                </AnimationOnScroll>
+                </div>
               </div>
               }
               {!this.state.showNotes &&
@@ -236,14 +296,17 @@ class ShineAI extends React.Component {
                 <div onClick={() => this.animateWords(0.02)}><i className="fas fa-fast-forward"></i> Fast Forward</div>
                 }
                 {this.state.animationComplete && !this.state.replyComplete &&
-                <AudioRecorder />
+                <AudioRecorder onTranscription={(transcript) => this.updateTranscript(transcript)} />
                 // <div><i className="fas fa-microphone"></i> Reply to Doctor Lee yourself</div>
                 }
                 {this.state.animationComplete && !this.state.replyComplete &&
                 <span onClick={() => this.setState({replyComplete: true})}>Skip replying</span>
                 }
-                {this.state.replyComplete &&
-                <div onClick={() => this.showNotes()}>Generate Notes</div>
+                {this.state.replyComplete && !this.state.generateLoading &&
+                <div onClick={() => this.showNotes()}><i className="fas fa-notes-medical"></i> Generate Notes</div>
+                }
+                {this.state.generateLoading &&
+                <span className="note-generate-loading-message">Thanks for the additional information. I'm generating your notes now.</span>
                 }
               </div>
               }
