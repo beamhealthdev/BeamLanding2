@@ -25,7 +25,7 @@ async function sendAudioToServer(audioBlob) {
     const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
         method: 'POST',
         headers: {
-          "Authorization": 'Bearer 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',
+          "Authorization": 'Bearer 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',
         },
         body: formData,
     });

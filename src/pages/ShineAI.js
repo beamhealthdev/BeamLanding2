@@ -50,8 +50,6 @@ class ShineAI extends React.Component {
 
   componentDidMount() {
     this.cycleHeaders();
-    console.log('TEST', process.env.TEST)
-    console.log("TEST1 ", process.env.REACT_APP_ENV_API_KEY)
   }
 
   scrollToBottom(element) {
@@ -148,7 +146,7 @@ class ShineAI extends React.Component {
       const response = await fetch('https://api.openai.com/v1/completions', {
         method: 'POST',
         headers: {
-          "Authorization": 'Bearer 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',
+          "Authorization": 'Bearer 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',
           "Content-Type": "application/json",
         },
         body: JSON.stringify(requestBody),
