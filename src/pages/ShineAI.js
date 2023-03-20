@@ -51,6 +51,7 @@ class ShineAI extends React.Component {
   componentDidMount() {
     this.cycleHeaders();
     console.log('TEST', process.env.TEST)
+    console.log("TEST1 ", process.env.REACT_APP_ENV_API_KEY)
   }
 
   scrollToBottom(element) {
