@@ -6,8 +6,6 @@ import 'animate.css';
 import {BrowserRouter, Link} from "react-router-dom";
 import DocumentMeta from 'react-document-meta';
 import AudioRecorder from "./AudioRecorder";
-import Amplify, { API } from 'aws-amplify';
-
 
 class ShineAI extends React.Component {
   constructor(props) {
@@ -52,6 +50,7 @@ class ShineAI extends React.Component {
 
   componentDidMount() {
     this.cycleHeaders();
+    console.log('TEST', process.env.TEST)
   }
 
   scrollToBottom(element) {
