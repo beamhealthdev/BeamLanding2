@@ -43,7 +43,7 @@ function App() {
             <Route path="/digital_health" element={ <PartnersDigitalHealth /> } />
             <Route path="/healthcare_systems" element={ <PartnersHealthcareSystems /> } />
             <Route path="/health_plans" element={ <PartnersHealthPlans /> } />
-            <Route path="/shine_ai" element={ <ShineAI /> } />
+            <Route path="/shineai" element={ <ShineAI /> } />
             <Route path="*" exact={true} element={ <NotFound /> } />
           </Routes>
           <Footer />
